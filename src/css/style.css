@@ -1,0 +1,467 @@
+/*==================================================================*/
+/* Fuentes */
+/*==================================================================*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@1,500;1,600&family=Overpass:wght@400;700&family=Poppins:wght@600&display=swap');
+
+
+* {
+
+    font-size: 16px;
+    margin: 0;
+    
+
+    padding: 0;
+
+}
+
+.dark {
+    color: #242f51;
+}
+
+.gray {
+    color: #5d5e65;
+}
+
+.green {
+    color: #40975f;
+}
+
+.bg_green {
+    background-color: #42865a;
+}
+
+.bg_gray {
+    background-color: #e2eaed;
+}
+
+.bg_azul {
+    background: #F5F7FA;
+}
+
+.font {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*==================================================================*/
+/* NavBar Start */
+/*==================================================================*/
+
+
+
+.logonav img {
+    max-width: 200px;
+    margin-left: 2em;
+}
+.flotante {
+    position: relative;
+    animation-name: flotar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes flotar {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+body {
+    background-color: white !important;
+}
+
+@media (max-width: 768px) {
+    .logonav img {
+        width: 100%;
+
+    }
+    
+    .acercaImg {
+        margin-top: 64px;
+        margin-bottom: 40px;
+    }
+
+    .ilustracion {
+        margin-top: 64px;
+    }
+
+    .conEmpresa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+@media (max-width: 1200px) {
+    .logonav img {
+        width: 70%;
+    }
+}
+
+.index_inicio {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5em;
+    margin-bottom: 2em;
+}
+
+/*==================================================================*/
+/* Home Start */
+/*==================================================================*/
+.index_inicios {
+    position: absolute;
+    background-position: bottom;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+
+
+
+}
+
+.badge {
+    font-size: clamp(13px, 1vw, 20px);
+    max-width: 330px;
+}.maquina{
+    display: block;
+    white-space: nowrap;
+    border-right:  5px solid rgb(23, 4, 129);
+    width: 34rem;
+    animation:escribiendo 8s steps(35) ,
+    parpadeo 0.9s infinite alternate
+   
+    ;
+    overflow: hidden;
+}
+@keyframes  escribiendo{
+    from{
+        width: 0;
+    }
+}
+@keyframes parpadeo{
+    71%{
+   border-color:transparent ; 
+    }
+ 
+}
+
+/*==================================================================*/
+/* Footer Start */
+/*==================================================================*/
+
+i {
+    font-size: 2rem;
+}
+
+nav {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+footer {
+
+    background-color: #161627;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.footer__container {
+    max-width: 116rem;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+
+.footer__title {
+    font-size: 1.5rem;
+    color: #e79d27;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.footer__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+}
+
+.footer__list-item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.footer__list-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color .25s;
+}
+
+.footer__list-link:hover {
+    color: #e7d127;
+    text-decoration: none;
+}
+
+.newsletter__form {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.newsletter__form-input {
+    max-width: 300px;
+    height: 40px;
+    border: none;
+    padding-left: .7rem;
+    outline: none;
+    border-radius: 20px;
+}
+
+.newsletter__form-btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    color: 151823;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -40px;
+    transition: background-color .25s, color .25s;
+    background-color: #ffd000;
+}
+
+.newsletter .footer__list {
+    flex-direction: row;
+}
+
+.footer__divider {
+    margin: 1.5rem 0rem 1rem;
+    border: none;
+    border-top: 1px solid rgba(252, 255, 255, .1);
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.footer__bottom .footer__list {
+    flex-direction: row;
+}
+
+.footer__list img:hover {
+    filter: invert(10%) sepia(62%) saturate(2406%) hue-rotate(335deg) brightness(92%) contrast(88%);
+
+}
+
+.eslogan-footeer {
+    background-color: #292c3f;
+    border-radius: 30px;
+    padding: 20px;
+    max-width: 300px;
+}
+
+.img_descarga {
+    border-radius: 30px;
+    box-shadow: 11px 22px 21px -6px rgba(242, 200, 14, 0.47);
+}
+
+
+/* Container olas */
+
+
+
+/*==================================================================*/
+/* Footer End */
+/*==================================================================*/
+
+
+/* -------------------------------------------------------------------------------------------------- */
+
+
+/*==================================================================*/
+/* Contacto Start */
+/*==================================================================*/
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.mapa-contacto {
+    width: 100%;
+}
+
+.contact-area {
+    position: relative;
+    height: 400px;
+}
+
+.container-form-contacto {
+    position: absolute;
+    background-color: #3a47ff;
+    color: white;
+    border-radius: 20px;
+    top: -120px;
+    left: 10%;
+    width: 80%;
+    max-height: 550px;
+}
+
+.titulo-form {
+    font-size: 1.8rem;
+    color: #e79d27;
+    font-weight: 500;
+}
+
+.iconos-form {
+    display: flex;
+    padding: 1.5rem 0rem;
+}
+
+.form__list-item {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.form__list-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color .25s;
+}
+
+.form__list-link:hover {
+    filter: invert(10%) sepia(42%) saturate(2406%) hue-rotate(335deg) brightness(92%) contrast(88%);
+}
+
+.descripcion-pregunta {
+    max-height: 250px;
+}
+
+.btn-form-contacto {
+    background-color: #ffa743;
+    color: white;
+}
+
+.btn-form-contacto:hover {
+    background-color: #50ff43;
+    color: white;
+    transition: 0.55;
+}
+
+@media (max-width: 992px) {
+    .contact-area {
+        height: 750px;
+    }
+
+    .container-form-contacto {
+        max-height: 900px;
+    }
+
+    .descripcion-pregunta {
+        max-height: 250px;
+    }
+}
+
+
+/*==================================================================*/
+/* Contacto End */
+/*==================================================================*/
+
+
+ /*============================================================*/
+ /* Slider Integrantes */
+ .card-integrantes:hover{
+    scale: 1.02;
+    box-shadow: #242f51;
+}
+.carousel img{
+    border-radius: 50%;
+}
+.redes-integrantes{
+    list-style: none;
+    cursor: pointer;
+}
+.redes-integrantes li{
+    margin-right: 5px;
+}
+
+.redes-integrantes li a{
+    background-color: #242f51;
+    margin-left:5px;
+
+    padding: 5px;
+    border-radius: 5px;
+}
+
+ .wasap:hover{
+background-color: #50ff43;
+}
+ .instagram:hover{
+    background-color: #E1306C;
+    }
+
+    .facebook:hover{
+        background-color: #4267B2;
+    }
+.redes-integrantes li a img{
+    width: 80%;
+    margin-top: 4px;
+}
+.carousel-pequeño{
+    display: none;
+  }
+
+@media (max-width: 768px) {
+    .carousel-pequeño{
+      display: block;
+    }
+    .carousel-grande{
+        display: flex;
+        justify-content: center;
+      }
+      .maquina{
+        width: 22rem;
+    }
+  }
+
+ 
+  /* ======================================================= */
+  /*Slider Testimonios*/
+
+  /* Cards Testimonios */
+  .card-testimonios .card-img-top{
+    max-width: 80px;
+    margin: 0;
+  }
+  .comillas-img{
+    width: 40px;
+    background-color: #efab2bd2;
+    margin: auto;
+  }
+
+/* -------------------------------------------------------------------------------------------------- */
+/* Cards Testimonios */
+.card-testimonios .card-img-top {
+    max-width: 80px;
+    margin: 0;
+}
+
+.comillas-img {
+    width: 40px;
+    background-color: #efab2bd2;
+    margin: auto;
+}
