@@ -1,21 +1,21 @@
-import React from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { getHistorial } from '../../../Data/Historial';
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { getHistorial } from "../../../Data/Historial";
 
-function Historial() {
-    const [Historial,setHistorial] = useState();
+function HistorialCards() {
+  const [Historial, setHistorial] = useState([]);
 
-    useEffect(()=>{
-        async function loadHistorial(){
-            const response=await getHistorial()
-            setHistorial(response)
-            console.log(response)
-          }
-        
-          loadHistorial()
-    },[])
+  useEffect(() => {
+    async function loadHistorial() {
+      const {data} = await getHistorial();
+      setHistorial(data);
+      console.log(response);
+    }
+
+    loadHistorial();
+  }, []);
   return (
     <>
       {Historial.map(({ name, id, username, address }) => (
@@ -27,7 +27,7 @@ function Historial() {
           <td className="text-center pt-4">${address.geo.lat}</td>
           <td className="text-center pt-4">
             <div className="manifiesto ">
-              <Link to={"/manifiesto"} className="text-danger" >
+              <Link to={"/manifiesto"} className="text-danger">
                 Ver manifiesto
               </Link>
             </div>
@@ -38,4 +38,4 @@ function Historial() {
   );
 }
 
-export default Historial
+export default HistorialCards;

@@ -1,6 +1,6 @@
 import Sidebar from "./Sidebar";
 import logo from "../../../assets/icons/horizontal.jpg";
-import "../../../css/styleAdmin.css";
+import "../../../css/styleAdmin.css"
 import profile from "../../../assets/icons/profile.jpg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -69,6 +69,7 @@ function Navbar() {
         </nav>
       </header>
       <Sidebar />
+   
     </>
   );
 }

@@ -4,7 +4,10 @@ import { lazy, Suspense } from "react";
 const Head = lazy(() => import("../Components/LandingPage/Header"));
 import Pagina404 from "../Pages/Pagina404";
 import Login from "../Pages/Login";
-import Navbar  from "../Pages/Dashboard/Navegacion/Navbar";
+import Navbar from "../Pages/Dashboard/Navegacion/Navbar";
+
+import Historial from "../Pages/Dashboard/Historial/Historial";
+import Pqrs from "../Pages/Dashboard/Pqrs/Pqrs";
 export const AppRouter = () => {
   return (
     <>
@@ -29,24 +32,22 @@ export const AppRouter = () => {
           <Route path="contactos" element={<Contact />} />
         </Route>
 
-
-
         {/* RUTAS SOLAS */}
         <Route path="login" element={<Login />} />
         <Route path="*" element={<Pagina404 />} />
 
         {/* RUTAS DEL DASHBOARD */}
-        <Route path="/dashboard" element={<Navbar/>}>
-        <Route index element={<Home />} />
-        {/* felipe dulcey */}
-        <Route path="solicitudes" element={<Home />} />
-         {/* felipe segura */}
-        <Route path="datosconductores" element={<Home />} />
-        <Route path="datoscliente" element={<Home />} />
-           {/* felipe dulcey */}
-        <Route path="historial" element={<Home />} />
-         {/* felipe segura */}
-        <Route path="pqrs" element={<Home />} />
+        <Route path="/dashboard" element={<Navbar />}>
+          <Route index element={<Home />} />
+          {/* felipe dulcey */}
+          <Route path="solicitudes" element={<Home />} />
+          {/* felipe segura */}
+          <Route path="datosconductores" element={<Home />} />
+          <Route path="datoscliente" element={<Home />} />
+          {/* felipe dulcey */}
+          <Route path="historial" element={<Historial />} />
+          {/* felipe segura */}
+          <Route path="pqrs" element={<Pqrs />} />
         </Route>
       </Routes>
     </>
