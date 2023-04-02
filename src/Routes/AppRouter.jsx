@@ -5,6 +5,7 @@ const Head = lazy(() => import("../Components/LandingPage/Header"));
 import Pagina404 from "../Pages/Pagina404";
 import Login from "../Pages/Login";
 import Navbar from "../Pages/Dashboard/Navegacion/Navbar";
+import Conductores from '../Pages/Dashboard/Conductores/ConductoresDisponibles';
 
 import Historial from "../Pages/Dashboard/Historial/Historial";
 import Pqrs from "../Pages/Dashboard/Pqrs/Pqrs";
@@ -38,7 +39,7 @@ export const AppRouter = () => {
 
         {/* RUTAS DEL DASHBOARD */}
         <Route path="/dashboard" element={<Navbar />}>
-          <Route index element={<Home />} />
+          <Route index element={<Conductores />} />
           {/* felipe dulcey */}
           <Route path="solicitudes" element={<Home />} />
           {/* felipe segura */}
