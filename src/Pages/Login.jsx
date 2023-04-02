@@ -1,19 +1,27 @@
 import logo from "../assets/icons/horizontal.jpg";
 import login from "../assets/ilustraciones/login.gif";
 import { useNavigate } from "react-router-dom";
-import "../css/styleAdmin.css"
+import "../css/styleAdmin.css";
 import { useState } from "react";
 
-
 function Login() {
-  const [correoAdmin, setCorreo] = useState("");
-  const [passwordAdmin, setContrasenia] = useState("");
   const navigate = useNavigate();
+  const [data, setdata] = useState({
+    correo: "",
+    password: "",
+  });
 
-  const user = {
-    correoAdmin: correoAdmin,
-    passwordAdmin: passwordAdmin,
+  const handleInputChange = ({ target }) => {
+    setdata({
+      ...data,
+      [target.name]: target.value,
+    });
   };
+
+  // const user = {
+  //   correoAdmin: correoAdmin,
+  //   passwordAdmin: passwordAdmin,
+  // };
 
   function handle(event) {
     event.preventDefault();
@@ -47,8 +55,8 @@ function Login() {
                           </label>
                           <input
                             type="email"
-                            onChange={(e) => setCorreo(e.target.value)}
-                            name="correoAdmin"
+                            onChange={handleInputChange}
+                            name="correo"
                             id="form-label"
                             className="form-control p-3 "
                             placeholder="Ingrese correo electrónico"
@@ -59,8 +67,8 @@ function Login() {
                           <label className="form-label">Contraseña</label>
                           <input
                             type="password"
-                            onChange={(e) => setContrasenia(e.target.value)}
-                            name="passwordAdmin"
+                            onChange={handleInputChange}
+                            name="password"
                             id="passwordAdmin"
                             className="form-control p-3"
                             placeholder="Ingrese la contraseña"

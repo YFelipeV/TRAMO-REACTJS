@@ -1,9 +1,10 @@
 import React from "react";
+import Conductor from "./Modales/Conductor";
 
-function ItemsHabilitados() {
+function ItemsHabilitados({data}) {
   return (
     <>
-      {DatosConductorHabilitados.map(
+      {data.map(
         ({
           idConductor,
           nombreCON,
@@ -89,7 +90,7 @@ function ItemsHabilitados() {
         )
       )}
       
-      <ModalDatosConductor />
+      <Conductor />
     </>
   );
 }

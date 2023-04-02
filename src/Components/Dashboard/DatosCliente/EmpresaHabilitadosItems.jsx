@@ -1,9 +1,9 @@
 import React from "react";
 
-function EmpresaHabilitadosItems() {
+function EmpresaHabilitadosItems({data}) {
   return (
     <>
-      {DatosClientehabilitadosEmpresa.map(
+      {data.map(
         ({
           nombreEmpresa,
           nroTelefonoPJU,

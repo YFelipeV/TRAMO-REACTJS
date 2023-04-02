@@ -1,20 +1,22 @@
 import React from "react";
+import { habilitarCliente } from "../../../Data/DatosCliente";
+import Swal from "sweetalert2";
 
-function ClienteInhabilitadosItems() {
+function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
   return (
     <>
-      {DatosClienteInhabilitados.map(
+      {ClienteInhabilitado.map(
         ({
-          idPerNatural,
+          _id,
+          perfil,
           nombrePNA,
           apellidoPNA,
           nroTelefonoPNA,
           correoElectronicoPNA,
           DireccionPNA,
           calificacionPNA,
-          fotoPerfilPNA,
         }) => (
-          <tr key={idPerNatural}>
+          <tr key={_id}>
             <td>
               <p className="font-weight-bold text-xs font-weight-bold m-0 text-danger">
                 <b>Cliente Natural</b>
@@ -22,7 +24,7 @@ function ClienteInhabilitadosItems() {
 
               <div>
                 <img
-                  src={fotoPerfilPNA}
+                  src
                   alt="Profile"
                   className="rounded-circle w-75"
                 />
@@ -83,7 +85,23 @@ function ClienteInhabilitadosItems() {
                 <div className="mt-2">
                   <button
                     onClick={() =>
-                      puthabilitarDatosClienteNatural(idPerNatural)
+                      Swal.fire({
+                        icon: "question",
+                        title: "Esta seguro que desea habilitar este cliente",
+                        showDenyButton: true,
+                        denyButtonText: "No",
+                        confirmButtonText: "Si",
+                      }).then((response) => {
+                        if (response.isConfirmed) {
+                          Swal.fire({
+                            icon: "success",
+                            title: "Inhabilitado Correctamente",
+                            timer: "2000",
+                          });
+                          button: habilitarCliente(_id)
+                          
+                        }
+                      })
                     }
                     className="btn btn-primary mb-2"
                   >
@@ -95,7 +113,7 @@ function ClienteInhabilitadosItems() {
           </tr>
         )
       )}
-      <ModalDatosClienteMotivoInha />
+      {/* <ModalDatosClienteMotivoInha /> */}
     </>
   );
 }

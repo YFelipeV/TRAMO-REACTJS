@@ -9,6 +9,7 @@ import Conductores from '../Pages/Dashboard/Conductores/ConductoresDisponibles';
 
 import Historial from "../Pages/Dashboard/Historial/Historial";
 import Pqrs from "../Pages/Dashboard/Pqrs/Pqrs";
+import DatosCliente from "../Pages/Dashboard/DatosCliente/DatosCliente";
 export const AppRouter = () => {
   return (
     <>
@@ -44,7 +45,7 @@ export const AppRouter = () => {
           <Route path="solicitudes" element={<Home />} />
           {/* felipe segura */}
           <Route path="datosconductores" element={<Home />} />
-          <Route path="datoscliente" element={<Home />} />
+          <Route path="datoscliente" element={<DatosCliente />} />
           {/* felipe dulcey */}
           <Route path="historial" element={<Historial />} />
           {/* felipe segura */}

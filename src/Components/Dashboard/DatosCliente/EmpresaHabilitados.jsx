@@ -1,6 +1,7 @@
 import React from "react";
+import EmpresaHabilitadosItems from "./EmpresaHabilitadosItems";
 
-function EmpresaHabilitados() {
+function EmpresaHabilitados({ data }) {
   return (
     <>
       <div className="row">
@@ -24,7 +25,7 @@ function EmpresaHabilitados() {
                     </tr>
                   </thead>
                   <tbody>
-                    <DatosEmpresaInha />
+                    <EmpresaHabilitadosItems data={data} />
                   </tbody>
                 </table>
               </div>

@@ -1,6 +1,6 @@
-import React from "react";
+import ClienteInhabilitadosItems from "./ClienteInhabilitadosItems";
 
-function ClienteInhabilitados() {
+function ClienteInhabilitados({ClienteInhabilitado}) {
   return (
     <>
       <div className="row">
@@ -24,7 +24,7 @@ function ClienteInhabilitados() {
                     </tr>
                   </thead>
                   <tbody>
-                    <DatosClienteInhabilitadosCards />
+                    <ClienteInhabilitadosItems ClienteInhabilitado={ClienteInhabilitado} />
                   </tbody>
                 </table>
               </div>

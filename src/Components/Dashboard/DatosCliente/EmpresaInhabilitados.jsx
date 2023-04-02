@@ -1,6 +1,7 @@
 import { useEffect } from "react";
+import EmpresaHabilitadosItems from "./EmpresaHabilitadosItems";
 
-function EmpresaInhabilitados() {
+function EmpresaInhabilitados({data}) {
   useEffect(() => {
     loadDatosClientesEmpresaInhabilitados();
   }, []);
@@ -27,7 +28,7 @@ function EmpresaInhabilitados() {
                     </tr>
                   </thead>
                   <tbody>
-                    <DatosEmpresaInha />
+                    <EmpresaHabilitadosItems data={data} />
                   </tbody>
                 </table>
               </div>

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import ItemsHabilitados from "./ItemsHabilitados";
 
 function Habilitados() {
   useEffect(() => {
@@ -17,7 +18,7 @@ function Habilitados() {
             <div className="table-responsive p-0">
               <table className="table align-items-center mb-2">
                 <tbody>
-                  <DatosConduCard />
+                  <ItemsHabilitados />
                 </tbody>
               </table>
             </div>
