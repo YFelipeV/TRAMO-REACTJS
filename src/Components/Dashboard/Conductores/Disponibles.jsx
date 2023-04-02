@@ -12,10 +12,9 @@ function Disponibles() {
 
 useEffect(()=>{
 
-    async function loadConductoresDisponibles() {
+    const loadConductoresDisponibles = async ()=> {
       let response = await getConductoresDisponibles();
       setCondutorDisponible(response);
-      console.log(response);
     }
 
     loadConductoresDisponibles()

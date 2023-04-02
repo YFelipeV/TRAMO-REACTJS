@@ -4,15 +4,14 @@ import Items from "./Items";
 import Head from "./Head";
 
 function Servicio() {
-  const { ConductorServicio, setConductorServicio } = useState([]);
+  const [conductorServicio, setConductorServicio] = useState([]);
 
   const subTitulos = ["perfil", "nombre", "telefono", "calificacion", "estado"];
 
   useEffect(() => {
-    async function loadConductoresServicio() {
+    const loadConductoresServicio = async ()=> {
         let response = await getConductoresServicio();
         setConductorServicio(response);
-        console.log(response);
       }
 
     loadConductoresServicio();
@@ -38,7 +37,7 @@ function Servicio() {
                       </tr>
                     </thead>
                     <tbody>
-                      <Items data={ConductorServicio} />
+                      <Items data={conductorServicio} />
                     </tbody>
                   </table>
                 </div>

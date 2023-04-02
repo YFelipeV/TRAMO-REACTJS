@@ -2,10 +2,14 @@ import axios from 'axios';
 
     /* CONDUCTORES  DISPONIBLE*/
 export const getConductoresDisponibles = async () => {
-    const response = await axios.get(
-      "https://tramo.herokuapp.com/admin/conductoresDis");
-  
-    return response;
+   try {
+    const {data} = await axios.get(
+      "https://backend-tramo-res.vercel.app/admin/conductoresDis");
+    return data;
+
+   } catch (error) {
+    console.log(error);
+   }
   };
   
   {
@@ -13,8 +17,11 @@ export const getConductoresDisponibles = async () => {
   }
   
   export const getConductoresServicio = async () => {
-    const response = await axios.get(
-      "https://tramo.herokuapp.com/admin/conductoresEnServicio");
-  
-    return response;
+    try {
+      const {data} = await axios.get(
+        "https://backend-tramo-res.vercel.app/admin/conductoresEnServicio");
+      return data;
+    } catch (error) {
+      console.log(error);
+    }
   };
