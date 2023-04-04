@@ -1,25 +1,19 @@
 import axios from "axios";
+import Swal from "sweetalert2";
 
-export const loadEmpresaHabilitados = async () => {
+/**
+ * |===================================|
+ *! |==     DATOS CLIENTE EMPRESA    ==|
+ * |===================================|
+ */
+
+{
+  /!*Datos  cliente  Empresa Habilitados */;
+}
+export const EmpresasHabilitadas = async () => {
   try {
     const response = await axios.get(
-      "https://backend-tramo-res.vercel.app/admin/datosClientesNaturalHB"
-    );
-    return response;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-
-
-
-
-
-export const loadEmpresaInhabilitados = async () => {
-  try {
-    const response = await axios.get(
-      "https://rickandmortyapi.com/api/character"
+      "https://backend-tramo-res.vercel.app/admin/datosClientesEmpresaHB"
     );
     return response;
   } catch (error) {
@@ -28,7 +22,72 @@ export const loadEmpresaInhabilitados = async () => {
 };
 
 {
-  /* CLIENTES NATURALES*/
+  /!*Inhabilitar Empresa  */;
+}
+export const InhabilitarEmpresa = async (data) => {
+  const { _id, motivoInhabilitadoPJU } = data;
+  console.log(data);
+  try {
+    const response = await axios.put(
+      `https://backend-tramo-res.vercel.app/admin/datosClientesEmpresaHB/${_id}`,
+      { motivoInhabilitadoPJU }
+    );
+    if (response.status === 200) {
+      location.reload();
+      return response;
+    }
+  } catch (error) {
+    if (error.response.data) {
+      Swal.fire({
+        icon: "error",
+        title: response.data,
+      });
+    }
+  }
+};
+
+{
+  /!*Datos  cliente  Empresa Inhabilitados */;
+}
+export const EmpresasInhabilitadas = async () => {
+  try {
+    const response = await axios.get(
+      " https://backend-tramo-res.vercel.app/admin/datosClientesEmpresaIN"
+    );
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+};
+{
+  /!*Habilitar Empresa  */;
+}
+export const habilitarEmpresa = async (_id) => {
+  try {
+    const response = await axios.put(
+      ` https://backend-tramo-res.vercel.app/admin/datosClientesEmpresaIN/${_id}`
+    );
+    if (response.status === 200) {
+      location.reload();
+      return response;
+    }
+  } catch (error) {
+    if (error.response.data) {
+      Swal.fire({
+        icon: "error",
+        title: response.data,
+      });
+    }
+  }
+};
+/**
+ * |===================================|
+ *! |==     DATOS CLIENTES NATURAL    ==|
+ * |===================================|
+ */
+
+{
+  /!*Datos  cliente Natural  */;
 }
 export const loadClienteHabilitados = async () => {
   try {
@@ -40,9 +99,13 @@ export const loadClienteHabilitados = async () => {
     console.log(error);
   }
 };
+
+{
+  /!*Inhabilitar  cliente Natural  */;
+}
 export const InhabilitarCliente = async (data) => {
   const { _id, motivoInhabilitadoPNA } = data;
-  console.log(data);
+
   try {
     const response = await axios.put(
       `https://backend-tramo-res.vercel.app/admin/datosClientesNaturalHB/${_id}`,
@@ -54,6 +117,10 @@ export const InhabilitarCliente = async (data) => {
     console.log(error);
   }
 };
+
+{
+  /!*Datos de los clientes Inhabilitados */;
+}
 export const loadClienteInhabilitados = async () => {
   try {
     const { data } = await axios.get(
@@ -64,15 +131,26 @@ export const loadClienteInhabilitados = async () => {
     console.log(error);
   }
 };
+
+{
+  /!*Habilitar Cliente Natural */;
+}
 export const habilitarCliente = async (_id) => {
-  console.log(_id)
   try {
     const response = await axios.put(
       `https://backend-tramo-res.vercel.app/admin/datosClientesNaturalIN/${_id}`
     );
     console.log(response);
-    return response;
+    if (response.status === 200) {
+      console.log(response);
+      return response;
+    }
   } catch (error) {
-    console.log(error);
+    if (error.response.data) {
+      Swal.fire({
+        icon: "error",
+        title: response.data,
+      });
+    }
   }
 };

@@ -68,7 +68,7 @@ function ClienteHabilitadosItems({ data }) {
               </div>
             </div>
           </td>
-        
+
           <Cliente idCliente={cliente._id} />
         </tr>
       ))}

@@ -1,6 +1,7 @@
 import React from "react";
 
-function EmpresaHabilitadosItems({data}) {
+function EmpresaHabilitadosItems( data ) {
+  console.log(data)
   return (
     <>
       {data.map(
@@ -73,7 +74,7 @@ function EmpresaHabilitadosItems({data}) {
               <div className="text-center">
                 <div className="mt-5">
                   <button
-                    onClick={() => idPersonal(idPerJuridica)}
+                    // onClick={() => idPersonal(idPerJuridica)}
                     className="btn btn-secondary mb-2 "
                     data-bs-toggle="modal"
                     data-bs-target="#motivo-inhabilitacion-o"
@@ -86,7 +87,7 @@ function EmpresaHabilitadosItems({data}) {
           </tr>
         )
       )}
-      <ModalDatosClienteEmpresa />
+      {/* <ModalDatosClienteEmpresa /> */}
     </>
   );
 }

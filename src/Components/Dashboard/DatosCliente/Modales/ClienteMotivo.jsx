@@ -1,9 +1,7 @@
 import React from "react";
-import { useConductores } from "../../Context/Context";
 
-function ClienteMotivo() {
-  const { DatosCLienteNaturalId } = useConductores();
-
+function ClienteMotivo(data) {
+  console.log(data);
   return (
     <>
       <tr>
@@ -30,9 +28,7 @@ function ClienteMotivo() {
                     aria-label="Close"
                   ></button>
                 </div>
-                <div className="modal-body">
-                  {DatosCLienteNaturalId.motivoInhabilitadoPNA}
-                </div>
+                <div className="modal-body">{data.data}</div>
               </div>
             </div>
           </div>

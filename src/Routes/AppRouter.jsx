@@ -10,6 +10,7 @@ import Conductores from '../Pages/Dashboard/Conductores/ConductoresDisponibles';
 import Historial from "../Pages/Dashboard/Historial/Historial";
 import Pqrs from "../Pages/Dashboard/Pqrs/Pqrs";
 import DatosCliente from "../Pages/Dashboard/DatosCliente/DatosCliente";
+import DatosEmpresa from "../Pages/Dashboard/DatosCliente/DatosEmpresa";
 export const AppRouter = () => {
   return (
     <>
@@ -46,6 +47,7 @@ export const AppRouter = () => {
           {/* felipe segura */}
           <Route path="datosconductores" element={<Home />} />
           <Route path="datoscliente" element={<DatosCliente />} />
+          <Route path="datosclienteEmpresa" element={<DatosEmpresa />} />
           {/* felipe dulcey */}
           <Route path="historial" element={<Historial />} />
           {/* felipe segura */}

@@ -1,6 +1,8 @@
 import React from "react";
 import { habilitarCliente } from "../../../Data/DatosCliente";
 import Swal from "sweetalert2";
+import ClienteMotivo from "./Modales/ClienteMotivo";
+// import ClienteMotivo from "./Modales/ClienteMotivo";
 
 function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
   return (
@@ -15,6 +17,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
           correoElectronicoPNA,
           DireccionPNA,
           calificacionPNA,
+          estadoCLN,
         }) => (
           <tr key={_id}>
             <td>
@@ -24,7 +27,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
 
               <div>
                 <img
-                  src
+                  src={perfil.fotoPerfilPNA}
                   alt="Profile"
                   className="rounded-circle w-75"
                 />
@@ -69,10 +72,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
             </td>
             <td>
               <div className="text-center mt-4">
-                <button
-                  className="border-0  bg-white"
-                  onClick={() => loadDatosClienteNaturalId(idPerNatural)}
-                >
+                <button className="border-0  bg-white">
                   <a
                     href=""
                     className="m-0 p-0 text-danger"
@@ -98,8 +98,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                             title: "Inhabilitado Correctamente",
                             timer: "2000",
                           });
-                          button: habilitarCliente(_id)
-                          
+                          button: habilitarCliente(_id);
                         }
                       })
                     }
@@ -110,10 +109,10 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                 </div>
               </div>
             </td>
+            <ClienteMotivo data={estadoCLN.motivoInhabilitadoPNA} />
           </tr>
         )
       )}
-      {/* <ModalDatosClienteMotivoInha /> */}
     </>
   );
 }

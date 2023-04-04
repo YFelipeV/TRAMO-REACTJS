@@ -10,17 +10,13 @@ function Cliente(id) {
     motivoInhabilitadoPNA: "",
   });
 
-  // const user={
-  //     idPerNatural:id,
-  //     motivoInhabilitadoPNA:write
-  // }
   const handleChange = ({ target }) => {
     setdata({
       ...data,
       [target.name]: target.value,
     });
   };
-  console.log(data);
+
   return (
     <>
       <tr>
@@ -75,7 +71,6 @@ function Cliente(id) {
                             timer: "2000",
                           });
                           button: InhabilitarCliente(data);
-                          
                         }
                       });
                     }}

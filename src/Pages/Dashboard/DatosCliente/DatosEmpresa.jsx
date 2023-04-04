@@ -1,19 +1,30 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import EmpresaHabilitados from "../../../Components/Dashboard/DatosCliente/EmpresaHabilitados";
 import EmpresaInhabilitados from "../../../Components/Dashboard/DatosCliente/EmpresaInhabilitados";
+import { EmpresasHabilitadas, EmpresasInhabilitadas } from "../../../Data/DatosCliente";
 
 function DatosEmpresa() {
   const navigate = useNavigate();
   const [data, setdata] = useState([]);
+  const [inhabilitados, setInhabilitados] = useState([]);
 
   useEffect(() => {
+
     const loadEmpresaHabilitados = async () => {
-      const response = await get;
+      const response = await EmpresasHabilitadas();
       setdata(response);
     };
+
+    const loadEmpresaInhabilitados = async () => {
+      const response = await EmpresasInhabilitadas();
+      setInhabilitados(response);
+    };
+
+    loadEmpresaInhabilitados();
     loadEmpresaHabilitados();
   }, []);
+  console.log(data)
 
   return (
     <>
@@ -59,7 +70,7 @@ function DatosEmpresa() {
                       </tr>
                     </thead>
                     <tbody>
-                      <EmpresaHabilitados />
+                      <EmpresaHabilitados data={data} />
                     </tbody>
                   </table>
                 </div>
@@ -67,7 +78,7 @@ function DatosEmpresa() {
             </div>
           </div>
         </div>
-        <EmpresaInhabilitados />
+        {/* <EmpresaInhabilitados  data={inhabilitados}/> */}
       </main>
     </>
   );
