@@ -1,8 +1,7 @@
 import React from "react";
-import { habilitarCliente } from "../../../Data/DatosCliente";
+import { habilitarCliente } from "../../../../Data/DatosCliente";
 import Swal from "sweetalert2";
-import ClienteMotivo from "./Modales/ClienteMotivo";
-// import ClienteMotivo from "./Modales/ClienteMotivo";
+import ClienteMotivo from "../Modales/ClienteMotivo";
 
 function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
   return (
@@ -29,7 +28,8 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                 <img
                   src={perfil.fotoPerfilPNA}
                   alt="Profile"
-                  className="rounded-circle w-75"
+                  style={{ width: "65%" }}
+                  className="rounded-circle "
                 />
               </div>
             </td>

@@ -1,12 +1,12 @@
 import React from "react";
-import Cliente from "./Modales/Cliente";
+import Cliente from "../Modales/Cliente";
 
 function ClienteHabilitadosItems({ data }) {
   return (
     <>
       {data.map((cliente) => (
-        <tr key={cliente._id}>
-          <td>
+        <tr  key={cliente._id} >
+          <td  >
             <p className="font-weight-bold text-xs font-weight-bold m-0 text-danger">
               <b>Cliente Natural</b>
             </p>
@@ -15,7 +15,8 @@ function ClienteHabilitadosItems({ data }) {
               <img
                 src={cliente.perfil.fotoPerfilPNA}
                 alt="Profile"
-                className="rounded-circle w-75"
+                style={{width:"65%"}}
+                className="rounded-circle "
               />
             </div>
           </td>
