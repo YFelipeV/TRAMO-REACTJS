@@ -1,7 +1,7 @@
-import { useConductores } from "../../Context/Context";
 
-function MotivoInhabilitado() {
-  const { DatosConductorId } = useConductores();
+
+function MotivoInhabilitado({motivoInhabilitadoCON}) {
+  
 
   return (
     <tr>
@@ -30,7 +30,7 @@ function MotivoInhabilitado() {
               </div>
               <div className="modal-body">
                 {/* {data.motivoRechazoCON} */}
-                {DatosConductorId.motivoInhabilitadoCON}
+                {motivoInhabilitadoCON}
               </div>
             </div>
           </div>

@@ -1,12 +1,13 @@
 import React from "react";
-import Conductor from "./Modales/Conductor";
 
-function ItemsHabilitados({data}) {
+import Minhabilitar from "./Modales/Minhabilitar";
+
+function ItemsHabilitados({ habilitados }) {
   return (
     <>
-      {data.map(
+      {habilitados.map(
         ({
-          idConductor,
+          _id,
           nombreCON,
           apellidoCON,
           nroTelefonoCON,
@@ -15,7 +16,7 @@ function ItemsHabilitados({data}) {
           DireccionResidenciaCON,
           fotoperfilCON,
         }) => (
-          <tr key={idConductor}>
+          <tr key={_id}>
             <td>
               <div>
                 <img
@@ -72,10 +73,7 @@ function ItemsHabilitados({data}) {
                 >
                   Mostrar mas datos
                 </a>
-                <button
-                  className="mt-2 border-0 bg-white"
-                  onClick={() => loadDatosConductorHabilitadosId(idConductor)}
-                >
+                <button className="mt-2 border-0 bg-white">
                   <div
                     className="btn btn-secondary mb-2 px-3 "
                     data-bs-toggle="modal"
@@ -86,11 +84,10 @@ function ItemsHabilitados({data}) {
                 </button>
               </div>
             </td>
+            <Minhabilitar _id={_id} />
           </tr>
         )
       )}
-      
-      <Conductor />
     </>
   );
 }

@@ -2,16 +2,20 @@ import axios from "axios";
 
 export const loadCondutoresHabilitados = async () => {
   try {
-    const response = await axios.get("felipe");
-    return response;
+    const {data} = await axios.get(
+      "https://backend-tramo-res.vercel.app/admin/conductoresHabilitados"
+    );
+    return data;
   } catch (error) {
     console.log(error);
   }
 };
 export const loadCondutoresInhabilitados = async () => {
   try {
-    const response = await axios.get("felipe");
-    return response;
+    const {data} = await axios.get(
+      "https://backend-tramo-res.vercel.app/admin/conductoresInhabilitados"
+    );
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -19,21 +23,40 @@ export const loadCondutoresInhabilitados = async () => {
 
 export const InhabilitarConductor = async (data) => {
   try {
+    const { _id, motivoInhabilitadoPNA } = data;
     const response = await axios.put(
-      `https://backend-tramo-res.vercel.app/admin/datosClientesNaturalHB/${data.id}`,
-      data.motivoInhabilitadoPNA
+      `https://backend-tramo-res.vercel.app/admin/inhabilitarConductor/${_id}`,
+      { motivoInhabilitadoPNA }
     );
-    console.log(response)
-    return response;
+
+    if (response.status === 200) {
+      location.reload();
+      return response;
+    }
   } catch (error) {
-    console.log(error);
+    if (error.response.data) {
+      Swal.fire({
+        icon: "error",
+        title: response.data,
+      });
+    }
   }
 };
-export const HabilitarConductor = async (data) => {
+export const HabilitarConductor = async (_id) => {
   try {
-    const response = await axios.put("felipe", data);
-    return response;
+    const response = await axios.put(
+      `https://backend-tramo-res.vercel.app/admin/habilitarConductor/${_id}`
+    );
+    if (response.status === 200) {
+      location.reload();
+      return response;
+    }
   } catch (error) {
-    console.log(error);
+    if (error.response.data) {
+      Swal.fire({
+        icon: "error",
+        title: response.data,
+      });
+    }
   }
 };

@@ -1,10 +1,9 @@
-import { useEffect } from "react";
+
 import ItemsHabilitados from "./ItemsHabilitados";
 
-function Habilitados() {
-  useEffect(() => {
-    
-  }, []);
+function Habilitados({habilitados}) {
+  
+  
   return (
     <div className="row">
       <div className="col-12">
@@ -18,7 +17,7 @@ function Habilitados() {
             <div className="table-responsive p-0">
               <table className="table align-items-center mb-2">
                 <tbody>
-                  <ItemsHabilitados />
+               <ItemsHabilitados habilitados={habilitados} /> 
                 </tbody>
               </table>
             </div>
