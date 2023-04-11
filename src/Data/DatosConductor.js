@@ -1,8 +1,8 @@
 import axios from "axios";
-
+import Swal from "sweetalert2";
 export const loadCondutoresHabilitados = async () => {
   try {
-    const {data} = await axios.get(
+    const { data } = await axios.get(
       "https://backend-tramo-res.vercel.app/admin/conductoresHabilitados"
     );
     return data;
@@ -12,7 +12,7 @@ export const loadCondutoresHabilitados = async () => {
 };
 export const loadCondutoresInhabilitados = async () => {
   try {
-    const {data} = await axios.get(
+    const { data } = await axios.get(
       "https://backend-tramo-res.vercel.app/admin/conductoresInhabilitados"
     );
     return data;
@@ -23,10 +23,11 @@ export const loadCondutoresInhabilitados = async () => {
 
 export const InhabilitarConductor = async (data) => {
   try {
-    const { _id, motivoInhabilitadoPNA } = data;
+    const { _id, motivoInhabilitadoCON } = data;
+    
     const response = await axios.put(
       `https://backend-tramo-res.vercel.app/admin/inhabilitarConductor/${_id}`,
-      { motivoInhabilitadoPNA }
+      { motivoInhabilitadoCON }
     );
 
     if (response.status === 200) {

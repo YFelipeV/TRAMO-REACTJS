@@ -1,7 +1,7 @@
 import React from "react";
 
 import Minhabilitar from "./Modales/Minhabilitar";
-
+import Swal from 'sweetalert2'
 function ItemsHabilitados({ habilitados }) {
   return (
     <>
