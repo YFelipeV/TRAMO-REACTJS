@@ -1,8 +1,14 @@
 import React from 'react'
+import moduleName from '../../../Components/Dashboard/Solicitudes/Pendientes';
+import moduleName from '../../../Components/Dashboard/Solicitudes/Rechazadas';
+
 
 function SolicitudesPendientes() {
   return (
-    <div>SolicitudesPendientes</div>
+    <main id="main" className="main">
+        <SolicitudesPendientes />
+       <SolicitudesRechazadas />
+      </main>
   )
 }
 
