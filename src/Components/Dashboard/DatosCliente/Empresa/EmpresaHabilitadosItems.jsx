@@ -1,7 +1,7 @@
 import React from "react";
+import Empresa from "../Modales/Empresa";
 
-function EmpresaHabilitadosItems( data ) {
-  console.log(data)
+function EmpresaHabilitadosItems({ data }) {
   return (
     <>
       {data.map(
@@ -13,9 +13,9 @@ function EmpresaHabilitadosItems( data ) {
           calificacionPJU,
           NITempresa,
           fotoPerfilPNA,
-          idPerJuridica,
+          _id,
         }) => (
-          <tr key={idPerJuridica}>
+          <tr key={_id}>
             <td>
               <p className="font-weight-bold text-xs font-weight-bold m-0 text-danger">
                 <b>Cliente Empresa</b>
@@ -61,21 +61,22 @@ function EmpresaHabilitadosItems( data ) {
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Calificacion {calificacionPJU}</b>
               </p>
-              {/* <p className="font-weight-bold text-xs font-weight-bold m-0">
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
               ⭐⭐⭐⭐⭐
-            </p> */}
+            </p> 
 
-              <p>
-                nit
-                {NITempresa}
+              <p className="fw-bold">
+              Nit:
+                
               </p>
+              <p className="">{NITempresa}</p>
             </td>
             <td>
               <div className="text-center">
-                <div className="mt-5">
+                <div className="mt-4">
                   <button
                     // onClick={() => idPersonal(idPerJuridica)}
-                    className="btn btn-secondary mb-2 "
+                    className="btn btn-danger mb-2  "
                     data-bs-toggle="modal"
                     data-bs-target="#motivo-inhabilitacion-o"
                   >
@@ -84,10 +85,11 @@ function EmpresaHabilitadosItems( data ) {
                 </div>
               </div>
             </td>
+            <Empresa _id={_id}/>  
           </tr>
         )
       )}
-      {/* <ModalDatosClienteEmpresa /> */}
+      
     </>
   );
 }

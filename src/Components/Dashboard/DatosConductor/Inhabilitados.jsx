@@ -1,15 +1,11 @@
-import React from "react";
-import DatosConInCards from "./DatosConInCards";
-import { useEffect } from "react";
-import { useConductores } from "../../Context/Context";
+
+
 import ItemsInhabilitados from "./ItemsInhabilitados";
 
-function Inhabilitados() {
-  const { loadDatosConductorInhabilitados } = useConductores();
+function Inhabilitados({Inhabilitado}) {
+  
 
-  useEffect(() => {
-    loadDatosConductorInhabilitados();
-  }, []);
+
 
   return (
     <>
@@ -26,7 +22,7 @@ function Inhabilitados() {
             <div className="table-responsive p-0">
               <table className="table align-items-center mb-2">
                 <tbody>
-                  <ItemsInhabilitados />
+                <ItemsInhabilitados  Inhabilitado={Inhabilitado}/> 
                 </tbody>
               </table>
             </div>

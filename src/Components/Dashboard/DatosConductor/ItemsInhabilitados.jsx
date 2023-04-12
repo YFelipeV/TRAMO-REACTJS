@@ -1,12 +1,13 @@
 import React from "react";
 import MotivoInhabilitado from "./Modales/MotivoInhabilitado";
+import { HabilitarConductor } from "../../../Data/DatosConductor";
 
-function ItemsInhabilitados() {
+function ItemsInhabilitados({ Inhabilitado }) {
   return (
     <>
-      {DatosConductorInhabilitados.map(
+      {Inhabilitado.map(
         ({
-          idConductor,
+          _id,
           nombreCON,
           apellidoCON,
           nroTelefonoCON,
@@ -15,7 +16,7 @@ function ItemsInhabilitados() {
           DireccionResidenciaCON,
           fotoperfilCON,
         }) => (
-          <tr key={idConductor}>
+          <tr key={_id}>
             <td>
               <div>
                 <img
@@ -77,7 +78,6 @@ function ItemsInhabilitados() {
                   className="m-0 p-0 text-danger border-0 bg-white"
                   data-bs-toggle="modal"
                   data-bs-target="#motivo-rechazo"
-                  onClick={() => loadDatosConductorId(idConductor)}
                 >
                   Ver motivo inhabilitacion
                 </button>
@@ -98,7 +98,7 @@ function ItemsInhabilitados() {
                             icon: "success",
                             title: "Habilitado Correctamente",
                           });
-                          button: putHabilitarDatosConductor(idConductor);
+                          button: HabilitarConductor(_id);
                         }
                       });
                     }}
@@ -108,10 +108,11 @@ function ItemsInhabilitados() {
                 </div>
               </div>
             </td>
+            <MotivoInhabilitado  motivoInhabilitadoCON={estadoPJU.motivoInhabilitadoCON}/>
           </tr>
         )
       )}
-      <MotivoInhabilitado />
+     
     </>
   );
 }

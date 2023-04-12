@@ -1,9 +1,11 @@
-import React from 'react'
+import { habilitarEmpresa } from "../../../../Data/DatosCliente";
+import EmpresaMotivo from "../Modales/EmpresaMotivo";
+import Swal from "sweetalert2";
 
-function EmpresaInhabilitadosItems() {
+function EmpresaInhabilitadosItems({ inhabilitados }) {
   return (
     <>
-    {DatosclienteInhabilitadosEmpresa.map(
+      {inhabilitados.map(
         ({
           nombreEmpresa,
           nroTelefonoPJU,
@@ -11,10 +13,11 @@ function EmpresaInhabilitadosItems() {
           DireccionEmpresa,
           calificacionPJU,
           NITempresa,
+          estadoPJU,
           fotoPerfilPNA,
-          idPerJuridica
+          _id,
         }) => (
-          <tr key={idPerJuridica}>
+          <tr key={_id}>
             <td>
               <p className="font-weight-bold text-xs font-weight-bold m-0 text-danger">
                 <b>Cliente Empresa</b>
@@ -69,33 +72,48 @@ function EmpresaInhabilitadosItems() {
               </p>
             </td>
             <td>
-            <div className="text-center mt-4">
-                <button className="border-0 bg-white"
-                onClick={()=>loadDatosClienteEmpresalId(idPerJuridica)}>
-                 
-                <a
-                
-                href=""
-                className="m-0 p-0 text-danger"
-                data-bs-toggle="modal"
-                data-bs-target="#motivo-inhabilitacion-empresa"
-                >
-                  Ver motivo inhabilitacion
-                </a>
-                  </button>
+              <div className="text-center mt-4">
+                <button className="border-0 bg-white">
+                  <a
+                    href=""
+                    className="m-0 p-0 text-danger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#motivo-inhabilitacion-empresa"
+                  >
+                    Ver motivo inhabilitacion
+                  </a>
+                </button>
                 <div className="mt-2">
-                  <button onClick={()=>putHabilitarDatosClienteEmpresa(idPerJuridica)} className="btn btn-primary mb-2">Habilitar</button>
+                  <button
+                    className="btn btn-primary mb-2"
+                    onClick={() => {
+                      Swal.fire({
+                        title: `¿Está seguro de habilitar el cliente ${nombreEmpresa} ? `,
+
+                        icon: "warning",
+                        showDenyButton: true,
+                        denyButtonText: "Cancelar",
+                        confirmButtonText: "Si, Habilitar!",
+                      }).then((response) => {
+                        if (response.isConfirmed) {
+                          habilitarEmpresa(_id);
+                        }
+                      });
+                    }}
+                  >
+                    Habilitar
+                  </button>
                 </div>
               </div>
             </td>
-          
+            <EmpresaMotivo
+              motivoInhabilitadoPJU={estadoPJU.motivoInhabilitadoPJU}
+            />
           </tr>
         )
       )}
-      <ModalDatosClienteEmpresaMotivo/>
-      
     </>
-  )
+  );
 }
 
-export default EmpresaInhabilitadosItems
+export default EmpresaInhabilitadosItems;

@@ -12,10 +12,11 @@ import Swal from "sweetalert2";
 }
 export const EmpresasHabilitadas = async () => {
   try {
-    const response = await axios.get(
+    const { data } = await axios.get(
       "https://backend-tramo-res.vercel.app/admin/datosClientesEmpresaHB"
     );
-    return response;
+
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -51,10 +52,10 @@ export const InhabilitarEmpresa = async (data) => {
 }
 export const EmpresasInhabilitadas = async () => {
   try {
-    const response = await axios.get(
+    const { data } = await axios.get(
       " https://backend-tramo-res.vercel.app/admin/datosClientesEmpresaIN"
     );
-    return response;
+    return data;
   } catch (error) {
     console.log(error);
   }
@@ -94,6 +95,7 @@ export const loadClienteHabilitados = async () => {
     const { data } = await axios.get(
       "https://backend-tramo-res.vercel.app/admin/datosClientesNaturalHB"
     );
+
     return data;
   } catch (error) {
     console.log(error);
@@ -111,10 +113,18 @@ export const InhabilitarCliente = async (data) => {
       `https://backend-tramo-res.vercel.app/admin/datosClientesNaturalHB/${_id}`,
       { motivoInhabilitadoPNA }
     );
-    console.log(response);
-    return response;
+
+    if (response.status === 200) {
+      location.reload();
+      return response;
+    }
   } catch (error) {
-    console.log(error);
+    if (error.response.data) {
+      Swal.fire({
+        icon: "error",
+        title: response.data,
+      });
+    }
   }
 };
 
@@ -142,7 +152,7 @@ export const habilitarCliente = async (_id) => {
     );
     console.log(response);
     if (response.status === 200) {
-      console.log(response);
+      location.reload();
       return response;
     }
   } catch (error) {

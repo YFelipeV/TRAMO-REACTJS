@@ -1,8 +1,8 @@
-import { useEffect } from "react";
-import EmpresaHabilitadosItems from "./EmpresaHabilitadosItems";
+import EmpresaInhabilitadosItems from "./EmpresaInhabilitadosItems";
 
 function EmpresaInhabilitados({inhabilitados}) {
-  
+
+
   return (
     <>
       <div className="row">
@@ -26,7 +26,7 @@ function EmpresaInhabilitados({inhabilitados}) {
                     </tr>
                   </thead>
                   <tbody>
-                    <EmpresaHabilitadosItems data={inhabilitados} />
+                 <EmpresaInhabilitadosItems inhabilitados={inhabilitados} /> 
                   </tbody>
                 </table>
               </div>

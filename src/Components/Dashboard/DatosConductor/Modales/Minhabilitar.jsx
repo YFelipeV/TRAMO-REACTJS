@@ -1,12 +1,11 @@
-import { useState } from "react";
-
+import React, { useState } from "react";
+import { InhabilitarConductor } from "../../../../Data/DatosConductor";
 import Swal from "sweetalert2";
-import { InhabilitarEmpresa } from "../../../../Data/DatosCliente";
 
-function Empresa({ _id }) {
+function Minhabilitartar({ _id }) {
   const [data, setdata] = useState({
     _id: _id,
-    motivoInhabilitadoPJU: "",
+    motivoInhabilitadoCON: "",
   });
 
   const handleChange = ({ target }) => {
@@ -18,8 +17,8 @@ function Empresa({ _id }) {
   return (
     <td>
       <div
-        className="modal "
-        id="motivo-inhabilitacion-o"
+        className="modal fade"
+        id="escribir-motivo-inhabilitacion"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
         tabIndex={-1}
@@ -42,7 +41,8 @@ function Empresa({ _id }) {
               <form>
                 <textarea
                   className="w-100"
-                  name="motivoInhabilitadoPJU"
+                  required
+                  name="motivoInhabilitadoCON"
                   rows="10"
                   onChange={handleChange}
                 ></textarea>
@@ -65,7 +65,7 @@ function Empresa({ _id }) {
                         title: "Inhabilitado Correctamente",
                         timer: "2000",
                       });
-                      button: InhabilitarEmpresa(data);
+                      button: InhabilitarConductor(data);
                     }
                   });
                 }}
@@ -81,4 +81,4 @@ function Empresa({ _id }) {
   );
 }
 
-export default Empresa;
+export default Minhabilitartar;

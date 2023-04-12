@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import ClienteHabilitadosItems from "./ClienteHabilitadosItems";
 
 function ClienteHabilitados({ data }) {
-  
   return (
     <>
       <div className="row">

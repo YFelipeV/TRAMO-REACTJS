@@ -1,10 +1,5 @@
-
-import { useConductores } from "../../Context/Context";
-function EmpresaMotivo() {
-    const {DatosClienteEmpresaId } = useConductores();
-    
+function EmpresaMotivo({ motivoInhabilitadoPJU }) {
   return (
-    <>
     <tr>
       <td>
         <div
@@ -29,16 +24,13 @@ function EmpresaMotivo() {
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">
-                {DatosClienteEmpresaId.motivoInhabilitadoPJU}
-              </div>
+              <div className="modal-body">{motivoInhabilitadoPJU}</div>
             </div>
           </div>
         </div>
       </td>
     </tr>
-    </>
-  )
+  );
 }
 
 export default EmpresaMotivo;
