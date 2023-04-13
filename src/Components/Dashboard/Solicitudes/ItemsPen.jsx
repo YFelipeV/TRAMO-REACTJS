@@ -1,33 +1,19 @@
 import React from 'react'
-
+import Swal from 'sweetalert2';
+import { updateSolicitudesPendientes } from '../../../Data/Solicitudes';
+import MotivoRechazo from './Modales/MotivoRechazo';
 function ItemsPen({SolicitudesPendientes}) {
-
+    console.log(SolicitudesPendientes);
   return (
     <>
-      {
-       
-    
-      SolicitudesPendientes.map(
-        ({
-          idConductor,
-          nombreCON,
-          apellidoCON,
-          nroTelefonoCON,
-          nroDocumentoCON,
-          correoElectronicoCON,
-          DireccionResidenciaCON,
-          fotoperfilCON
-        }) => (
-          
-            <tr key={idConductor}>
+      {  SolicitudesPendientes.map(
+        ({conductor}) => (
+          <>
+            <tr key={conductor._id}>
               <td>
                 <div className="d-flex justify-content-center aling-items-center ">
-                  <img
-                    src={fotoperfilCON}
-                    alt=""
-                    className="rounded-circle fotoperfil  "
-                    style={{maxWidth:"90px"}}
-                  ></img>
+                    <img src={conductor.perfil.fotoperfilCON}   style={{maxWidth:"90px"}}  className="rounded-circle fotoperfil  " alt="" />
+                  
                 </div>
               </td>
               <td className="text-center align-middle text-sm">
@@ -35,13 +21,13 @@ function ItemsPen({SolicitudesPendientes}) {
                   <b>Nombre</b>
                 </p>
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
-                  {nombreCON} {apellidoCON}
+                  {conductor.nombreCON} {conductor.apellidoCON}
                 </p>
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
                   <b>N° Telefono</b>
                 </p>
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
-                  {nroTelefonoCON}
+                  {conductor.nroTelefonoCON}
                 </p>
               </td>
               <td className="text-center align-middle text-sm">
@@ -49,13 +35,13 @@ function ItemsPen({SolicitudesPendientes}) {
                   <b>Cedula</b>
                 </p>
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
-                  {nroDocumentoCON}
+                  {conductor.nroDocumentoCON}
                 </p>
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
                   <b>Correo</b>
                 </p>
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
-                  {correoElectronicoCON}
+                  {conductor.correoElectronicoCON}
                 </p>
               </td>
               <td className="text-center align-middle">
@@ -63,7 +49,7 @@ function ItemsPen({SolicitudesPendientes}) {
                   <b>Direccion de residencia</b>
                 </p>
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
-                  {DireccionResidenciaCON}
+                  {conductor.DireccionResidenciaCON}
                 </p>
               </td>
               <td>
@@ -83,7 +69,7 @@ function ItemsPen({SolicitudesPendientes}) {
                         Swal.fire({
                           title: "¿Seguro que desea Aceptar la solicitud?",
                           icon: "question",
-                          html: `<p>${nombreCON} ${apellidoCON}</p>`,
+                          html: `<p>${conductor.nombreCON} ${conductor.apellidoCON}</p>`,
                           showDenyButton: true,
                           denyButtonText: "No",
                           confirmButtonText: "Si",
@@ -93,7 +79,7 @@ function ItemsPen({SolicitudesPendientes}) {
                               icon: "success",
                               title: "Habilitado Correctamente",
                             });
-                            // button: updateSolicitudesPendientes(idConductor);
+                            button: updateSolicitudesPendientes(conductor._id);
                           }
                         });
                       }}
@@ -116,10 +102,12 @@ function ItemsPen({SolicitudesPendientes}) {
                 </div>
               </td>
             </tr>
-          
+            <tr>
+            <MotivoRechazo _id={conductor._id}/>
+            </tr>
+        </>
         )
       )}
-      {/* <ModalSolicitudesRechazo/> */}
     </>
   )
 }

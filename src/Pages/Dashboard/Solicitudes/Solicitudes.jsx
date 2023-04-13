@@ -1,16 +1,16 @@
 import React from 'react'
 import Pendientes from '../../../Components/Dashboard/Solicitudes/Pendientes';
-// import SolicitudesRechazadas from '../../../Components/Dashboard/Solicitudes/Rechazadas';
+import SolicitudesRechazadas from '../../../Components/Dashboard/Solicitudes/Rechazadas';
 
 
 function Solicitudes() {
-  
+
   
   return (
     <>
     <main id="main" className="main">
         <Pendientes />
-       {/* <SolicitudesRechazadas /> */}
+       <SolicitudesRechazadas />
       </main>
     </>
   )
