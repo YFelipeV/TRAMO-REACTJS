@@ -1,6 +1,6 @@
 import Sidebar from "./Sidebar";
 import logo from "../../../assets/icons/horizontal.jpg";
-import "../../../css/styleAdmin.css"
+import "../../../css/styleAdmin.css";
 import profile from "../../../assets/icons/profile.jpg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -18,7 +18,7 @@ function Navbar() {
     <>
       <header
         id="header"
-        className="header fixed-top d-flex align-items-center"
+        className="header fixed-top d-flex align-items-center "
       >
         <div className="d-flex align-items-center justify-content-between">
           <Link to="/dashboard" className="me-3">
@@ -69,7 +69,6 @@ function Navbar() {
         </nav>
       </header>
       <Sidebar />
-   
     </>
   );
 }

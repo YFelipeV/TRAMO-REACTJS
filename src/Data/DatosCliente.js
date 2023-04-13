@@ -105,12 +105,14 @@ export const loadClienteHabilitados = async () => {
 {
   /!*Inhabilitar  cliente Natural  */;
 }
-export const InhabilitarCliente = async (data) => {
-  const { _id, motivoInhabilitadoPNA } = data;
+export const InhabilitarCliente = async (motivoInhabilitadoPNA,getid) => {
+  
+ 
+ 
 
   try {
     const response = await axios.put(
-      `https://backend-tramo-res.vercel.app/admin/datosClientesNaturalHB/${_id}`,
+      `https://backend-tramo-res.vercel.app/admin/datosClientesNaturalHB/${getid}`,
       { motivoInhabilitadoPNA }
     );
 

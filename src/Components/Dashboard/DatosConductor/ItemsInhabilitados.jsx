@@ -1,26 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 import MotivoInhabilitado from "./Modales/MotivoInhabilitado";
-import { HabilitarConductor } from "../../../Data/DatosConductor";
+import {
+  HabilitarConductor,
+  loadCondutoresInhabilitado,
+} from "../../../Data/DatosConductor";
+import MasDatosInhabilitado from "./Modales/MasDatosInhabilitado";
 
 function ItemsInhabilitados({ Inhabilitado }) {
+  const [data, setdata] = useState([]);
+  const [motivo, setMotivo] = useState("");
+
+  const handleOnsumbit = async (id) => {
+    const response = await loadCondutoresInhabilitado(id);
+    setdata(response);
+  };
+  const handleMotivo = (motivoInhabilitadoCON) => {
+    setMotivo(motivoInhabilitadoCON);
+  };
+  console.log(Inhabilitado);
   return (
     <>
-      {Inhabilitado.map(
-        ({
-          _id,
-          nombreCON,
-          apellidoCON,
-          nroTelefonoCON,
-          nroDocumentoCON,
-          correoElectronicoCON,
-          DireccionResidenciaCON,
-          fotoperfilCON,
-        }) => (
-          <tr key={_id}>
+      {Inhabilitado.map(({ conductor }) => (
+        <>
+          <tr key={conductor._id}>
             <td>
               <div>
                 <img
-                  src={fotoperfilCON}
+                  src={conductor.perfil.fotoperfilCON}
                   className="rounded-circle w-75"
                   alt=""
                   style={{ maxWidth: "110px" }}
@@ -32,13 +39,13 @@ function ItemsInhabilitados({ Inhabilitado }) {
                 <b>Nombre</b>
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
-                {nombreCON} {apellidoCON}
+                {conductor.nombreCON} {conductor.apellidoCON}
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>N° Telefono</b>
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
-                {nroTelefonoCON}
+                {conductor.nroTelefonoCON}
               </p>
             </td>
             <td className="text-center align-middle text-sm">
@@ -46,13 +53,13 @@ function ItemsInhabilitados({ Inhabilitado }) {
                 <b>Cedula</b>
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
-                {nroDocumentoCON}
+                {conductor.nroDocumentoCON}
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Correo</b>
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
-                {correoElectronicoCON}
+                {conductor.correoElectronicoCON}
               </p>
             </td>
             <td className="text-center align-middle">
@@ -60,7 +67,7 @@ function ItemsInhabilitados({ Inhabilitado }) {
                 <b>Direccion de residencia</b>
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
-                {DireccionResidenciaCON} 78N - Popayan Cauca
+                {conductor.DireccionResidenciaCON} 78N - Popayan Cauca
               </p>
             </td>
             <td>
@@ -69,15 +76,17 @@ function ItemsInhabilitados({ Inhabilitado }) {
                   href=""
                   className="m-0 p-0 text-primary"
                   data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
+                  data-bs-target="#inhabilitado"
+                  onClick={() => handleOnsumbit(conductor._id)}
                 >
                   Mostrar mas datos
                 </a>
                 <br />
                 <button
-                  className="m-0 p-0 text-danger border-0 bg-white"
+                  className="m-0 p-0 text-primary bg-white border-0 mr-2  "
                   data-bs-toggle="modal"
                   data-bs-target="#motivo-rechazo"
+                  onClick={() => handleMotivo(conductor.motivoInhabilitadoCON)}
                 >
                   Ver motivo inhabilitacion
                 </button>
@@ -88,7 +97,7 @@ function ItemsInhabilitados({ Inhabilitado }) {
                       Swal.fire({
                         title: "¿Seguro que desea habilitar el Conductor?",
                         icon: "question",
-                        html: `<p>${nombreCON} ${apellidoCON}</p>`,
+                        html: `<p>${conductor.nombreCON} ${conductor.apellidoCON}</p>`,
                         showDenyButton: true,
                         denyButtonText: "No",
                         confirmButtonText: "Si",
@@ -98,7 +107,7 @@ function ItemsInhabilitados({ Inhabilitado }) {
                             icon: "success",
                             title: "Habilitado Correctamente",
                           });
-                          button: HabilitarConductor(_id);
+                          button: HabilitarConductor(conductor._id);
                         }
                       });
                     }}
@@ -108,11 +117,11 @@ function ItemsInhabilitados({ Inhabilitado }) {
                 </div>
               </div>
             </td>
-            <MotivoInhabilitado  motivoInhabilitadoCON={estadoPJU.motivoInhabilitadoCON}/>
           </tr>
-        )
-      )}
-     
+        </>
+      ))}
+      <MotivoInhabilitado motivo={motivo} />
+      <MasDatosInhabilitado data={data} />
     </>
   );
 }

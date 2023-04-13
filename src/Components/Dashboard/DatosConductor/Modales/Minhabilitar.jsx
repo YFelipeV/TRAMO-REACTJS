@@ -3,6 +3,7 @@ import { InhabilitarConductor } from "../../../../Data/DatosConductor";
 import Swal from "sweetalert2";
 
 function Minhabilitartar({ _id }) {
+  console.log(_id)
   const [data, setdata] = useState({
     _id: _id,
     motivoInhabilitadoCON: "",

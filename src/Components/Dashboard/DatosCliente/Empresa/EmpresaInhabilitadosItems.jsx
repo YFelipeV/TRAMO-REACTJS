@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { habilitarEmpresa } from "../../../../Data/DatosCliente";
 import EmpresaMotivo from "../Modales/EmpresaMotivo";
 import Swal from "sweetalert2";
 
 function EmpresaInhabilitadosItems({ inhabilitados }) {
+  const [motivo, setmotivo] = useState("");
   return (
     <>
       {inhabilitados.map(
@@ -12,25 +14,13 @@ function EmpresaInhabilitadosItems({ inhabilitados }) {
           correoElectronicoPJU,
           DireccionEmpresa,
           calificacionPJU,
+          nomRepresentanteLegal,
           NITempresa,
+          razonSocialEmpresa,
           estadoPJU,
-          fotoPerfilPNA,
           _id,
         }) => (
           <tr key={_id}>
-            <td>
-              <p className="font-weight-bold text-xs font-weight-bold m-0 text-danger">
-                <b>Cliente Empresa</b>
-              </p>
-
-              <div>
-                <img
-                  src={fotoPerfilPNA}
-                  alt="Profile"
-                  className="rounded-circle w-75"
-                />
-              </div>
-            </td>
             <td className="text-center align-middle text-sm">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Nombre Empresa</b>
@@ -66,22 +56,32 @@ function EmpresaInhabilitadosItems({ inhabilitados }) {
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 ⭐⭐⭐⭐⭐
               </p>
-              <p>
-                nit
-                {NITempresa}
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                <b>Nit </b>
               </p>
+              <p className="">{NITempresa}</p>
+            </td>
+            <td className="align-middle">
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                <b>Razon Social </b>
+              </p>
+              <p>{razonSocialEmpresa}</p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                <b>Representante Legal </b>
+              </p>
+              <p>{nomRepresentanteLegal}</p>
             </td>
             <td>
               <div className="text-center mt-4">
                 <button className="border-0 bg-white">
-                  <a
-                    href=""
-                    className="m-0 p-0 text-danger"
+                  <button
+                    className="m-0 p-0 text-danger bg-white border-0"
                     data-bs-toggle="modal"
                     data-bs-target="#motivo-inhabilitacion-empresa"
+                    onClick={() => setmotivo(estadoPJU.motivoInhabilitadoPJU)}
                   >
                     Ver motivo inhabilitacion
-                  </a>
+                  </button>
                 </button>
                 <div className="mt-2">
                   <button
@@ -106,12 +106,10 @@ function EmpresaInhabilitadosItems({ inhabilitados }) {
                 </div>
               </div>
             </td>
-            <EmpresaMotivo
-              motivoInhabilitadoPJU={estadoPJU.motivoInhabilitadoPJU}
-            />
           </tr>
         )
       )}
+      <EmpresaMotivo motivo={motivo} />
     </>
   );
 }

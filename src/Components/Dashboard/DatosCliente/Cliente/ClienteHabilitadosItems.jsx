@@ -1,78 +1,90 @@
-import React from "react";
+import React, { useState } from "react";
 import Cliente from "../Modales/Cliente";
 
 function ClienteHabilitadosItems({ data }) {
+  const [getid, setid] = useState(0);
+  const handleId = (id) => {
+    setid(id);
+  };
+  console.log(getid)
   return (
     <>
       {data.map((cliente) => (
-        <tr  key={cliente._id} >
-          <td  >
-            <p className="font-weight-bold text-xs font-weight-bold m-0 text-danger">
-              <b>Cliente Natural</b>
-            </p>
-
-            <div>
+        <>
+          <tr key={cliente._id}>
+            <td>
               <img
-                src={cliente.perfil.fotoPerfilPNA}
-                alt="Profile"
-                style={{width:"65%"}}
-                className="rounded-circle "
+                src={
+                  cliente.perfil
+                    ? cliente.perfil.fotoPerfilPNA
+                    : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
+                }
+                className="rounded-circle mx-5   "
+                alt=""
+                style={{ maxWidth: "110px" }}
               />
-            </div>
-          </td>
-          <td className="text-center align-middle text-sm">
-            <p className="font-weight-bold text-xs font-weight-bold m-0">
-              <b>Nombre</b>
-            </p>
-            <p className="font-weight-bold text-xs font-weight-bold m-0">
-              {cliente.nombrePNA} {cliente.apellidoPNA}
-            </p>
-            <p className="font-weight-bold text-xs font-weight-bold m-0">
-              <b>N° Telefono</b>
-            </p>
-            <p className="font-weight-bold text-xs font-weight-bold m-0">
-              {cliente.nroTelefonoPNA}
-            </p>
-          </td>
-          <td className="text-center align-middle text-sm">
-            <p className="font-weight-bold text-xs font-weight-bold m-0">
-              <b>Correo</b>
-            </p>
-            <p className="font-weight-bold text-xs font-weight-bold m-0">
-              {cliente.correoElectronicoPNA}
-            </p>
-            <p className="font-weight-bold text-xs font-weight-bold m-0">
-              <b>Direccion</b>
-            </p>
-            <p className="font-weight-bold text-xs font-weight-bold m-0">
-              {cliente.DireccionPNA}
-            </p>
-          </td>
-          <td className="text-center align-middle">
-            <p className="font-weight-bold text-xs font-weight-bold m-0">
-              <b>Calificacion {cliente.calificacionPNA}</b>
-            </p>
-            <p className="font-weight-bold text-xs font-weight-bold m-0">
-              ⭐⭐⭐⭐⭐
-            </p>
-          </td>
-          <td>
-            <div className="text-center">
-              <div className="mt-5">
-                <button
-                  className="btn btn-secondary mb-2"
-                  data-bs-toggle="modal"
-                  data-bs-target="#escribir-motivo-inhabilitacion"
-                >
-                  Inhabilitar
-                </button>
-              </div>
-            </div>
-          </td>
+            </td>
 
-          <Cliente idCliente={cliente._id} />
-        </tr>
+            <td className="text-center align-middle text-sm">
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                <b>Nombre</b>
+              </p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                {cliente.nombrePNA} {cliente.apellidoPNA}
+              </p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0 mt-2">
+                <b>N° Telefono</b>
+              </p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                {cliente.nroTelefonoPNA}
+              </p>
+            </td>
+            <td className="text-center align-middle text-sm">
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                <b>Correo</b>
+              </p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                {cliente.correoElectronicoPNA}
+              </p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0 mt-2">
+                <b>Direccion</b>
+              </p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                {cliente.DireccionPNA}
+              </p>
+            </td>
+            <td className="text-center align-middle">
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                <b>Calificacion {cliente.calificacionPNA}</b>
+              </p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                ⭐⭐⭐⭐⭐
+              </p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0 mt-2">
+                <b>Documento</b>
+              </p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                {cliente.nroDocumentoPNA}
+              </p>
+            </td>
+            <td>
+              <div className="text-center">
+                <div className="mt-5">
+                  <button
+                    className="btn btn-danger mb-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#escribir-motivo-inhabilitacion"
+                    onClick={() => handleId(cliente._id)}
+                  >
+                    Inhabilitar
+                  </button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </>
       ))}
+      <Cliente getid={getid} />
     </>
   );
 }

@@ -16,7 +16,7 @@ function Empresa({ _id }) {
     });
   };
   return (
-    <td>
+    < >
       <div
         className="modal "
         id="motivo-inhabilitacion-o"
@@ -48,7 +48,7 @@ function Empresa({ _id }) {
                 ></textarea>
               </form>
             </div>
-            <div className="modal-footer">
+            <div className="modal-footer d-flex justify-content-center ">
               <button
                 type="submit"
                 onClick={() => {
@@ -69,7 +69,7 @@ function Empresa({ _id }) {
                     }
                   });
                 }}
-                className="btn btn-primary"
+                className="btn btn-primary w-75"
               >
                 Confirmar Rechazo y enviar motivo
               </button>
@@ -77,7 +77,7 @@ function Empresa({ _id }) {
           </div>
         </div>
       </div>
-    </td>
+    </>
   );
 }
 
