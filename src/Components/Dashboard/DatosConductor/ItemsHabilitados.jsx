@@ -1,44 +1,45 @@
-import React from "react";
-
 import Minhabilitar from "./Modales/Minhabilitar";
-import Swal from 'sweetalert2'
+import MasDatos from "./Modales/MasDatos";
+import { useState } from "react";
+import { loadCondutoresHabilitado } from "../../../Data/DatosConductor";
+
 function ItemsHabilitados({ habilitados }) {
+  const [data, setdata] = useState([]);
+
+  const handleOnsumbit = async (id) => {
+    const response = await loadCondutoresHabilitado(id);
+    setdata(response);
+  };
+
   return (
     <>
-      {habilitados.map(
-        ({
-          _id,
-          nombreCON,
-          apellidoCON,
-          nroTelefonoCON,
-          nroDocumentoCON,
-          correoElectronicoCON,
-          DireccionResidenciaCON,
-          fotoperfilCON,
-        }) => (
-          <tr key={_id}>
+      {habilitados.map(({ conductor }) => (
+        <>
+          <tr key={conductor._id}>
             <td>
-              <div>
-                <img
-                  src={fotoperfilCON}
-                  className="rounded-circle w-75"
-                  alt=""
-                  style={{ maxWidth: "110px" }}
-                />
-              </div>
+              <img
+                src={
+                  conductor.perfil
+                    ? conductor.perfil.fotoperfilCON
+                    : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
+                }
+                className="rounded-circle mx-5  "
+                alt=""
+                style={{ maxWidth: "110px" }}
+              />
             </td>
             <td className="text-center align-middle text-sm">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Nombre</b>
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
-                {nombreCON} {apellidoCON}
+                {conductor.nombreCON} {conductor.apellidoCON}
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>N° Telefono</b>
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
-                {nroTelefonoCON}
+                {conductor.nroTelefonoCON}
               </p>
             </td>
             <td className="text-center align-middle text-sm">
@@ -46,13 +47,13 @@ function ItemsHabilitados({ habilitados }) {
                 <b>Cedula</b>
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
-                {nroDocumentoCON}
+                {conductor.nroDocumentoCON}
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Correo</b>
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
-                {correoElectronicoCON}
+                {conductor.correoElectronicoCON}
               </p>
             </td>
             <td className="text-center align-middle">
@@ -60,34 +61,39 @@ function ItemsHabilitados({ habilitados }) {
                 <b>Direccion de residencia</b>
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
-                {DireccionResidenciaCON} 78N - Popayan Cauca
+                {conductor.DireccionResidenciaCON}
               </p>
             </td>
             <td>
-              <div className="text-center" style={{ marginTop: "10%" }}>
-                <a
-                  href=""
-                  className="m-0 p-0 text-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
-                >
-                  Mostrar mas datos
-                </a>
-                <button className="mt-2 border-0 bg-white">
-                  <div
-                    className="btn btn-secondary mb-2 px-3 "
+              <div>
+                <div className="text-center " style={{ marginTop: "10%" }}>
+                  <button
+                    className="m-0 p-0 text-primary bg-white border-0 mr-2  "
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                    onClick={() => handleOnsumbit(conductor._id)}
+                  >
+                    Mostrar mas datos
+                  </button>
+                </div>
+                <div className="mt-2 border-0 bg-white ">
+                  <button
+                    className="btn btn-danger mb-2 px-3  "
                     data-bs-toggle="modal"
                     data-bs-target="#escribir-motivo-inhabilitacion"
                   >
                     Inhabilitar
-                  </div>
-                </button>
+                  </button>
+                </div>
               </div>
             </td>
-            <Minhabilitar _id={_id} />
           </tr>
-        )
-      )}
+          <tr>
+            <Minhabilitar _id={conductor._id} />
+          </tr>
+        </>
+      ))}
+      <MasDatos data={data} />
     </>
   );
 }

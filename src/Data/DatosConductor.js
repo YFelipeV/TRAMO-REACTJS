@@ -5,7 +5,22 @@ export const loadCondutoresHabilitados = async () => {
     const { data } = await axios.get(
       "https://backend-tramo-res.vercel.app/admin/conductoresHabilitados"
     );
-    return data;
+    console.log(data)
+    return data
+    
+  } catch (error) {
+    console.log(error);
+  }
+};
+export const loadCondutoresHabilitado = async (id) => {
+  try {
+    const { data } = await axios.get(
+      `https://backend-tramo-res.vercel.app/admin/conductoresHabilitados/${id}`
+     
+    );
+    console.log(data)
+    return data
+    
   } catch (error) {
     console.log(error);
   }
@@ -24,14 +39,14 @@ export const loadCondutoresInhabilitados = async () => {
 export const InhabilitarConductor = async (data) => {
   try {
     const { _id, motivoInhabilitadoCON } = data;
-    
+
     const response = await axios.put(
       `https://backend-tramo-res.vercel.app/admin/inhabilitarConductor/${_id}`,
       { motivoInhabilitadoCON }
     );
 
     if (response.status === 200) {
-      location.reload();
+      console.log(response)
       return response;
     }
   } catch (error) {
