@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Cliente from "../Modales/Cliente";
 
 function ClienteHabilitadosItems({ data }) {
+  const [getid, setid] = useState(0);
+  const handleId = (id) => {
+    setid(id);
+  };
+  console.log(getid)
   return (
     <>
       {data.map((cliente) => (
@@ -69,6 +74,7 @@ function ClienteHabilitadosItems({ data }) {
                     className="btn btn-danger mb-2"
                     data-bs-toggle="modal"
                     data-bs-target="#escribir-motivo-inhabilitacion"
+                    onClick={() => handleId(cliente._id)}
                   >
                     Inhabilitar
                   </button>
@@ -76,12 +82,9 @@ function ClienteHabilitadosItems({ data }) {
               </div>
             </td>
           </tr>
-          <tr>
-            {" "}
-            <Cliente idCliente={cliente._id} />
-          </tr>
         </>
       ))}
+      <Cliente getid={getid} />
     </>
   );
 }

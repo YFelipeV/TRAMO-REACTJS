@@ -1,4 +1,4 @@
-function MotivoInhabilitado({ motivoInhabilitadoCON }) {
+function MotivoInhabilitado({ motivo }) {
   
   return (
     <tr>
@@ -25,7 +25,7 @@ function MotivoInhabilitado({ motivoInhabilitadoCON }) {
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">{motivoInhabilitadoCON}</div>
+              <div className="modal-body">{motivo}</div>
             </div>
           </div>
         </div>

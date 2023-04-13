@@ -1,4 +1,4 @@
-function EmpresaMotivo({ motivoInhabilitadoPJU }) {
+function EmpresaMotivo({ motivo }) {
   return (
     <tr>
       <td>
@@ -24,7 +24,7 @@ function EmpresaMotivo({ motivoInhabilitadoPJU }) {
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">{motivoInhabilitadoPJU}</div>
+              <div className="modal-body">{motivo}</div>
             </div>
           </div>
         </div>

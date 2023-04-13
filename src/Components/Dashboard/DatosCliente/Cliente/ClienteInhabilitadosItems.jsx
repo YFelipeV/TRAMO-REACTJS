@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { habilitarCliente } from "../../../../Data/DatosCliente";
 import Swal from "sweetalert2";
 import ClienteMotivo from "../Modales/ClienteMotivo";
 
 function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
+  const [motivo, setmotivo] = useState("");
   return (
     <>
       {ClienteInhabilitado.map(
@@ -20,17 +21,23 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
         }) => (
           <tr key={_id}>
             <td>
-              <p className="font-weight-bold text-xs font-weight-bold m-0 text-danger">
-                <b>Cliente Natural</b>
-              </p>
-
               <div>
-                <img
+                {/* <img
                   src={perfil.fotoPerfilPNA}
                   alt="Profile"
                   style={{ width: "65%" }}
                   className="rounded-circle "
-                />
+                /> */}
+                <img
+                src={
+                  perfil
+                    ? perfil.fotoPerfilPNA
+                    : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
+                }
+                className="rounded-circle mx-5   "
+                alt=""
+                style={{ maxWidth: "110px" }}
+              />
               </div>
             </td>
             <td className="text-center align-middle text-sm">
@@ -73,14 +80,15 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
             <td>
               <div className="text-center mt-4">
                 <button className="border-0  bg-white">
-                  <a
+                  <button
                     href=""
-                    className="m-0 p-0 text-danger"
+                    className="m-0 p-0 text-danger bg-white border-0"
                     data-bs-toggle="modal"
                     data-bs-target="#motivo-inhabilitacion"
+                    onClick={() => setmotivo(estadoCLN.motivoInhabilitadoPNA)}
                   >
                     Ver motivo inhabilitacion
-                  </a>
+                  </button>
                 </button>
                 <div className="mt-2">
                   <button
@@ -109,10 +117,10 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                 </div>
               </div>
             </td>
-            <ClienteMotivo data={estadoCLN.motivoInhabilitadoPNA} />
           </tr>
         )
       )}
+      <ClienteMotivo motivo={motivo} />
     </>
   );
 }

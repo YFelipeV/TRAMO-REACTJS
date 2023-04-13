@@ -4,18 +4,10 @@ import Swal from "sweetalert2";
 
 import { InhabilitarCliente } from "../../../../Data/DatosCliente";
 
-function Cliente(id) {
-  const [data, setdata] = useState({
-    _id: id.idCliente,
-    motivoInhabilitadoPNA: "",
-  });
+function Cliente({ getid }) {
+  console.log(getid);
 
-  const handleChange = ({ target }) => {
-    setdata({
-      ...data,
-      [target.name]: target.value,
-    });
-  };
+  const [motivoInhabilitadoPNA, setmotivoInhabilitadoPNA] = useState("");
 
   return (
     <td>
@@ -47,7 +39,7 @@ function Cliente(id) {
                   name="motivoInhabilitadoPNA"
                   id="respuesta-pqrs"
                   rows="10"
-                  onChange={handleChange}
+                  onChange={(e) => setmotivoInhabilitadoPNA(e.target.value)}
                 ></textarea>
               </form>
             </div>
@@ -68,7 +60,7 @@ function Cliente(id) {
                         title: "Inhabilitado Correctamente",
                         timer: "2000",
                       });
-                      button: InhabilitarCliente(data);
+                      button: InhabilitarCliente(motivoInhabilitadoPNA, getid);
                     }
                   });
                 }}

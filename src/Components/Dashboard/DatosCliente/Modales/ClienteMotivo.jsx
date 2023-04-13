@@ -1,6 +1,6 @@
 import React from "react";
 
-function ClienteMotivo(data) {
+function ClienteMotivo({motivo}) {
   return (
     <td>
       <div
@@ -25,7 +25,7 @@ function ClienteMotivo(data) {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body">{data.data}</div>
+            <div className="modal-body">{motivo}</div>
           </div>
         </div>
       </div>
