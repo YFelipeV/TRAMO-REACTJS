@@ -2,6 +2,7 @@ import React from "react";
 
 function ClienteMotivo({motivo}) {
   return (
+    <tr>
     <td>
       <div
         className="modal fade"
@@ -30,6 +31,7 @@ function ClienteMotivo({motivo}) {
         </div>
       </div>
     </td>
+    </tr>
   );
 }
 

@@ -1,9 +1,6 @@
-
 import ItemsHabilitados from "./ItemsHabilitados";
 
-function Habilitados({habilitados}) {
-  
-  
+function Habilitados() {
   return (
     <div className="row">
       <div className="col-12">
@@ -17,7 +14,7 @@ function Habilitados({habilitados}) {
             <div className="table-responsive p-0">
               <table className="table align-items-center mb-2">
                 <tbody>
-               <ItemsHabilitados habilitados={habilitados} /> 
+                  <ItemsHabilitados  />
                 </tbody>
               </table>
             </div>

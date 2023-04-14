@@ -5,12 +5,13 @@ import Swal from "sweetalert2";
 import { InhabilitarCliente } from "../../../../Data/DatosCliente";
 
 function Cliente({ getid }) {
-  console.log(getid);
+  
 
   const [motivoInhabilitadoPNA, setmotivoInhabilitadoPNA] = useState("");
 
   return (
-    <td>
+    <tr>
+      <td>
       <div
         className="modal fade"
         id="escribir-motivo-inhabilitacion"
@@ -72,7 +73,8 @@ function Cliente({ getid }) {
           </div>
         </div>
       </div>
-    </td>
+      </td>
+    </tr>
   );
 }
 

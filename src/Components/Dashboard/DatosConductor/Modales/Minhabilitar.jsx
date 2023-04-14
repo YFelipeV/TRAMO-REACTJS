@@ -2,21 +2,14 @@ import React, { useState } from "react";
 import { InhabilitarConductor } from "../../../../Data/DatosConductor";
 import Swal from "sweetalert2";
 
-function Minhabilitartar({ _id }) {
-  console.log(_id)
-  const [data, setdata] = useState({
-    _id: _id,
-    motivoInhabilitadoCON: "",
-  });
+function Minhabilitar({ getid }) {
+  const [motivoInhabilitadoCON, setmotivoInhabilitadoCON] = useState("")
+   
 
-  const handleChange = ({ target }) => {
-    setdata({
-      ...data,
-      [target.name]: target.value,
-    });
-  };
+  
   return (
-    <td>
+    <tr>
+      <td>
       <div
         className="modal fade"
         id="escribir-motivo-inhabilitacion"
@@ -41,11 +34,12 @@ function Minhabilitartar({ _id }) {
             <div className="modal-body">
               <form>
                 <textarea
-                  className="w-100"
+                  className="w-100 p-2"
                   required
                   name="motivoInhabilitadoCON"
                   rows="10"
-                  onChange={handleChange}
+                  onChange={(e)=>setmotivoInhabilitadoCON(e.target.value)}
+                  placeholder="Ingrese motivio inhabilitacion...."
                 ></textarea>
               </form>
             </div>
@@ -66,7 +60,7 @@ function Minhabilitartar({ _id }) {
                         title: "Inhabilitado Correctamente",
                         timer: "2000",
                       });
-                      button: InhabilitarConductor(data);
+                      button: InhabilitarConductor(motivoInhabilitadoCON,getid);
                     }
                   });
                 }}
@@ -78,8 +72,9 @@ function Minhabilitartar({ _id }) {
           </div>
         </div>
       </div>
-    </td>
+      </td>
+    </tr>
   );
 }
 
-export default Minhabilitartar;
+export default Minhabilitar;

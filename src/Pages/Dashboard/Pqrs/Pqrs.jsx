@@ -14,7 +14,7 @@ function Pqrs() {
     loadPqrs();
   }, []);
 
-  console.log(data);
+  
   return (
     <main id="main" className="main">
       {/* tabla 2 */}

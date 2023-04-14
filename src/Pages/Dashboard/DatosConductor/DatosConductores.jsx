@@ -1,36 +1,21 @@
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Habilitados from "../../../Components/Dashboard/DatosConductor/Habilitados";
 import Inhabilitados from "../../../Components/Dashboard/DatosConductor/Inhabilitados";
-import {
-  loadCondutoresHabilitados,
-  loadCondutoresInhabilitados,
-} from "../../../Data/DatosConductor";
+import { useConductores } from "../../../Context/Contexto";
 
 function DatosConductores() {
-  const [habilitados, setHabilitado] = useState([]);
-  const [Inhabilitado, setInhabilitado] = useState([]);
+  const { loadDatosConductorInhabilitados, loadDatosConductorHabilitados } =
+    useConductores();
+    
   useEffect(() => {
-    const loadConductor = async () => {
-      const response = await loadCondutoresHabilitados();
-
-      setHabilitado(response);
-    };
-    const ConductorInhabilitado = async () => {
-      const response = await loadCondutoresInhabilitados();
-
-      setInhabilitado(response);
-    };
-    loadConductor();
-
-    ConductorInhabilitado();
+    loadDatosConductorHabilitados();
+    loadDatosConductorInhabilitados();
   }, []);
 
   return (
     <main className="main" id="main">
-      <Habilitados  habilitados={habilitados} />
-
-      {/* {tabla dos} */}
-      <Inhabilitados Inhabilitado={Inhabilitado} />
+      <Habilitados />
+      <Inhabilitados />
     </main>
   );
 }

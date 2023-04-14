@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { habilitarCliente } from "../../../../Data/DatosCliente";
 import Swal from "sweetalert2";
 import ClienteMotivo from "../Modales/ClienteMotivo";
+import ReactStarts from 'react-stars'
+
 
 function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
   const [motivo, setmotivo] = useState("");
+  
   return (
     <>
       {ClienteInhabilitado.map(
@@ -29,15 +32,15 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                   className="rounded-circle "
                 /> */}
                 <img
-                src={
-                  perfil
-                    ? perfil.fotoPerfilPNA
-                    : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
-                }
-                className="rounded-circle mx-5   "
-                alt=""
-                style={{ maxWidth: "110px" }}
-              />
+                  src={
+                    perfil
+                      ? perfil.fotoPerfilPNA
+                      : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
+                  }
+                  className="circle-img    "
+                  alt=""
+                  
+                />
               </div>
             </td>
             <td className="text-center align-middle text-sm">
@@ -70,16 +73,17 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
             </td>
             <td className="text-center align-middle">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
-                <b>Calificacion{calificacionPNA}</b>
+                <b>Calificacion {calificacionPNA}</b>
               </p>
-              <p className="font-weight-bold text-xs font-weight-bold m-0">
-                ⭐⭐⭐⭐⭐
-              </p>
+             <div className="d-flex justify-content-center">
+              <ReactStarts  edit={false}  value={calificacionPNA}  size={28} /> 
+              </div>
+              
               <p className="font-weight-bold text-xs font-weight-bold m-0"></p>
             </td>
             <td>
               <div className="text-center mt-4">
-                <button className="border-0  bg-white">
+                <div className="border-0  bg-white">
                   <button
                     href=""
                     className="m-0 p-0 text-danger bg-white border-0"
@@ -89,7 +93,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                   >
                     Ver motivo inhabilitacion
                   </button>
-                </button>
+                </div>
                 <div className="mt-2">
                   <button
                     onClick={() =>
@@ -118,8 +122,11 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
               </div>
             </td>
           </tr>
+         
         )
       )}
+       
+    
       <ClienteMotivo motivo={motivo} />
     </>
   );

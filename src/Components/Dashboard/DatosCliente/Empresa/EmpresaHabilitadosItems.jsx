@@ -1,5 +1,6 @@
 import React from "react";
 import Empresa from "../Modales/Empresa";
+import ReactStarts from 'react-stars'
 
 function EmpresaHabilitadosItems({ data }) {
   return (
@@ -51,9 +52,9 @@ function EmpresaHabilitadosItems({ data }) {
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
                   <b>Calificacion {calificacionPJU}</b>
                 </p>
-                <p className="font-weight-bold text-xs font-weight-bold m-0">
-                  ⭐⭐⭐⭐⭐
-                </p>
+                <div className="d-flex justify-content-center">
+              <ReactStarts  edit={false}  value={calificacionPJU}  size={28} /> 
+              </div>
 
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
                   <b>Nit </b>
