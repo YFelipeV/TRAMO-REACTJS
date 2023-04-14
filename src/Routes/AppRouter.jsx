@@ -5,7 +5,7 @@ const Head = lazy(() => import("../Components/LandingPage/Header"));
 import Pagina404 from "../Pages/Pagina404";
 import Login from "../Pages/Login";
 import Navbar from "../Pages/Dashboard/Navegacion/Navbar";
-import Conductores from '../Pages/Dashboard/Conductores/ConductoresDisponibles';
+import Conductores from "../Pages/Dashboard/Conductores/ConductoresDisponibles";
 
 import Historial from "../Pages/Dashboard/Historial/Historial";
 import Pqrs from "../Pages/Dashboard/Pqrs/Pqrs";
@@ -13,6 +13,7 @@ import DatosCliente from "../Pages/Dashboard/DatosCliente/DatosCliente";
 import DatosEmpresa from "../Pages/Dashboard/DatosCliente/DatosEmpresa";
 import DatosConductores from "../Pages/Dashboard/DatosConductor/DatosConductores";
 import Solicitudes from "../Pages/Dashboard/Solicitudes/Solicitudes";
+import PrivateRoute from "./PrivateRoute";
 export const AppRouter = () => {
   return (
     <>
@@ -42,19 +43,21 @@ export const AppRouter = () => {
         <Route path="*" element={<Pagina404 />} />
 
         {/* RUTAS DEL DASHBOARD */}
-        <Route path="/dashboard" element={<Navbar />}>
-          <Route index element={<Conductores />} />
-          {/* felipe dulcey */}
-          <Route path="solicitudes" element={<Solicitudes/>} />
-          {/* felipe segura */}
-          <Route path="datosconductores" element={<DatosConductores />} />
-          <Route path="datoscliente" element={<DatosCliente />} />
-          <Route path="datosclienteempresa" element={<DatosEmpresa />} />
-          {/* felipe dulcey */}
-          <Route path="historial" element={<Historial />} />
-          {/* felipe segura */}
-          <Route path="pqrs" element={<Pqrs />} />
-        </Route>
+        
+          <Route path="/dashboard" element={<Navbar />}>
+            <Route index element={<Conductores />} />
+            {/* felipe dulcey */}
+            <Route path="solicitudes" element={<Solicitudes />} />
+            {/* felipe segura */}
+            <Route path="datosconductores" element={<DatosConductores />} />
+            <Route path="datoscliente" element={<DatosCliente />} />
+            <Route path="datosclienteempresa" element={<DatosEmpresa />} />
+            {/* felipe dulcey */}
+            <Route path="historial" element={<Historial />} />
+            {/* felipe segura */}
+            <Route path="pqrs" element={<Pqrs />} />
+          </Route>
+       
       </Routes>
     </>
   );

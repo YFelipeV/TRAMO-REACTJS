@@ -15,7 +15,7 @@ function Inhabilitados() {
           <div className="card-body px-0 pb-2">
             <div className="table-responsive p-0">
               <table className="table align-items-center mb-2">
-                <thead>
+                {/* <thead>
                   <tr>
                     <th colSpan={5}>
                       <div  className="d-flex w-100">
@@ -28,7 +28,7 @@ function Inhabilitados() {
                  
                   </tr>
               
-                </thead>
+                </thead> */}
                 <tbody>
                   <ItemsInhabilitados />
                 </tbody>

@@ -40,7 +40,7 @@ function MasDatos({ data }) {
                           DATOS CONDUCTOR
                         </div>
                         <div className="col-12 col-xl-6">
-                          <div>
+                          {/* <div>
                             <img
                               src={
                                 conductor.unicoConductor.perfil.fotoperfilCON
@@ -48,7 +48,7 @@ function MasDatos({ data }) {
                               classNameName="circle-img"
                               alt=""
                             />
-                          </div>
+                          </div> */}
                           <div
                             id="carouselExampleDark"
                             className="carousel carousel-dark slide"
@@ -83,7 +83,7 @@ function MasDatos({ data }) {
                               >
                                 <img
                                   src={conductor.imagenes.FotoFrontal}
-                                  className="d-block w-100"
+                                  className="d-block w-50"
                                   alt=""
                                 />
                               </div>
@@ -366,7 +366,7 @@ function MasDatos({ data }) {
 
                             <tr>
                               <td>Contraseña</td>
-                              <td>{conductor.unicoConductor.contrasenaCON}</td>
+                              <td>******************</td>
                             </tr>
 
                             <tr>
@@ -427,7 +427,7 @@ function MasDatos({ data }) {
                         <div className="col-12 text-center">
                           <button
                             type="button"
-                            classNameName="btn btn-danger mb-2 px-3  w-25 "
+                            className="btn btn-danger mb-2 px-3  w-25 "
                             data-bs-toggle="modal"
                             data-bs-target="#escribir-motivo-inhabilitacion"
                           >

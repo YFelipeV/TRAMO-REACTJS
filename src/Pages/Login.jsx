@@ -3,12 +3,13 @@ import login from "../assets/ilustraciones/login.gif";
 import { useNavigate } from "react-router-dom";
 import "../css/styleAdmin.css";
 import { useState } from "react";
+import { authUsuarios } from "../Data/Login";
 
 function Login() {
   const navigate = useNavigate();
   const [data, setdata] = useState({
     correo: "",
-    password: "",
+    contrasena: "",
   });
 
   const handleInputChange = ({ target }) => {
@@ -68,8 +69,8 @@ function Login() {
                           <input
                             type="password"
                             onChange={handleInputChange}
-                            name="password"
-                            id="passwordAdmin"
+                            name="contrasena"
+                            id="contrasena"
                             className="form-control p-3"
                             placeholder="Ingrese la contraseña"
                           />
@@ -79,7 +80,7 @@ function Login() {
                           <button
                             type="submit"
                             className="btn text-white gradient-custom-button  w-100 fs- pb-2"
-                            onClick={() => handleSubmit(user, navigate)}
+                            onClick={() => authUsuarios(data, navigate)}
                           >
                             Iniciar sesión
                           </button>
