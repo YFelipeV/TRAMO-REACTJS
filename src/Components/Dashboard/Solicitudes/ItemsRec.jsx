@@ -5,6 +5,8 @@ import { getSolicitudesRechazadasid } from "../../../Data/Solicitudes";
 
 function ItemsRec({ SolicitudesRechazadas }) {
   const [motivoRechazoCON, setMotivoRechazoCON] = useState("")
+  const [nombreCON, setNombreCON] = useState("")
+  const [apellidoCON, setapellidoCON] = useState("")
 
   const [data, setdata] = useState([]);
 
@@ -32,7 +34,7 @@ function ItemsRec({ SolicitudesRechazadas }) {
               <b>Nombre</b>
             </p>
             <p className="font-weight-bold text-xs font-weight-bold m-0">
-              {conductor.nombreCON}
+              {conductor.nombreCON} {conductor.apellidoCON}
             </p>
             <p className="font-weight-bold text-xs font-weight-bold m-0">
               <b>N° Telefono</b>
@@ -80,14 +82,18 @@ function ItemsRec({ SolicitudesRechazadas }) {
                   className=" px-3 text-danger d-flex"
                   data-bs-toggle="modal"
                   data-bs-target="#motivo-rechazo"
-                  onClick={()=>setMotivoRechazoCON(conductor.motivoRechazoCON)}
+                  onClick={() => {
+                    setMotivoRechazoCON(conductor.motivoRechazoCON);
+                    setNombreCON(conductor.nombreCON);
+                    setapellidoCON(conductor.apellidoCON);
+                  }}
                 >
                   Motivo de rechazo
                 </a>
               </div>
             </div>
           </td>
-          <MostrarMotivoRec motivoRechazoCON={motivoRechazoCON}/>
+          <MostrarMotivoRec motivoRechazoCON={motivoRechazoCON} nombreCON={nombreCON} apellidoCON={apellidoCON}/>
         </tr>
       ))}
       <MasDatosRec data={data}/>

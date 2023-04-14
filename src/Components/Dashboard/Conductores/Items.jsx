@@ -11,8 +11,7 @@ function Items({ data }) {
               <div className="d-flex justify-content-center">
               <img
                 src={conductor.perfil.fotoperfilCON}
-                  className="rounded-circle"
-                  width="50%"
+                  className="circle-img"
                 ></img>
               </div>
             </td>
