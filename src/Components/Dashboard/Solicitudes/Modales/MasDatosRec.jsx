@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-function MasDatosRec({data}) {
+function MasDatosRec({ data }) {
   return (
     <div
       className="modal fade"
@@ -67,21 +67,31 @@ function MasDatosRec({data}) {
                             data-bs-interval="10000"
                           >
                             <img
-                              src={conductor.imagenesSolicitudRechazada.FotoFrontal}
+                              src={
+                                conductor.imagenesSolicitudRechazada.FotoFrontal
+                              }
                               className="d-block w-100"
                               alt=""
                             />
                           </div>
-                          <div className="carousel-item" data-bs-interval="2000">
+                          <div
+                            className="carousel-item"
+                            data-bs-interval="2000"
+                          >
                             <img
-                              src={conductor.imagenesSolicitudRechazada.FotoVolco}
+                              src={
+                                conductor.imagenesSolicitudRechazada.FotoVolco
+                              }
                               className="d-block w-50"
                               alt="..."
                             />
                           </div>
                           <div className="carousel-item">
                             <img
-                              src={conductor.imagenesSolicitudRechazada.Fotolateral_Der}
+                              src={
+                                conductor.imagenesSolicitudRechazada
+                                  .Fotolateral_Der
+                              }
                               className="d-block w-100"
                               alt="..."
                             />
@@ -122,27 +132,42 @@ function MasDatosRec({data}) {
                         </tr>
                         <tr>
                           <td>Nombre:</td>
-                          <td>{conductor.tenedorSolicitudRechazada.nombreTE}</td>
+                          <td>
+                            {conductor.tenedorSolicitudRechazada.nombreTE}
+                          </td>
                         </tr>
                         <tr>
                           <td>Apellido:</td>
-                          <td>{conductor.tenedorSolicitudRechazada.apellidoTE}</td>
+                          <td>
+                            {conductor.tenedorSolicitudRechazada.apellidoTE}
+                          </td>
                         </tr>
                         <tr>
                           <td>Numero Documento:</td>
-                          <td>{conductor.tenedorSolicitudRechazada.apellidoTE}</td>
+                          <td>
+                            {conductor.tenedorSolicitudRechazada.apellidoTE}
+                          </td>
                         </tr>
                         <tr>
                           <td>Direccion residencia:</td>
-                          <td>{conductor.tenedorSolicitudRechazada.DireccionResidenciaTE}</td>
+                          <td>
+                            {
+                              conductor.tenedorSolicitudRechazada
+                                .DireccionResidenciaTE
+                            }
+                          </td>
                         </tr>
                         <tr>
                           <td>Ciudad:</td>
-                          <td>{conductor.tenedorSolicitudRechazada.ciudadTE}</td>
+                          <td>
+                            {conductor.tenedorSolicitudRechazada.ciudadTE}
+                          </td>
                         </tr>
                         <tr>
                           <td>Telefono:</td>
-                          <td>{conductor.tenedorSolicitudRechazada.NroTelefonoTE}</td>
+                          <td>
+                            {conductor.tenedorSolicitudRechazada.NroTelefonoTE}
+                          </td>
                         </tr>
                       </table>
                       <table className="w-100 text-center">
@@ -153,19 +178,39 @@ function MasDatosRec({data}) {
                         </tr>
                         <tr>
                           <td>Nombre:</td>
-                          <td>{conductor.contactoEmergenciaSolicitudRechazada.nombreCEM}</td>
+                          <td>
+                            {
+                              conductor.contactoEmergenciaSolicitudRechazada
+                                .nombreCEM
+                            }
+                          </td>
                         </tr>
                         <tr>
                           <td>Apellido:</td>
-                          <td>{conductor.contactoEmergenciaSolicitudRechazada.apellidoCEM}</td>
+                          <td>
+                            {
+                              conductor.contactoEmergenciaSolicitudRechazada
+                                .apellidoCEM
+                            }
+                          </td>
                         </tr>
                         <tr>
                           <td>Numero Documento:</td>
-                          <td>{conductor.contactoEmergenciaSolicitudRechazada.NroDocumentoCEM}</td>
+                          <td>
+                            {
+                              conductor.contactoEmergenciaSolicitudRechazada
+                                .NroDocumentoCEM
+                            }
+                          </td>
                         </tr>
                         <tr>
                           <td>Correo Electronico:</td>
-                          <td>{conductor.contactoEmergenciaSolicitudRechazada.CorreoElectricoCEM}</td>
+                          <td>
+                            {
+                              conductor.contactoEmergenciaSolicitudRechazada
+                                .CorreoElectricoCEM
+                            }
+                          </td>
                         </tr>
                       </table>
                     </div>
@@ -181,7 +226,9 @@ function MasDatosRec({data}) {
 
                         <tr>
                           <td>Placa Vehiculo</td>
-                          <td>{conductor.vehiculoSolicitudRechazada.placaVehiculo}</td>
+                          <td>
+                            {conductor.vehiculoSolicitudRechazada.placaVehiculo}
+                          </td>
                         </tr>
 
                         <tr>
@@ -196,67 +243,113 @@ function MasDatosRec({data}) {
 
                         <tr>
                           <td>Numero Ejes</td>
-                          <td>{conductor.vehiculoSolicitudRechazada.numeroEjes}</td>
+                          <td>
+                            {conductor.vehiculoSolicitudRechazada.numeroEjes}
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Tipo Vehiculo</td>
-                          <td>{conductor.vehiculoSolicitudRechazada.tipoVehiculo}</td>
+                          <td>
+                            {conductor.vehiculoSolicitudRechazada.tipoVehiculo}
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Fecha Vencimiento</td>
-                          <td>{conductor.vehiculoSolicitudRechazada.fechavencSOAT}</td>
+                          <td>
+                            {conductor.vehiculoSolicitudRechazada.fechavencSOAT}
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Traccion Vehiculo</td>
-                          <td> {conductor.vehiculoSolicitudRechazada.traccionVeh}</td>
+                          <td>
+                            {" "}
+                            {conductor.vehiculoSolicitudRechazada.traccionVeh}
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Placas Trailer</td>
-                          <td> {conductor.vehiculoSolicitudRechazada.placasTrailer} </td>
+                          <td>
+                            {" "}
+                            {
+                              conductor.vehiculoSolicitudRechazada.placasTrailer
+                            }{" "}
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Peso Vacio</td>
-                          <td>{conductor.vehiculoSolicitudRechazada.pesoVacio}</td>
+                          <td>
+                            {conductor.vehiculoSolicitudRechazada.pesoVacio}
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Tipo Combustible</td>
-                          <td>{conductor.vehiculoSolicitudRechazada.CombustibleVeh}</td>
+                          <td>
+                            {
+                              conductor.vehiculoSolicitudRechazada
+                                .CombustibleVeh
+                            }
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Numero Licencia</td>
-                          <td>{conductor.vehiculoSolicitudRechazada.numeroLicenciaVeh}</td>
+                          <td>
+                            {
+                              conductor.vehiculoSolicitudRechazada
+                                .numeroLicenciaVeh
+                            }
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Numero Soat</td>
-                          <td>{conductor.vehiculoSolicitudRechazada.numeroSOAT}</td>
+                          <td>
+                            {conductor.vehiculoSolicitudRechazada.numeroSOAT}
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Fecha Venimiento Soat</td>
-                          <td> {conductor.vehiculoSolicitudRechazada.fechavencSOAT}</td>
+                          <td>
+                            {" "}
+                            {conductor.vehiculoSolicitudRechazada.fechavencSOAT}
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Numero Poliza Responsable</td>
-                          <td>{conductor.vehiculoSolicitudRechazada.nroPoliza_ResponCivil}</td>
+                          <td>
+                            {
+                              conductor.vehiculoSolicitudRechazada
+                                .nroPoliza_ResponCivil
+                            }
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Numero Revision Tecnomecanica</td>
-                          <td>{conductor.vehiculoSolicitudRechazada.nroRev_TecMecanica}</td>
+                          <td>
+                            {
+                              conductor.vehiculoSolicitudRechazada
+                                .nroRev_TecMecanica
+                            }
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Fecha vencimiento Tecnomecanica</td>
-                          <td>{conductor.vehiculoSolicitudRechazada.fechaVenc_Tecno}</td>
+                          <td>
+                            {
+                              conductor.vehiculoSolicitudRechazada
+                                .fechaVenc_Tecno
+                            }
+                          </td>
                         </tr>
                       </table>
                     </div>
@@ -270,67 +363,123 @@ function MasDatosRec({data}) {
 
                         <tr>
                           <td>Nombre</td>
-                          <td>{conductor.conductorSolicitudRechazada.nombreCON}</td>
+                          <td>
+                            {conductor.conductorSolicitudRechazada.nombreCON}
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Apellido</td>
-                          <td>{conductor.conductorSolicitudRechazada.apellidoCON}</td>
+                          <td>
+                            {conductor.conductorSolicitudRechazada.apellidoCON}
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Tipo Documento</td>
-                          <td>{conductor.conductorSolicitudRechazada.tipo_DocumentoCON}</td>
+                          <td>
+                            {
+                              conductor.conductorSolicitudRechazada
+                                .tipo_DocumentoCON
+                            }
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Numero Documento</td>
-                          <td>{conductor.conductorSolicitudRechazada.nroDocumentoCON}</td>
+                          <td>
+                            {
+                              conductor.conductorSolicitudRechazada
+                                .nroDocumentoCON
+                            }
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Nacionalidad</td>
-                          <td>{conductor.conductorSolicitudRechazada.nacionalidadCON}</td>
+                          <td>
+                            {
+                              conductor.conductorSolicitudRechazada
+                                .nacionalidadCON
+                            }
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Fecha Nacimiento</td>
-                          <td>{conductor.conductorSolicitudRechazada.fechaNacimientoCON}</td>
+                          <td>
+                            {
+                              conductor.conductorSolicitudRechazada
+                                .fechaNacimientoCON
+                            }
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Correo Electronico</td>
-                          <td>{conductor.conductorSolicitudRechazada.correoElectronicoCON}</td>
+                          <td>
+                            {
+                              conductor.conductorSolicitudRechazada
+                                .correoElectronicoCON
+                            }
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Correo Electronico Recuperacion</td>
-                          <td>{conductor.conductorSolicitudRechazada.correoRecuperacionCON}</td>
+                          <td>
+                            {
+                              conductor.conductorSolicitudRechazada
+                                .correoRecuperacionCON
+                            }
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Usuario</td>
-                          <td>{conductor.conductorSolicitudRechazada.usuarioCON}</td>
+                          <td>
+                            {conductor.conductorSolicitudRechazada.usuarioCON}
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Numero Telefono</td>
-                          <td>{conductor.conductorSolicitudRechazada.nroTelefonoCON}</td>
+                          <td>
+                            {
+                              conductor.conductorSolicitudRechazada
+                                .nroTelefonoCON
+                            }
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Numero Licencia</td>
-                          <td>{conductor.conductorSolicitudRechazada.nroLicenciaCON}</td>
+                          <td>
+                            {
+                              conductor.conductorSolicitudRechazada
+                                .nroLicenciaCON
+                            }
+                          </td>
                         </tr>
-                        
+
                         <tr>
                           <td>Pregunta Seguridad</td>
-                          <td>{conductor.conductorSolicitudRechazada.preguntaSeguridadCON}</td>
+                          <td>
+                            {
+                              conductor.conductorSolicitudRechazada
+                                .preguntaSeguridadCON
+                            }
+                          </td>
                         </tr>
 
                         <tr>
                           <td>Respuesta Seguridad</td>
-                          <td>{conductor.conductorSolicitudRechazada.respuestaSeguridadCON}</td>
+                          <td>
+                            {
+                              conductor.conductorSolicitudRechazada
+                                .respuestaSeguridadCON
+                            }
+                          </td>
                         </tr>
                       </table>
                     </div>
@@ -345,28 +494,53 @@ function MasDatosRec({data}) {
                         </tr>
                         <tr>
                           <td>Nombre:</td>
-                          <td>{conductor.propietarioSolicitudRechazada.nombrePRO}</td>
+                          <td>
+                            {conductor.propietarioSolicitudRechazada.nombrePRO}
+                          </td>
                         </tr>
                         <tr>
                           <td>Apellido:</td>
-                          <td>{conductor.propietarioSolicitudRechazada.apellidoPRO}</td>
+                          <td>
+                            {
+                              conductor.propietarioSolicitudRechazada
+                                .apellidoPRO
+                            }
+                          </td>
                         </tr>
                         <tr>
                           <td>Numero Documento:</td>
-                          <td>{conductor.propietarioSolicitudRechazada.NroDocumentoPRO}</td>
+                          <td>
+                            {
+                              conductor.propietarioSolicitudRechazada
+                                .NroDocumentoPRO
+                            }
+                          </td>
                         </tr>
                         <h1>sdas</h1>
                         <tr>
                           <td>Direcion residencia:</td>
-                          <td> {conductor.propietarioSolicitudRechazada.DireccionResidenciaPRO}</td>
+                          <td>
+                            {" "}
+                            {
+                              conductor.propietarioSolicitudRechazada
+                                .DireccionResidenciaPRO
+                            }
+                          </td>
                         </tr>
                         <tr>
                           <td>Ciudad:</td>
-                          <td>{conductor.propietarioSolicitudRechazada.ciudadPRO}</td>
+                          <td>
+                            {conductor.propietarioSolicitudRechazada.ciudadPRO}
+                          </td>
                         </tr>
                         <tr>
                           <td>Numero Telefono:</td>
-                          <td>{conductor.propietarioSolicitudRechazada.NroTelefonoPRO}</td>
+                          <td>
+                            {
+                              conductor.propietarioSolicitudRechazada
+                                .NroTelefonoPRO
+                            }
+                          </td>
                         </tr>
                       </table>
                     </div>
@@ -391,8 +565,8 @@ function MasDatosRec({data}) {
           </div>
         </div>
       </div>
-      </div>
-  )
+    </div>
+  );
 }
 
-export default MasDatosRec
+export default MasDatosRec;
