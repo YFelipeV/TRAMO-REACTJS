@@ -1,28 +1,15 @@
 import Modal from "./Modal";
+import ReactStarts from "react-stars";
 
-
+function PqrsCards({ data }) {
   
-function PqrsCards({data}) {
-  console.log(data)
   return (
     <>
       {data.map(({ name, id }) => (
         <tr key={id}>
           <td className="text-center pt-3 ">{name}</td>
-          <td className=" pt-3">
-            {id > 5
-              ? "⭐⭐⭐⭐⭐⭐"
-              : id == 5
-              ? "⭐⭐⭐⭐⭐"
-              : id == 4
-              ? "⭐⭐⭐⭐"
-              : id == 3
-              ? "⭐⭐⭐"
-              : id == 2
-              ? "⭐⭐"
-              : id == 1
-              ? "⭐"
-              : "0"}
+          <td className=" d-flex justify-content-center pt-3">
+            <ReactStarts edit={false} value={id} size={28} />
           </td>
 
           <td className="p-3 ">
@@ -38,7 +25,7 @@ function PqrsCards({data}) {
           </td>
         </tr>
       ))}
-      <Modal/>
+      <Modal />
     </>
   );
 }

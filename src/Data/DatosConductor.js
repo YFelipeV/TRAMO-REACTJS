@@ -1,17 +1,17 @@
 import axios from "axios";
 import Swal from "sweetalert2";
-export const loadCondutoresHabilitados = async () => {
+export const CondutoresHabilitados = async () => {
   try {
     const { data } = await axios.get(
       "https://backend-tramo-res.vercel.app/admin/conductoresHabilitados"
     );
-    console.log(data);
+
     return data;
   } catch (error) {
     console.log(error);
   }
 };
-export const loadCondutoresHabilitado = async (id) => {
+export const CondutoresHabilitado = async (id) => {
   try {
     const { data } = await axios.get(
       `https://backend-tramo-res.vercel.app/admin/conductoresHabilitados/${id}`
@@ -22,7 +22,7 @@ export const loadCondutoresHabilitado = async (id) => {
     console.log(error);
   }
 };
-export const loadCondutoresInhabilitados = async () => {
+export const CondutoresInhabilitados = async () => {
   try {
     const { data } = await axios.get(
       "https://backend-tramo-res.vercel.app/admin/conductoresInhabilitados"
@@ -32,7 +32,7 @@ export const loadCondutoresInhabilitados = async () => {
     console.log(error);
   }
 };
-export const loadCondutoresInhabilitado = async (id) => {
+export const CondutoresInhabilitado = async (id) => {
   try {
     const { data } = await axios.get(
       `https://backend-tramo-res.vercel.app/admin/conductoresInhabilitados/${id}`
@@ -44,17 +44,15 @@ export const loadCondutoresInhabilitado = async (id) => {
   }
 };
 
-export const InhabilitarConductor = async (data) => {
+export const InhabilitarConductor = async (motivoInhabilitadoCON, getid) => {
   try {
-    const { _id, motivoInhabilitadoCON } = data;
-
     const response = await axios.put(
-      `https://backend-tramo-res.vercel.app/admin/inhabilitarConductor/${_id}`,
+      `https://backend-tramo-res.vercel.app/admin/inhabilitarConductor/${getid}`,
       { motivoInhabilitadoCON }
     );
 
     if (response.status === 200) {
-      location.reload()
+      location.reload();
       return response;
     }
   } catch (error) {

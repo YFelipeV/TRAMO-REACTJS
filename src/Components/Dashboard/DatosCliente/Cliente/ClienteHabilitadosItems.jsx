@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import Cliente from "../Modales/Cliente";
+import ReactStarts from 'react-stars'
 
 function ClienteHabilitadosItems({ data }) {
   const [getid, setid] = useState(0);
   const handleId = (id) => {
     setid(id);
   };
-  console.log(getid)
+
   return (
     <>
       {data.map((cliente) => (
-        <>
+        
           <tr key={cliente._id}>
             <td>
               <img
@@ -19,9 +20,9 @@ function ClienteHabilitadosItems({ data }) {
                     ? cliente.perfil.fotoPerfilPNA
                     : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
                 }
-                className="rounded-circle mx-5   "
+                className="circle-img   "
                 alt=""
-                style={{ maxWidth: "110px" }}
+              
               />
             </td>
 
@@ -57,9 +58,10 @@ function ClienteHabilitadosItems({ data }) {
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Calificacion {cliente.calificacionPNA}</b>
               </p>
-              <p className="font-weight-bold text-xs font-weight-bold m-0">
-                ⭐⭐⭐⭐⭐
-              </p>
+              <div className="d-flex justify-content-center">
+              <ReactStarts  edit={false}  value={cliente.calificacionPNA}  size={28} /> 
+              </div>
+             
               <p className="font-weight-bold text-xs font-weight-bold m-0 mt-2">
                 <b>Documento</b>
               </p>
@@ -82,7 +84,7 @@ function ClienteHabilitadosItems({ data }) {
               </div>
             </td>
           </tr>
-        </>
+        
       ))}
       <Cliente getid={getid} />
     </>

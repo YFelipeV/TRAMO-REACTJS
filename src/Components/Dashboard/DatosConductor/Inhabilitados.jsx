@@ -1,12 +1,6 @@
-
-
 import ItemsInhabilitados from "./ItemsInhabilitados";
 
-function Inhabilitados({Inhabilitado}) {
-  
-
-
-
+function Inhabilitados() {
   return (
     <>
       <div className="col-12">
@@ -21,8 +15,22 @@ function Inhabilitados({Inhabilitado}) {
           <div className="card-body px-0 pb-2">
             <div className="table-responsive p-0">
               <table className="table align-items-center mb-2">
+                <thead>
+                  <tr>
+                    <th colSpan={5}>
+                      <div  className="d-flex w-100">
+                      <input type="text" className="form-control w-100 " placeholder="Ingrese Nombre" />
+                    <button className="btn btn-primary">Buscar</button>
+                      </div>
+                      </th>
+                      
+                  
+                 
+                  </tr>
+              
+                </thead>
                 <tbody>
-                <ItemsInhabilitados  Inhabilitado={Inhabilitado}/> 
+                  <ItemsInhabilitados />
                 </tbody>
               </table>
             </div>

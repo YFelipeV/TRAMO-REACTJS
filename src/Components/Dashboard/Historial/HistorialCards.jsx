@@ -11,7 +11,7 @@ function HistorialCards() {
     async function loadHistorial() {
       const {data} = await getHistorial();
       setHistorial(data);
-      console.log(response);
+      
     }
 
     loadHistorial();

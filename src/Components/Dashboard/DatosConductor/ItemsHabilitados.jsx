@@ -1,20 +1,27 @@
 import Minhabilitar from "./Modales/Minhabilitar";
 import MasDatos from "./Modales/MasDatos";
 import { useState } from "react";
-import { loadCondutoresHabilitado } from "../../../Data/DatosConductor";
+import {
+  CondutoresHabilitado,
+  CondutoresInhabilitado,
+} from "../../../Data/DatosConductor";
+import { useConductores } from "../../../Context/Contexto";
 
-function ItemsHabilitados({ habilitados }) {
+function ItemsHabilitados() {
+  const { datosConductor } = useConductores();
   const [data, setdata] = useState([]);
+  const [getid, setgetid] = useState(0);
 
   const handleOnsumbit = async (id) => {
-    const response = await loadCondutoresHabilitado(id);
+    setgetid(id)
+    const response = await CondutoresHabilitado(id);
     setdata(response);
   };
 
   return (
     <>
-      {habilitados.map(({ conductor }) => (
-        <>
+      {datosConductor.map(({ conductor }) => (
+        
           <tr key={conductor._id}>
             <td>
               <img
@@ -23,9 +30,8 @@ function ItemsHabilitados({ habilitados }) {
                     ? conductor.perfil.fotoperfilCON
                     : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
                 }
-                className="rounded-circle mx-5  "
+                className="circle-img m-2 "
                 alt=""
-                style={{ maxWidth: "110px" }}
               />
             </td>
             <td className="text-center align-middle text-sm">
@@ -64,19 +70,18 @@ function ItemsHabilitados({ habilitados }) {
                 {conductor.DireccionResidenciaCON}
               </p>
             </td>
-            <td>
-              <div>
-                <div className="text-center " style={{ marginTop: "10%" }}>
-                  <button
-                    className="m-0 p-0 text-primary bg-white border-0 mr-2  "
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
-                    onClick={() => handleOnsumbit(conductor._id)}
-                  >
-                    Mostrar mas datos
-                  </button>
-                </div>
-                <div className="mt-2 border-0 bg-white ">
+            <td className="align-middle">
+              <div className="text-center " style={{ marginTop: "10%" }}>
+                <button
+                  className="m-0 p-0 text-primary bg-white border-0 mr-2  "
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                  onClick={() => handleOnsumbit(conductor._id)}
+                >
+                  Mostrar mas datos
+                </button>
+              </div>
+              {/* <div className="mt-2 border-0 bg-white ">
                   <button
                     className="btn btn-danger mb-2 px-3  "
                     data-bs-toggle="modal"
@@ -84,15 +89,14 @@ function ItemsHabilitados({ habilitados }) {
                   >
                     Inhabilitar
                   </button>
-                </div>
-              </div>
+                </div> */}
             </td>
           </tr>
-          <tr>
-            <Minhabilitar _id={conductor._id} />
-          </tr>
-        </>
+          
+        
       ))}
+      <Minhabilitar getid={getid} />
+     
       <MasDatos data={data} />
     </>
   );
