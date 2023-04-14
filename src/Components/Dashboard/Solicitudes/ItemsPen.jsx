@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Swal from 'sweetalert2';
-import { updateSolicitudesPendientes } from '../../../Data/Solicitudes';
+import { getSolicitudesPendientesid, updateSolicitudesPendientes } from '../../../Data/Solicitudes';
 import MotivoRechazo from './Modales/MotivoRechazo';
+import MasDatos from './Modales/MasDatos';
 function ItemsPen({SolicitudesPendientes}) {
-    console.log(SolicitudesPendientes);
+
+  const [data, setdata] = useState([]);
+
+  const handleOnsumbit = async (id) => {
+    const response = await getSolicitudesPendientesid(id);
+    setdata(response);
+  };
+  console.log(data);
+
   return (
     <>
       {  SolicitudesPendientes.map(
@@ -59,6 +68,7 @@ function ItemsPen({SolicitudesPendientes}) {
                     className="m-0 p-0 text-primary"
                     data-bs-toggle="modal"
                     data-bs-target="#mas-datos"
+                    onClick={() => handleOnsumbit(conductor._id)}
                   >
                     Mostrar mas datos
                   </a>
@@ -91,7 +101,7 @@ function ItemsPen({SolicitudesPendientes}) {
                      
                     >
                       <a
-                        className="btn btn-secondary  px-3  "
+                        className="btn btn-danger  px-3  "
                         data-bs-toggle="modal"
                         data-bs-target="#escribir-motivo-rechazo"
                       >
@@ -105,6 +115,7 @@ function ItemsPen({SolicitudesPendientes}) {
             <tr>
             <MotivoRechazo _id={conductor._id}/>
             </tr>
+            <MasDatos data={data}/>
         </>
         )
       )}
