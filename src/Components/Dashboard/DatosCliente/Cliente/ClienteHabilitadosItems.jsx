@@ -20,7 +20,7 @@ function ClienteHabilitadosItems({ data }) {
                     ? cliente.perfil.fotoPerfilPNA
                     : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
                 }
-                className="circle-img   "
+                className="circle-img "
                 alt=""
               
               />
