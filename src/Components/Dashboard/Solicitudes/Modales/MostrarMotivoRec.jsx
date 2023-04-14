@@ -1,6 +1,6 @@
 import React from 'react'
 
-function MostrarMotivoRec({motivoRechazoCON}) {
+function MostrarMotivoRec({motivoRechazoCON, nombreCON, apellidoCON}) {
   return (
     <>
       <tr>
@@ -18,7 +18,7 @@ function MostrarMotivoRec({motivoRechazoCON}) {
             <div className="modal-content">
               <div className="modal-header">
                 <h1 className="modal-title fs-5" id="mas-datosLabel">
-                  Motivo de rechazo{" "}
+                  Motivo de rechazo
                 </h1>
                 <button
                   type="button"
@@ -28,6 +28,8 @@ function MostrarMotivoRec({motivoRechazoCON}) {
                 ></button>
               </div>
               <div className="modal-body">
+                <h6 className='mb-3 fw-bold'>{nombreCON} {apellidoCON}</h6>
+                
                 {motivoRechazoCON}
               </div>
             </div>
