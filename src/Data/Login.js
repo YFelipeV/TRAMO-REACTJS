@@ -21,18 +21,18 @@ export const authUsuario = async () => {
   }
 };
 
-export const authUsuarios = async ({ correoAdmin, passwordAdmin },navigate) => {
+export const authUsuarios = async ({ correo, contrasena },navigate) => {
  
   try {
     const response = await axios.post(
-      "https://tramo.herokuapp.com/auth",
-      { correoAdmin, passwordAdmin }
+      "https://backend-tramo-res.vercel.app/auchAdmin",
+      { correo, contrasena }
     );
     console.log(response);
 
     if (response.status === 200 && response.data) {
       Swal.fire({
-        title: response.data.message,
+        title: response.data.messagge,
         icon: "success",
         timer: 1500,
       }).then(() => {

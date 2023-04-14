@@ -1514,4 +1514,15 @@ td {
     border-radius: 50%;
     object-fit: cover;
   }
+
+  .cuadrado {
+    width: 300px; /* Aquí puedes ajustar el tamaño del cuadrado según tus necesidades */
+    height: 300px;
+    overflow: hidden; /* Oculta cualquier parte de la imagen que sobresalga del cuadrado */
+  }
+  
+  .cuadrado img {
+    width: 100%; /* La imagen se ajustará al tamaño del cuadrado */
+    height: auto; /* Mantiene la proporción original de la imagen */
+  }
  

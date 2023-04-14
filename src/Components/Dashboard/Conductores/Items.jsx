@@ -1,15 +1,16 @@
+import ReactStarts from 'react-stars'
 function Items({ data }) {
   
   return (
     <>
      {
       data.map(
-        (conductor) => (
+        ({conductor}) => (
           <tr key={conductor._id}>
             <td>
               <div className="d-flex justify-content-center">
-                <img
-                  src={conductor.perfil.fotoperfilCON}
+              <img
+                src={conductor.perfil.fotoperfilCON}
                   className="rounded-circle"
                   width="50%"
                 ></img>
@@ -26,18 +27,11 @@ function Items({ data }) {
               </span>
             </td>
             <td className="text-center align-middle text-sm">
+              <div className='d-flex justify-content-center'>
+              <ReactStarts  edit={false}  value={conductor.calificacionCON}  size={28} /> 
+              </div>
               
-               {conductor.calificacionCON == 5
-                ? "⭐⭐⭐⭐⭐"
-                : conductor.calificacionCON == 4
-                ? "⭐⭐⭐⭐"
-                : conductor.calificacionCON == 3
-                ? "⭐⭐⭐"
-                : conductor.calificacionCON == 2
-                ? "⭐⭐"
-                : conductor.calificacionCON == 1
-                ? "⭐"
-                : "0"} 
+      
             </td>
 
             <td className="text-center align-middle">

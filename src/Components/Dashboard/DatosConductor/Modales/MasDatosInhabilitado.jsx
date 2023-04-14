@@ -72,13 +72,15 @@ function MasDatosInhabilitado({ data }) {
                                 className="carousel-item active"
                                 data-bs-interval="10000"
                               >
+                                <div class="cuadrado">
                                 <img
                                   src={
                                     conductor.imagenesInhabilitado.FotoFrontal
                                   }
-                                  className=" w-50"
+                                  className=" "
                                   alt=""
                                 />
+                                </div>
                               </div>
                               <div
                                 className="carousel-item"
@@ -554,9 +556,9 @@ function MasDatosInhabilitado({ data }) {
                         </div>
                         <hr />
                         <div className="col-12 text-center">
-                          <div classNameName="mt-2">
+                          <div className="mt-2">
                             <button
-                              classNameName="btn btn-primary mb-2"
+                              className="btn btn-primary mb-2"
                               onClick={() => {
                                 Swal.fire({
                                   title:

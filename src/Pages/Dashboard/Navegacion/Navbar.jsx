@@ -4,8 +4,10 @@ import "../../../css/styleAdmin.css";
 import profile from "../../../assets/icons/profile.jpg";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import {useNavigate} from 'react-router-dom'
 
 function Navbar() {
+  const navigate=useNavigate()
   const [openMenu, setOpenSidebar] = useState(false);
 
   function openSidebar() {
@@ -52,10 +54,16 @@ function Navbar() {
 
               <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                 <li>
-                  <div className="dropdown-item d-flex align-items-center">
+                  <button className="dropdown-item d-flex align-items-center" onClick={()=>{
+                    localStorage.clear()
+                    return navigate("/")
+                    
+                    
+                    }}>
                     <i className="bi bi-box-arrow-right"></i>
+                    
                     Cerrar Sesion
-                  </div>
+                  </button>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
