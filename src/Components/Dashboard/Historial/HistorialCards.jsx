@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { getHistorial } from "../../../Data/Historial";
+import Manifiesto from './Manifiesto';
 
 function HistorialCards() {
   const [Historial, setHistorial] = useState([]);
@@ -27,7 +28,8 @@ function HistorialCards() {
           <td className="text-center pt-4">${address.geo.lat}</td>
           <td className="text-center pt-4">
             <div className="manifiesto ">
-              <Link to={"/manifiesto"} className="text-danger">
+              <Link to={`/manifiesto/${id}`} target="blank" className="text-danger"
+              >
                 Ver manifiesto
               </Link>
             </div>

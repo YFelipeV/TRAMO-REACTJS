@@ -14,6 +14,7 @@ import DatosEmpresa from "../Pages/Dashboard/DatosCliente/DatosEmpresa";
 import DatosConductores from "../Pages/Dashboard/DatosConductor/DatosConductores";
 import Solicitudes from "../Pages/Dashboard/Solicitudes/Solicitudes";
 import PrivateRoute from "./PrivateRoute";
+import Manifiesto from "../Components/Dashboard/Historial/Manifiesto";
 export const AppRouter = () => {
   return (
     <>
@@ -54,9 +55,11 @@ export const AppRouter = () => {
             <Route path="datosclienteempresa" element={<DatosEmpresa />} />
             {/* felipe dulcey */}
             <Route path="historial" element={<Historial />} />
+           
             {/* felipe segura */}
             <Route path="pqrs" element={<Pqrs />} />
           </Route>
+          <Route path="manifiesto/:id" element={<Manifiesto />} />
        
       </Routes>
     </>

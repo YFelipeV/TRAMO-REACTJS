@@ -1,0 +1,37 @@
+.Manifiesto{
+    font-size: 10px;
+}
+.Manifiesto p{
+    font-size: 11px;
+    margin: 1px;
+    padding: 0;
+}
+
+.Manifiesto .texto-largo{
+    font-size: 9px;
+}
+
+
+.Manifiesto .subtitulos{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.Manifiesto .bordes{
+    border: 1px solid;
+    height: 10px;
+}
+
+.Manifiesto .bordes td{
+    border: 1px solid;
+    height: 10px;
+}
+.Manifiesto .bordes td p{
+    text-align: center;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.Manifiesto .bordes td .border-right{
+    border-right: 1px solid black;
+}
