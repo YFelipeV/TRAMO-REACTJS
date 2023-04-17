@@ -3,6 +3,7 @@ import { Suspense, lazy } from "react";
 
 import PrivateRoute from "./PrivateRoute";
 import Header from "../Pages/LandingPage/Header";
+import Manifiesto from "../Components/Dashboard/Historial/Manifiesto";
 
 const Home = lazy(() => import("../Pages/LandingPage/Home"));
 const About = lazy(() => import("../Pages/LandingPage/About"));
@@ -76,11 +77,12 @@ export const AppRouter = () => {
             <Route path="datosclienteempresa" element={<DatosEmpresa />} />
             {/* felipe dulcey */}
             <Route path="historial" element={<Historial />} />
-           
+
             {/* felipe segura */}
             <Route path="pqrs" element={<Pqrs />} />
           </Route>
-       
+          <Route path="/manifiesto/:id" element={<Manifiesto/>}></Route>
+        </Route>
       </Routes>
     </>
   );
