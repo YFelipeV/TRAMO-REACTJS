@@ -1,14 +1,14 @@
-import facebook from "../assets/icons/facebook.svg";
+import facebook from "../../assets/icons/facebook.svg";
 
-import youtube from "../assets/icons/youtube.svg";
-import twitter from "../assets/icons/twitter.svg";
-import ins from "../assets/icons/instagram.svg";
-import wasap from "../assets/icons/whatsapp.svg";
-import telefono from "../assets/icons/telephone.svg";
-import geo from "../assets/icons/geo.svg";
-import email from "../assets/icons/email.svg";
-import back from "../assets/icons/back.svg";
-import negativo from '../assets/icons/negativo.png'
+import youtube from "../../assets/icons/youtube.svg";
+import twitter from "../../assets/icons/twitter.svg";
+import ins from "../../assets/icons/instagram.svg";
+import wasap from "../../assets/icons/whatsapp.svg";
+import telefono from "../../assets/icons/telephone.svg";
+import geo from "../../assets/icons/geo.svg";
+import email from "../../assets/icons/email.svg";
+import back from "../../assets/icons/back.svg";
+import negativo from '../../assets/icons/negativo.png'
 import { Link } from "react-router-dom";
 
 function Footer() {

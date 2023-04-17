@@ -16,6 +16,8 @@ export const useConductores = () => {
 
 export const ServiceContextProvider = ({ children }) => {
   const [datosConductor, setDatosConductor] = useState([]);
+  const [loadingconductor, setloadingconductor] = useState(false);
+  const [loading, setloading] = useState(false);
   const [datosConductorInhabilitado, setDatosConductorInhabilitado] = useState(
     []
   );
@@ -23,10 +25,12 @@ export const ServiceContextProvider = ({ children }) => {
   const loadDatosConductorHabilitados = async () => {
     const response = await CondutoresHabilitados();
     setDatosConductor(response);
+    setloadingconductor(true)
   };
   const loadDatosConductorInhabilitados = async () => {
     const response = await CondutoresInhabilitados();
     setDatosConductorInhabilitado(response);
+    setloading(true)
   };
 
   return (
@@ -36,6 +40,8 @@ export const ServiceContextProvider = ({ children }) => {
         datosConductor,
         loadDatosConductorInhabilitados,
         datosConductorInhabilitado,
+        loadingconductor,
+        loading
       }}
     >
       {children}

@@ -1,13 +1,13 @@
-import felipeD from "../assets/Integrantes/Perfil_SF.png";
+import felipeD from "../../assets/Integrantes/Perfil_SF.png";
 
-import jhon from "../assets/Integrantes/JhonSF.png";
-import felipeS from "../assets/Integrantes/SeguraSF.png";
-import carlos from '../assets/Integrantes/carlos.png'
-import yonathan from "../assets/Integrantes/YonatanSF.png";
-import hernan from "../assets/Integrantes/HernanSF2.png";
-import facebook from "../assets/icons/facebook.svg";
-import ins from "../assets/icons/instagram.svg";
-import wasap from "../assets/icons/whatsapp.svg";
+import jhon from "../../assets/Integrantes/JhonSF.png";
+import felipeS from "../../assets/Integrantes/SeguraSF.png";
+import carlos from "../../assets/Integrantes/carlos.png";
+import yonathan from "../../assets/Integrantes/YonatanSF.png";
+import hernan from "../../assets/Integrantes/HernanSF2.png";
+import facebook from "../../assets/icons/facebook.svg";
+import ins from "../../assets/icons/instagram.svg";
+import wasap from "../../assets/icons/whatsapp.svg";
 
 function IntegrantesSliderGrande() {
   return (
@@ -27,7 +27,7 @@ function IntegrantesSliderGrande() {
               <div className="carousel-item active text-center d-flex  justify-content-center  w-100">
                 <div
                   className="card card-integrantes my-5"
-                  style={{width: "18rem"}}
+                  style={{ width: "18rem" }}
                 >
                   <img
                     src={felipeD}
@@ -39,7 +39,11 @@ function IntegrantesSliderGrande() {
                     <h6 className="">Scrum Master</h6>
                     <ul className="d-flex redes-integrantes justify-content-center">
                       <li>
-                        <a className=" bg-yellow wasap " target={"_blank"} href="">
+                        <a
+                          className=" bg-yellow wasap "
+                          target={"_blank"}
+                          href=""
+                        >
                           <img
                             src={wasap}
                             className=" p-2 rounded mb-2  "
@@ -53,11 +57,7 @@ function IntegrantesSliderGrande() {
                           target={"_blank"}
                           href="https://www.instagram.com/felipe_dullcey/"
                         >
-                          <img
-                            src={ins}
-                            className=" p-2 rounded mb-2"
-                            alt=""
-                          />
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
                         </a>
                       </li>
                       <li>
@@ -79,7 +79,7 @@ function IntegrantesSliderGrande() {
 
                 <div
                   className="ms-3 card card-integrantes my-5"
-                  style={{width: "18rem"}}
+                  style={{ width: "18rem" }}
                 >
                   <img
                     src={carlos}
@@ -88,7 +88,7 @@ function IntegrantesSliderGrande() {
                   />
                   <div className="card-body">
                     <h5 className="card-title">Carlos Noguera Cordoba</h5>
-                    <h6 >Product Owner</h6>
+                    <h6>Product Owner</h6>
                     <ul className="d-flex redes-integrantes justify-content-center">
                       <li>
                         <a className=" bg-yellow wasap" target="_blank" href="">
@@ -105,11 +105,7 @@ function IntegrantesSliderGrande() {
                           target="_blank"
                           href="https://www.instagram.com/krlos_nc/"
                         >
-                          <img
-                            src={ins}
-                            className=" p-2 rounded mb-2"
-                            alt=""
-                          />
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
                         </a>
                       </li>
                       <li>
@@ -134,7 +130,7 @@ function IntegrantesSliderGrande() {
               <div className="carousel-item text-center d-flex justify-content-center  w-100">
                 <div
                   className="card card-integrantes my-5"
-                  style={{width: "18rem"}}
+                  style={{ width: "18rem" }}
                 >
                   <img
                     src={felipeS}
@@ -155,12 +151,12 @@ function IntegrantesSliderGrande() {
                         </a>
                       </li>
                       <li>
-                        <a className=" bg-yellow instagram" target="_blank" href="">
-                          <img
-                            src={ins}
-                            className=" p-2 rounded mb-2"
-                            alt=""
-                          />
+                        <a
+                          className=" bg-yellow instagram"
+                          target="_blank"
+                          href=""
+                        >
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
                         </a>
                       </li>
                       <li>
@@ -182,7 +178,7 @@ function IntegrantesSliderGrande() {
 
                 <div
                   className="ms-3  card card-integrantes my-5"
-                  style={{width: "18rem"}}
+                  style={{ width: "18rem" }}
                 >
                   <img
                     src={jhon}
@@ -203,12 +199,12 @@ function IntegrantesSliderGrande() {
                         </a>
                       </li>
                       <li>
-                        <a className=" bg-yellow instagram" target="_blank" href="">
-                          <img
-                            src={ins}
-                            className=" p-2 rounded mb-2"
-                            alt=""
-                          />
+                        <a
+                          className=" bg-yellow instagram"
+                          target="_blank"
+                          href=""
+                        >
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
                         </a>
                       </li>
                       <li>
@@ -233,7 +229,7 @@ function IntegrantesSliderGrande() {
               <div className="carousel-item text-center d-flex justify-content-center  w-100">
                 <div
                   className="card card-integrantes my-5"
-                  style={{width: "18rem"}}
+                  style={{ width: "18rem" }}
                 >
                   <img
                     src={yonathan}
@@ -254,12 +250,12 @@ function IntegrantesSliderGrande() {
                         </a>
                       </li>
                       <li>
-                        <a className=" bg-yellow instagram" target="_blank" href="">
-                          <img
-                            src={ins}
-                            className=" p-2 rounded mb-2"
-                            alt=""
-                          />
+                        <a
+                          className=" bg-yellow instagram"
+                          target="_blank"
+                          href=""
+                        >
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
                         </a>
                       </li>
                       <li>
@@ -281,7 +277,7 @@ function IntegrantesSliderGrande() {
 
                 <div
                   className="ms-3  card card-integrantes my-5"
-                  style={{width: "18rem"}}
+                  style={{ width: "18rem" }}
                 >
                   <img
                     src={hernan}
@@ -302,12 +298,12 @@ function IntegrantesSliderGrande() {
                         </a>
                       </li>
                       <li>
-                        <a className=" bg-yellow instagram" target="_blank" href="">
-                          <img
-                            src={ins}
-                            className=" p-2 rounded mb-2"
-                            alt=""
-                          />
+                        <a
+                          className=" bg-yellow instagram"
+                          target="_blank"
+                          href=""
+                        >
+                          <img src={ins} className=" p-2 rounded mb-2" alt="" />
                         </a>
                       </li>
                       <li>

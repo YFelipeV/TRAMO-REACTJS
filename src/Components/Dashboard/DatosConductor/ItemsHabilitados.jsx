@@ -1,6 +1,8 @@
 import Minhabilitar from "./Modales/Minhabilitar";
 import MasDatos from "./Modales/MasDatos";
 import { useState } from "react";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import {
   CondutoresHabilitado,
   CondutoresInhabilitado,
@@ -8,25 +10,25 @@ import {
 import { useConductores } from "../../../Context/Contexto";
 
 function ItemsHabilitados() {
-  const { datosConductor } = useConductores();
+  const { datosConductor, loadingconductor } = useConductores();
   const [data, setdata] = useState([]);
   const [getid, setgetid] = useState(0);
 
   const handleOnsumbit = async (id) => {
-    setgetid(id)
+    setgetid(id);
     const response = await CondutoresHabilitado(id);
     setdata(response);
   };
 
   return (
     <>
-      {datosConductor.map(({ conductor }) => (
-        
+      {loadingconductor ? (
+        datosConductor.map(({ conductor }) => (
           <tr key={conductor._id}>
             <td>
               <img
                 src={
-                  conductor.perfil
+                  conductor.perfil.fotoperfilCON
                     ? conductor.perfil.fotoperfilCON
                     : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
                 }
@@ -39,7 +41,8 @@ function ItemsHabilitados() {
                 <b>Nombre</b>
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
-                {conductor.nombreCON} {conductor.apellidoCON}
+                {conductor.nombreCON || <Skeleton count={1} />}{" "}
+                {conductor.apellidoCON || <Skeleton count={1} />}
               </p>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>N° Telefono</b>
@@ -92,11 +95,14 @@ function ItemsHabilitados() {
                 </div> */}
             </td>
           </tr>
-          
-        
-      ))}
+        ))
+      ) : (
+        <div className="d-flex justify-content-center">
+          <span class="loader3"></span>
+        </div>
+      )}
       <Minhabilitar getid={getid} />
-     
+
       <MasDatos data={data} />
     </>
   );

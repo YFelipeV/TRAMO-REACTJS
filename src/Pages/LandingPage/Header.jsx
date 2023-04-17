@@ -1,15 +1,15 @@
-import logo from "../assets/icons/horizontal.jpg";
+import logo from "../../assets/icons/horizontal.jpg";
 import Footer from "./Footer";
-import "../css/style.css";
+import "../../css/style.css";
 import { Link, Outlet } from "react-router-dom";
-
+import { Suspense } from "react";
 
 function Header() {
   return (
     <>
       <header>
         <nav
-          className="navbar d-flex navbar-expand-lg navbar-light fixed-top pt-2 bg-white"
+          className="navbar d-flex navbar-expand-lg nav-menu navbar-light fixed-top pt-2 bg-white"
           data-navbar-on-scroll="data-navbar-on-scroll"
         >
           <div className="container-fluid">
@@ -56,7 +56,7 @@ function Header() {
                     Acerca de Nosotros
                   </Link>
                 </li>
-                
+
                 <li className="nav-item">
                   <Link
                     className="nav-link fw-medium fs-5 text-primary"
@@ -78,8 +78,23 @@ function Header() {
           </div>
         </nav>
       </header>
-      <Outlet />
-      <Footer />
+
+      <Suspense
+        fallback={
+          <section className="mt-5 p-5">
+            <div className="d-flex justify-content-center mt-5 align-content-center">
+            <span class="loader"></span>
+           
+            </div>
+            <div className="text-center">
+            <span className="loader1 "></span>
+            </div>
+          </section>
+        }
+      >
+        <Outlet />
+        <Footer />
+      </Suspense>
     </>
   );
 }

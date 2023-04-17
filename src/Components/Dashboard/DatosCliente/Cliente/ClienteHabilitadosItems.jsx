@@ -16,7 +16,7 @@ function ClienteHabilitadosItems({ data }) {
             <td>
               <img
                 src={
-                  cliente.perfil
+                  cliente.perfil.fotoPerfilPNA
                     ? cliente.perfil.fotoPerfilPNA
                     : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
                 }

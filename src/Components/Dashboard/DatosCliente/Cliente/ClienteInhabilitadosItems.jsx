@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import { habilitarCliente } from "../../../../Data/DatosCliente";
 import Swal from "sweetalert2";
 import ClienteMotivo from "../Modales/ClienteMotivo";
-import ReactStarts from 'react-stars'
-
+import ReactStarts from "react-stars";
 
 function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
   const [motivo, setmotivo] = useState("");
-  
+  const [nombre, setnombre] = useState("");
   return (
     <>
       {ClienteInhabilitado.map(
@@ -25,12 +24,6 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
           <tr key={_id}>
             <td>
               <div>
-                {/* <img
-                  src={perfil.fotoPerfilPNA}
-                  alt="Profile"
-                  style={{ width: "65%" }}
-                  className="rounded-circle "
-                /> */}
                 <img
                   src={
                     perfil
@@ -39,7 +32,6 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                   }
                   className="circle-img    "
                   alt=""
-                  
                 />
               </div>
             </td>
@@ -75,10 +67,10 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Calificacion {calificacionPNA}</b>
               </p>
-             <div className="d-flex justify-content-center">
-              <ReactStarts  edit={false}  value={calificacionPNA}  size={28} /> 
+              <div className="d-flex justify-content-center">
+                <ReactStarts edit={false} value={calificacionPNA} size={28} />
               </div>
-              
+
               <p className="font-weight-bold text-xs font-weight-bold m-0"></p>
             </td>
             <td>
@@ -89,7 +81,10 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                     className="m-0 p-0 text-danger bg-white border-0"
                     data-bs-toggle="modal"
                     data-bs-target="#motivo-inhabilitacion"
-                    onClick={() => setmotivo(estadoCLN.motivoInhabilitadoPNA)}
+                    onClick={() => {
+                      setmotivo(estadoCLN.motivoInhabilitadoPNA),
+                        setnombre(nombrePNA , apellidoPNA);
+                    }}
                   >
                     Ver motivo inhabilitacion
                   </button>
@@ -122,12 +117,10 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
               </div>
             </td>
           </tr>
-         
         )
       )}
-       
-    
-      <ClienteMotivo motivo={motivo} />
+
+      <ClienteMotivo motivo={motivo} nombre={nombre} />
     </>
   );
 }

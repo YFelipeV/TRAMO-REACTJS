@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 
 import { getPqrs } from "../../../Data/Pqrs";
 import PqrsCards from "../../../Components/Dashboard/Pqrs/PqrsCards";
+import { useParams } from "react-router-dom";
 
 function Pqrs() {
   const [data, setdata] = useState([]);
+  const{id}=useParams()
 
   useEffect(() => {
     const loadPqrs = async () => {

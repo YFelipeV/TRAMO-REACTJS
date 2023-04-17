@@ -1,4 +1,5 @@
-function EmpresaMotivo({ motivo }) {
+function EmpresaMotivo(data) {
+  const{motivo,nombre}=data
   return (
     <tr>
       <td>
@@ -24,7 +25,10 @@ function EmpresaMotivo({ motivo }) {
                   aria-label="Close"
                 ></button>
               </div>
-              <div className="modal-body">{motivo}</div>
+              <div className="modal-body">
+              <h6 className='mb-3 fw-bold'>{nombre}</h6>
+                {motivo}
+                </div>
             </div>
           </div>
         </div>

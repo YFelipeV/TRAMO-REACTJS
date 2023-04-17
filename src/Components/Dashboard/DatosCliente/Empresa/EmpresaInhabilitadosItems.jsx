@@ -6,6 +6,7 @@ import ReactStarts from 'react-stars'
 
 function EmpresaInhabilitadosItems({ inhabilitados }) {
   const [motivo, setmotivo] = useState("");
+  const [nombre, setnombre] = useState("");
   return (
     <>
       {inhabilitados.map(
@@ -79,7 +80,7 @@ function EmpresaInhabilitadosItems({ inhabilitados }) {
                     className="m-0 p-0 text-danger bg-white border-0"
                     data-bs-toggle="modal"
                     data-bs-target="#motivo-inhabilitacion-empresa"
-                    onClick={() => setmotivo(estadoPJU.motivoInhabilitadoPJU)}
+                    onClick={() => {setmotivo(estadoPJU.motivoInhabilitadoPJU), setnombre(nombreEmpresa)}}
                   >
                     Ver motivo inhabilitacion
                   </button>
@@ -110,7 +111,7 @@ function EmpresaInhabilitadosItems({ inhabilitados }) {
           </tr>
         )
       )}
-      <EmpresaMotivo motivo={motivo} />
+      <EmpresaMotivo motivo={motivo} nombre={nombre} />
     </>
   );
 }

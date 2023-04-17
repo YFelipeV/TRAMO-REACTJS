@@ -1,51 +1,64 @@
-import "../css/style.css";
+import "../../css/style.css";
 
-import imagen1 from "../assets/ilustraciones/movil-inicio.png";
-import imagen2 from "../assets/icons/arrow-right.png";
-import company_1 from "../assets/sponsor/company-1.png";
-import company_2 from "../assets/sponsor/company-2.png";
-import company_3 from "../assets/sponsor/company-3.png";
-import company_4 from "../assets/sponsor/company-4.png";
-import ilustracion from "../assets/ilustraciones/movil-cliente.png";
-import icon1 from "../assets/icons/fast-performance.png";
-import icon2 from "../assets/icons/prototype.png";
-import icon3 from "../assets/icons/vector.png";
-import acerca from "../assets/ilustraciones/acerca_nosotros_ilus.svg";
-import appstore from "../assets/icons/app-store.png";
-import playstore from "../assets/icons/google-play.png";
-import ilustracion2 from "../assets/ilustraciones/cta.svg";
+import imagen1me from "../../assets/ilustraciones/1.png";
+import imagen2me from "../../assets/ilustraciones/3.png";
+import imagen3me from "../../assets/ilustraciones/5.png";
+import wuawei from "../../assets/icons/huawey.jpg";
+import imagen2 from "../../assets/icons/arrow-right.png";
+import company_1 from "../../assets/sponsor/company-1.png";
+import company_2 from "../../assets/sponsor/company-2.png";
+import company_3 from "../../assets/sponsor/company-3.png";
+import company_4 from "../../assets/sponsor/company-4.png";
+
+import icon1 from "../../assets/icons/fast-performance.png";
+import icon2 from "../../assets/icons/prototype.png";
+import icon3 from "../../assets/icons/vector.png";
+import acerca from "../../assets/ilustraciones/acerca_nosotros_ilus.svg";
+import appstore from "../../assets/icons/app-store.png";
+import playstore from "../../assets/icons/google-play.png";
+
 import { Link } from "react-router-dom";
 import Testimonios from "./Testimonios";
-import hero from '../assets/ilustraciones/hero-bg.png'
-import { lazy } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+//  import hero from ' ../../assets/ilustraciones/hero-bg.png'
+import { lazy, useEffect } from "react";
 function Home() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
     <>
-      <section className="   index_inicio  " id="home container">
-        <div className="container   mt-5">
-          <div className="row align-items-center  w-100  ">
-            <div className="col-md-5 col-lg-6 order-md-1 text-center ">
+      <section className="index_inicio fond   " id="home ">
+        <div className="w-100 px-5 hello container mt-5">
+          <div
+            className="row align-items-center    w-100  "
+            data-aos="fade-right"
+          >
+            <div className="col-md-3 arreglar3   mt-5 col-lg-6 order-md-1 text-center ">
               <img
                 className="img-fluid flotante"
-                src={imagen1}
-                loading={lazy}
-                style={{ maxWidth: "270px" }}
+                src={imagen1me}
+                style={{ maxWidth: "290px" }}
                 alt=""
               ></img>
             </div>
-            <div className="col-md-7  col-lg-6 text-center text-md-start">
-              <span className="badge bg_gray rounded-pill text-dark align-items-center d-flex flex-row-reverse justify-content-end mx-auto mx-md-0 ps-0 w-100 w-sm-50 w-md-75 w-xl-0 my-3 ">
+            <div
+              className="col-md-9 arreglar2  col-lg-6 text-center text-md-start "
+              data-aos="fade-right"
+            >
+              <span className=" badge bg_gray rounded-pill text-dark align-items-center d-flex flex-row-reverse justify-content-end mx-auto mx-md-0 ps-0 w-100 w-sm-50 w-md-75 w-xl-0 my-3 ">
                 APP #1 Transporte De Carga 2023
                 <img
                   className="img-fluid float-start me-4   "
-                  loading={lazy}
                   src={imagen2}
                   alt=""
                 ></img>
               </span>
-              <h1 className="mb-4  display-5 fw-bold lh-sm dark pt-3">
+              <h1 className="mb-4 arreglar1 display-5 fw-bold lh-sm dark pt-3">
                 TRAMO <br className="d-block d-lg-none d-xl-block d5 " />
-                <span className="display-5 fw-bold maquina">
+                <span className="arreglar display-5 fw-bold ">
                   Transporte y Movilidad
                 </span>
               </h1>
@@ -66,16 +79,13 @@ function Home() {
           </div>
           {/* <img src={hero} className="w-100 " alt="" /> */}
         </div>
-        <div className="d-flex justify-content-center   w-100 ">
-    
-        </div>
-        
+        <div className="d-flex justify-content-center   w-100 "></div>
       </section>
-     
+
       {/* fin section */}
 
       {/* sponsor */}
-      <section className="py-5 ">
+      <section className="py-5  ">
         <div className="container">
           <div className="row">
             <div className="col-12 mx-auto align-items-center text-center">
@@ -84,21 +94,33 @@ function Home() {
               </p>
             </div>
           </div>
-          <div className="row align-items-center justify-content-center justify-content-lg-around">
-            <div className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center">
-              <img src={company_1} loading={lazy} alt=""></img>
+          <div className="row align-items-center justify-content-center justify-content-lg-around efectos">
+            <div
+              className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center efecto1"
+              data-aos="fade-rigth"
+            >
+              <img src={company_1}  alt=""></img>
             </div>
-            <div className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center">
-              <img src={company_2} loading={lazy} alt=""></img>
+            <div
+              className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center efecto2"
+              data-aos="fade-right"
+            >
+              <img src={company_2}  alt=""></img>
             </div>
-            <div className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center">
-              <img src={company_3} loading={lazy} alt=""></img>
+            <div className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center efecto3">
+              <img src={company_3}  alt=""></img>
             </div>
-            <div className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center">
-              <img src={company_4} loading={lazy} alt=""></img>
+            <div
+              className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center efecto4"
+              data-aos="fade-left"
+            >
+              <img src={company_4}  alt=""></img>
             </div>
-            <div className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center">
-              <img src={company_1} loading={lazy} alt=""></img>
+            <div
+              className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center efecto5"
+              data-aos="fade-left"
+            >
+              <img src={company_1}  alt=""></img>
             </div>
           </div>
         </div>
@@ -109,12 +131,14 @@ function Home() {
       <section className="py-1" id="features">
         <div className="container-lg pt-2 mt-2">
           <div className="row align-items-center">
-            <div className="col-md-4 col-lg-5 order-md-0  text-start mb-5 mb-md-0 conEmpresa">
+            <div
+              className="col-md-4 col-lg-5 order-md-0  text-start mb-5 mb-md-0 conEmpresa"
+              data-aos="fade-right"
+            >
               <img
                 className="img-fluid ilustracionEmpresa flotante"
-                src={ilustracion}
+                src={imagen2me}
                 style={{ maxWidth: "290px" }}
-                loading={lazy}
                 alt=""
               ></img>
             </div>
@@ -134,7 +158,6 @@ function Home() {
                   <img
                     className="img-fluid "
                     src={icon1}
-                    loading={lazy}
                     width="90"
                     alt=""
                   ></img>
@@ -154,7 +177,6 @@ function Home() {
                     className="img-fluid "
                     src={icon2}
                     width="90"
-                    loading={lazy}
                     alt=""
                   ></img>
                 </div>
@@ -173,7 +195,6 @@ function Home() {
                   <img
                     className="img-fluid "
                     src={icon3}
-                    loading={lazy}
                     width="90"
                     alt=""
                   ></img>
@@ -196,7 +217,7 @@ function Home() {
       {/* fin section */}
 
       {/* Acerca de nosotros */}
-      <section className="py-sm-4  my-sm-2 py-md-4 my-md-5">
+      <section className="py-sm-4 fond  my-sm-2 py-md-4 my-md-5">
         <div className="container pt-md-5">
           <div className="row align-items-center">
             <div className="col-md-6 text-center text-md-start offset-md-1 mb-sm-5">
@@ -220,11 +241,13 @@ function Home() {
                 Ver Más
               </Link>
             </div>
-            <div className="col-md-5 order-md-0 text-center text-md-start pt-sm-5">
+            <div
+              className="col-md-5 order-md-0 text-center text-md-start pt-sm-5"
+              data-aos="fade-left"
+            >
               <img
                 className="img-fluid acercaImg my-md-5  flotante"
                 src={acerca}
-                loading={lazy}
                 width="300"
                 alt=""
               ></img>
@@ -269,7 +292,8 @@ function Home() {
                       aria-controls="collapse1"
                     >
                       <span className=" fs-5   mb-0 fw-bold text-start  dark">
-                        How to contact with riders emergency?
+                        Es posible negociar el precio del flete directamente con
+                        el conductor encargado del servicio ?
                       </span>
                     </button>
                   </h2>
@@ -280,17 +304,11 @@ function Home() {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body  text-secondary bg_azul ">
-                      Leverage agile frameworks to provide a robust synopsis for
-                      high level overviews. Iterative approaches to corporate
-                      strategy foster collaborative thinking to further the
-                      overall value proposition. Organically grow the holistic
-                      world view of disruptive innovation via workplace
-                      diversity and empowerment.Bring to the table win-win
-                      survival strategies to ensure proactive domination. At the
-                      end of the day, going forward, a new normal that has
-                      evolved from generation X is on the runway heading towards
-                      a streamlined cloud solution. User generated content in
-                      real-time will have multiple touchpoints for offshoring.
+                      Hola, buenos dias, si es posible negociar el precio del
+                      flete con el conductor encargado de prestar el servicio,
+                      lo puedes hacer por medio una llamada telefonica, ya que
+                      tienes la posibilidad de poder acceder a los datos del
+                      conductor.
                     </div>
                   </div>
                 </div>
@@ -305,8 +323,8 @@ function Home() {
                       aria-controls="collapse2"
                     >
                       <span className="mb-0 fs-5  fw-bold text-start bg_azul  dark">
-                        App installation failed, how to update system
-                        information?
+                        Que pasa si hay un retraso en la llegada del vehiculo
+                        encargado de prestar el servicio?
                       </span>
                     </button>
                   </h2>
@@ -317,9 +335,11 @@ function Home() {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body text-secondary  bg_azul">
-                      You can issue either partial or full refunds. There are no
-                      fees to refund a charge, but the fees from the original
-                      charge are not returned.
+                      Hola, buenas tardes, en tal caso de que sucedan ese tipo
+                      de situaciones, el conductor debera notificarte del por
+                      que el retraso, en tal caso de que se le haga imposible
+                      llegar, te debe notificar, para que asi puedas solicitar
+                      otro vehiculo.
                     </div>
                   </div>
                 </div>
@@ -334,7 +354,8 @@ function Home() {
                       aria-controls="collapse3"
                     >
                       <span className="mb-0 fs-5 fw-bold text-start dark ">
-                        Website reponse taking time, how to improve?
+                        Que sucederia si el vehiculo en el cual transportaba los
+                        alimentos nunca llego al lugar de destino.
                       </span>
                     </button>
                   </h2>
@@ -345,9 +366,15 @@ function Home() {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body  text-secondary bg_azul">
-                      Disputed payments (also known as chargebacks) incur a
-                      $15.00 fee. If the customer’s bank resolves the dispute in
-                      your favor, the fee is fully refunded.
+                      En tal caso de que suceda una situacion de este tipo debes
+                      de comunicarte con las autoridades pertinentes para dar
+                      aviso, y brindarles toda la informacion que te brinda la
+                      aplicacion en ese momento sobre el conductor y el vehiculo
+                      en el cual estaba prestando el servicio, tambien debes de
+                      notificar con los administardores de la aplicacion para
+                      que se encarguen de inhabilitar al condutor, en ese
+                      momento se le notificara al conductor del por que la
+                      suspencion
                     </div>
                   </div>
                 </div>
@@ -362,7 +389,9 @@ function Home() {
                       aria-controls="collapse4"
                     >
                       <span className="mb-0 fs-5 fw-bold text-start  dark ">
-                        New update fixed all bug and issues
+                        Como hago para tener la seguridad de que los vehiculos y
+                        conductores que estan regristrados a la app cumplen con
+                        toda la normativa?
                       </span>
                     </button>
                   </h2>
@@ -373,9 +402,12 @@ function Home() {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body text-secondary bg_azul">
-                      There are no additional fees for using our mobile SDKs or
-                      to accept payments using consumer wallets like Apple Pay
-                      or Google Pay.
+                      Los administradores de TRAMO se encaragn de verificar que
+                      cada solicitud que es enviada a la aplicacion, que los
+                      documentos de la persona se encuentren en regla igual que
+                      los documentos del vehiculo, despues de haber revisado y
+                      comprobar que se encuentren en regla, sera aprobado para
+                      que pueda prestar sus servicios.
                     </div>
                   </div>
                 </div>
@@ -390,7 +422,8 @@ function Home() {
                       aria-controls="collapse5"
                     >
                       <span className="mb-0 fs-5 text-start fw-bold  dark">
-                        How to contact with riders emergency?
+                        Tengo la posibilidad de escoger el vehiculo de acuerdo a
+                        mis nesecidades?
                       </span>
                     </button>
                   </h2>
@@ -401,9 +434,8 @@ function Home() {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body text-secondary bg_azul">
-                      There are no additional fees for using our mobile SDKs or
-                      to accept payments using consumer wallets like Apple Pay
-                      or Google Pay.
+                      Hola, buenas tardes, si es posible escoger el veiculo, de
+                      acuerdo a tus nesecidades, y al ambiente geografico.
                     </div>
                   </div>
                 </div>
@@ -415,14 +447,13 @@ function Home() {
       {/* fin section */}
 
       {/* section descarga */}
-      <section className="pt-sm-3 mt-md-5 pt-sm-2 pt-md-5 " id="descarga-con">
+      <section className="pt-sm-3 mt-md-5 pt-sm-2 pt-md-5  fond" id="descarga-con">
         <div className="container mt-sm-3 mt-md-5 ">
-          <div className="row align-items-center">
-            <div className="col-md-5 col-lg-5 order-md-1 text-center z-index-2 cta-image ">
+          <div className="row align-items-center ">
+            <div className="col-md-5 col-lg-5  order-md-1 text-center z-index-2 cta-image ">
               <img
-                className="img-fluid mb-4 mb-md-0 img_descarga ilustracion  w-75 flotante"
-                src={ilustracion2}
-                loading={lazy}
+                className="img-fluid mb-4 mb-md-0  ilustracion  flotante"
+                src={imagen3me}
                 alt=""
               ></img>
             </div>
@@ -432,19 +463,31 @@ function Home() {
               </h1>
               <p className="my-4 fs-5 text-secondary">
                 {" "}
-                The rise of mobile devices transforms the way we consume
-                information entirely and the world's most elevant channels such
-                as Facebook.
+                El auge de los dispositivos moviles transforma la forma en que
+                consumimos informacion por completo y los mas importante del
+                mundo, como facebook.
               </p>
-              <div className="d-flex justify-content-center d-md-inline-block">
+              <div className=" justify-content-center d-md-inline-block columna centrar">
                 <a className="pe-2 pe-sm-3 pe-md-4" href="!#">
-                  <img className="w-sm-50 w-md-50" src={playstore} alt=""></img>
-                </a>
-                <a href="!#">
                   <img
-                    className="w-sm-25 w-md-50 appstore"
+                    className="w-sm-50 w-md-50 playstore"
+                    src={playstore}
+                    alt=""
+                  ></img>
+                </a>
+                <a href="!#"></a>
+
+                <a className="pe-2 pe-sm-3 pe-md-4" href="!#">
+                  <img
+                    className="w-sm-50 w-md-50 appstore"
                     src={appstore}
-                    loading={lazy}
+                    alt=""
+                  ></img>
+                </a>
+                <a className="pe-2 pe-sm-3 pe-md-4" href="!#">
+                  <img
+                    className="w-sm-50 w-md-50 wuawei"
+                    src={wuawei}
                     alt=""
                   ></img>
                 </a>

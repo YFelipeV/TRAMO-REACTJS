@@ -1,6 +1,7 @@
 import React from "react";
 
-function ClienteMotivo({motivo}) {
+function ClienteMotivo(data) {
+  const{motivo,nombre}=data
   return (
     <tr>
     <td>
@@ -26,7 +27,10 @@ function ClienteMotivo({motivo}) {
                 aria-label="Close"
               ></button>
             </div>
-            <div className="modal-body">{motivo}</div>
+            <div className="modal-body">
+            <h6 className='mb-3 fw-bold'>{nombre}</h6>
+              {motivo}
+              </div>
           </div>
         </div>
       </div>

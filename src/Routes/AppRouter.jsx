@@ -1,49 +1,71 @@
-import { Route, Routes } from "react-router-dom";
-import { Home, About, Contact } from "../Components/LandingPage";
-import { lazy, Suspense } from "react";
-const Head = lazy(() => import("../Components/LandingPage/Header"));
-import Pagina404 from "../Pages/Pagina404";
-import Login from "../Pages/Login";
-import Navbar from "../Pages/Dashboard/Navegacion/Navbar";
-import Conductores from "../Pages/Dashboard/Conductores/ConductoresDisponibles";
+import { Outlet, Route, Routes } from "react-router-dom";
+import { Suspense, lazy } from "react";
 
-import Historial from "../Pages/Dashboard/Historial/Historial";
-import Pqrs from "../Pages/Dashboard/Pqrs/Pqrs";
-import DatosCliente from "../Pages/Dashboard/DatosCliente/DatosCliente";
-import DatosEmpresa from "../Pages/Dashboard/DatosCliente/DatosEmpresa";
-import DatosConductores from "../Pages/Dashboard/DatosConductor/DatosConductores";
-import Solicitudes from "../Pages/Dashboard/Solicitudes/Solicitudes";
 import PrivateRoute from "./PrivateRoute";
+import Header from "../Pages/LandingPage/Header";
+
+const Home = lazy(() => import("../Pages/LandingPage/Home"));
+const About = lazy(() => import("../Pages/LandingPage/About"));
+const Contact = lazy(() => import("../Pages/LandingPage/Contact"));
+const Login = lazy(() => import("../Pages/Login"));
+const Pagina404 = lazy(() => import("../Pages/Pagina404"));
+
+const Navbar = lazy(() => import("../Pages/Dashboard/Navegacion/Navbar"));
+const Conductores = lazy(() =>
+  import("../Pages/Dashboard/Conductores/ConductoresDisponibles")
+);
+const Historial = lazy(() => import("../Pages/Dashboard/Historial/Historial"));
+const Pqrs = lazy(() => import("../Pages/Dashboard/Pqrs/Pqrs"));
+const DatosCliente = lazy(() =>
+  import("../Pages/Dashboard/DatosCliente/DatosCliente")
+);
+const DatosEmpresa = lazy(() =>
+  import("../Pages/Dashboard/DatosCliente/DatosEmpresa")
+);
+const DatosConductores = lazy(() =>
+  import("../Pages/Dashboard/DatosConductor/DatosConductores")
+);
+const Solicitudes = lazy(() =>
+  import("../Pages/Dashboard/Solicitudes/Solicitudes")
+);
+
 export const AppRouter = () => {
   return (
     <>
-      {/* LANIDNG*/}
+      {/* LANDING*/}
       <Routes>
-        <Route
-          path="/"
-          element={
-            <Suspense
-              fallback={
-                <div className="d-flex justify-content-center">
-                  <h4 className="text-white">Cargando...</h4>
-                </div>
-              }
-            >
-              <Head />
-            </Suspense>
-          }
-        >
+        <Route path="/" element={<Header />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contactos" element={<Contact />} />
         </Route>
-
         {/* RUTAS SOLAS */}
-        <Route path="login" element={<Login />} />
+        <Route
+          path="/login"
+          element={
+            <Suspense
+              fallback={
+                <section className="mt-5 p-5">
+                  <div className="d-flex justify-content-center mt-5 align-content-center">
+                    <span class="loader"></span>
+                  </div>
+                  <div className="text-center">
+                    <span className="loader1 "></span>
+                  </div>
+                </section>
+              }
+            >
+              {" "}
+              <Outlet />
+            </Suspense>
+          }
+        >
+          <Route index element={<Login />} />
+        </Route>
+        <Route path="/pagina404" element={<Pagina404 />} />
         <Route path="*" element={<Pagina404 />} />
-
-        {/* RUTAS DEL DASHBOARD */}
-        
+        RUTAS DEL DASHBOARD
+        <Route element={<PrivateRoute />}>
           <Route path="/dashboard" element={<Navbar />}>
             <Route index element={<Conductores />} />
             {/* felipe dulcey */}
@@ -57,7 +79,7 @@ export const AppRouter = () => {
             {/* felipe segura */}
             <Route path="pqrs" element={<Pqrs />} />
           </Route>
-       
+        </Route>
       </Routes>
     </>
   );

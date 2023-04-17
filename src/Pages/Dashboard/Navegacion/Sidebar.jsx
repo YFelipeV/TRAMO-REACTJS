@@ -5,7 +5,7 @@ import "../../../css/styleAdmin.css";
 function Sidebar() {
   return (
     <>
-      <Outlet />
+    <Outlet />
       <aside id="sidebar" className="sidebar">
         <ul className="sidebar-nav" id="sidebar-nav">
           <SidebarLinks goingTo={"/dashboard"} children={"conductores"} />

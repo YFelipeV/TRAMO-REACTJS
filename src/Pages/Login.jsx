@@ -19,11 +19,6 @@ function Login() {
     });
   };
 
-  // const user = {
-  //   correoAdmin: correoAdmin,
-  //   passwordAdmin: passwordAdmin,
-  // };
-
   function handle(event) {
     event.preventDefault();
   }

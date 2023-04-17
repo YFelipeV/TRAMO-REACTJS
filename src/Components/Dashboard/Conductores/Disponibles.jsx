@@ -1,24 +1,21 @@
-import React, { useEffect, useState } from 'react'
-import {getConductoresDisponibles} from '../../../Data/Conductores';
-import Head from './Head';
-import Items from './Items';
-
+import React, { useEffect, useState } from "react";
+import { getConductoresDisponibles } from "../../../Data/Conductores";
+import Head from "./Head";
+import Items from "./Items";
 
 function Disponibles() {
-
   const [condutorDisponible, setCondutorDisponible] = useState([]);
 
   const subTitulos = ["perfil", "nombre", "telefono", "calificacion", "estado"];
 
-useEffect(()=>{
-
-    const loadConductoresDisponibles = async ()=> {
+  useEffect(() => {
+    const loadConductoresDisponibles = async () => {
       let response = await getConductoresDisponibles();
       setCondutorDisponible(response);
-    }
+    };
 
-    loadConductoresDisponibles()
-},[])
+    loadConductoresDisponibles();
+  }, []);
 
   return (
     <>
@@ -48,7 +45,7 @@ useEffect(()=>{
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Disponibles
+export default Disponibles;

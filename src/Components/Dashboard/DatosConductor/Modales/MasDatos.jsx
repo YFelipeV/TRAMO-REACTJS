@@ -432,7 +432,7 @@ function MasDatos({ data }) {
                             data-bs-target="#escribir-motivo-inhabilitacion"
                           >
                             Inhabilitar
-                          </button>
+                          </button> 
                         </div>
                       </div>
                       {/* <Minhabilitar _id={conductor._id} /> */}

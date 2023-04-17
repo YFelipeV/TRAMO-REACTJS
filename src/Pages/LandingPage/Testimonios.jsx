@@ -1,7 +1,7 @@
-import testimonio1 from "../assets/icons/testimonio1.jpg";
-import testimonio2 from "../assets/icons/testimonio2.jpg";
-import testimonio3 from "../assets/icons/testimonio3.jpg";
-import comillas from "../assets/icons/comillas.png";
+import testimonio1 from "../../assets/icons/testimonio1.jpg";
+import testimonio2 from "../../assets/icons/testimonio2.jpg";
+import testimonio3 from "../../assets/icons/testimonio3.jpg";
+import comillas from "../../assets/icons/comillas.png";
 function Testimonios() {
   return (
     <>
