@@ -76,10 +76,11 @@ export const AppRouter = () => {
             <Route path="datosclienteempresa" element={<DatosEmpresa />} />
             {/* felipe dulcey */}
             <Route path="historial" element={<Historial />} />
+           
             {/* felipe segura */}
             <Route path="pqrs" element={<Pqrs />} />
           </Route>
-        </Route>
+       
       </Routes>
     </>
   );
