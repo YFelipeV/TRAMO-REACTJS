@@ -30,7 +30,7 @@ function ItemsInhabilitados() {
               <div>
                 <img
                   src={conductor.perfil.fotoperfilCON}
-                  className="circle-img  m-2 "
+                  className="circle-img  ms-5"
                   alt=""
                 />
               </div>

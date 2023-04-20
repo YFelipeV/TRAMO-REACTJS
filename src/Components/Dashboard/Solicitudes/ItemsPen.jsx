@@ -24,8 +24,7 @@ function ItemsPen({ SolicitudesPendientes }) {
               <div className="d-flex justify-content-center aling-items-center ">
                 <img
                   src={conductor.perfil.fotoperfilCON}
-                  style={{ maxWidth: "90px" }}
-                  className="circle-img fotoperfil  "
+                  className="circle-img"
                   alt=""
                 />
               </div>

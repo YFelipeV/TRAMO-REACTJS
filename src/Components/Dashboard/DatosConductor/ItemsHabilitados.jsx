@@ -27,12 +27,12 @@ function ItemsHabilitados() {
           <tr key={conductor._id}>
             <td>
               <img
+                className="circle-img ms-5"
                 src={
                   conductor.perfil.fotoperfilCON
                     ? conductor.perfil.fotoperfilCON
                     : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
                 }
-                className="circle-img m-2 "
                 alt=""
               />
             </td>
