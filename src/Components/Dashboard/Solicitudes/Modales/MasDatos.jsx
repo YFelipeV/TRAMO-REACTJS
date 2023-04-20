@@ -17,7 +17,7 @@ function MasDatos({data}) {
       <div className="modal-dialog modal-dialog-scrollable modal-xl" id="modal">
         <div className="modal-content Modal-mas-datos">
           <div className="modal-header">
-            <h1 className="modal-title fs-5" id="staticBackdropLabel">
+            <h1 className="modal-title fs-5 fw-bold ps-2 opacity-75" id="staticBackdropLabel">
               Mas datos conductor
             </h1>
             <button

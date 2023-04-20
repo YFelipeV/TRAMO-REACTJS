@@ -25,7 +25,6 @@ function ItemsRec({ SolicitudesRechazadas }) {
                 src={conductor.perfil.fotoperfilCON}
                 alt=""
                 className="circle-img"
-                style={{ maxWidth: "90px" }}
               />
             </span>
           </td>

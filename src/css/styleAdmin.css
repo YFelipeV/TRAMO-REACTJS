@@ -1730,7 +1730,7 @@ td {
 .Modal-mas-datos .modal-botones{
   text-align: left;
   font-size: 17px;
-  padding: 4px 15px;
+  padding: 4px 25px;
 }
 
 .Modal-mas-datos .propietario{
@@ -1751,14 +1751,20 @@ td {
 /*--------------------------------------------------------------
   #Cabecera de titulos 
 --------------------------------------------------------------*/
-.bg-green{
-  background-color: #0080ff;
+.bg-blue-head{
+  background-color: #0051ff;
   opacity: 90%;
 }
 
 .bg-orange{
   background-color: #f1a546;
-  opacity: 80%;
+  opacity: 90%;
+
+}
+
+.bg-green{
+  background-color: #00b33c;
+  opacity: 100%;
 
 }
 .head-title{
