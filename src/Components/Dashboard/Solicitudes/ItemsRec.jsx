@@ -67,8 +67,8 @@ function ItemsRec({ SolicitudesRechazadas }) {
           </td>
 
           <td>
-            <div className="text-center" style={{ marginTop: "10%" }}>
-              <a
+            <div className="d-flex flex-md-column align-items-center" style={{ marginTop: "10%" }}>
+              <div
                 href=""
                 className="m-0 p-0 text-primary"
                 data-bs-toggle="modal"
@@ -76,9 +76,9 @@ function ItemsRec({ SolicitudesRechazadas }) {
                 onClick={() => handleOnsumbit(conductor._id)}
               >
                 Mostrar mas datos
-              </a>
+              </div>
               <div className="mt-2">
-                <a
+                <div
                   className=" px-3 text-danger d-flex"
                   data-bs-toggle="modal"
                   data-bs-target="#motivo-rechazo"
@@ -89,7 +89,7 @@ function ItemsRec({ SolicitudesRechazadas }) {
                   }}
                 >
                   Motivo de rechazo
-                </a>
+                </div>
               </div>
             </div>
           </td>
