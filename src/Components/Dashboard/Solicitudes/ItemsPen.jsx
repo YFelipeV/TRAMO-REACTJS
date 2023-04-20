@@ -67,49 +67,14 @@ function ItemsPen({ SolicitudesPendientes }) {
               </p>
             </td>
             <td>
-              <div className="text-center" style={{ marginTop: "10%" }}>
-                <a
-                  href=""
+              <div className="text-center d-flex align-items-center justify-content-center" style={{ marginTop: "10%" }}>
+                <div
                   className="m-0 p-0 text-primary"
                   data-bs-toggle="modal"
                   data-bs-target="#mas-datos"
                   onClick={() => handleOnsumbit(conductor._id)}
                 >
-                  Mostrar mas datos
-                </a>
-                <div className="mt-2 ">
-                  <button
-                    className="btn btn-primary mb-2 px-4 border-0 mx-2"
-                    onClick={() => {
-                      Swal.fire({
-                        title: "¿Seguro que desea Aceptar la solicitud?",
-                        icon: "question",
-                        html: `<p>${conductor.nombreCON} ${conductor.apellidoCON}</p>`,
-                        showDenyButton: true,
-                        denyButtonText: "No",
-                        confirmButtonText: "Si",
-                      }).then((response) => {
-                        if (response.isConfirmed) {
-                          Swal.fire({
-                            icon: "success",
-                            title: "Habilitado Correctamente",
-                          });
-                          button: updateSolicitudesPendientes(conductor._id);
-                        }
-                      });
-                    }}
-                  >
-                    Aceptar
-                  </button>
-                  <button className="border-0  ">
-                    <a
-                      className="btn btn-danger  px-3  "
-                      data-bs-toggle="modal"
-                      data-bs-target="#escribir-motivo-rechazo"
-                    >
-                      Rechazar
-                    </a>
-                  </button>
+                  <p className="scale">Mostrar mas datos</p>
                 </div>
               </div>
             </td>

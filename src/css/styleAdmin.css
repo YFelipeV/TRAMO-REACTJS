@@ -1686,3 +1686,116 @@ td {
     }
   }
   
+/*--------------------------------------------------------------
+# Star Mas Datos
+--------------------------------------------------------------*/
+
+.Modal-mas-datos .carousel{
+  max-width: 500px;
+  max-height: 300px;
+}
+
+.Modal-mas-datos .carousel img{
+  object-fit: cover;
+  max-width: 500px;
+  max-height: 250px;
+  
+}
+
+.Modal-mas-datos .head-title{
+  background-color: #0080ff;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 12px;
+}
+.Modal-mas-datos .head-subtitle{
+  background-color: #0080ff;
+  height: 25px;
+  text-align: center;
+}
+
+.Modal-mas-datos table .subtitulo{
+  font-weight: bold;
+  padding-left: 5px;
+  opacity: 70%;
+}
+
+.Modal-mas-datos table td{
+  text-align: left;
+  font-size: 15px;
+}
+.Modal-mas-datos .modal-botones{
+  text-align: left;
+  font-size: 17px;
+  padding: 4px 15px;
+}
+
+.Modal-mas-datos .propietario{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.scale:hover{
+  opacity: 80%;
+  scale: 0.9;
+}
+/*--------------------------------------------------------------
+# End Mas Datos
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+  #Cabecera de titulos 
+--------------------------------------------------------------*/
+.bg-green{
+  background-color: #0080ff;
+  opacity: 90%;
+}
+
+.bg-orange{
+  background-color: #f1a546;
+  opacity: 80%;
+
+}
+.head-title{
+  height: 60px;
+  display: flex;
+  text-align: center;
+  padding: 15px 15px 2px;
+}
+
+.imagen-titulo{
+  width: 40px;
+  margin-right: 10px;
+}
+.bg-blue{
+  background-color: #0055ff;
+  color: white;
+}
+
+.bg-red{
+  background-color: #e63900;
+  color: white;
+  opacity: 100%;
+}
+
+.bg-blue:hover{
+  background-color: #0055ff;
+  color: white;
+  scale: 1.1;
+}
+
+.bg-red:hover{
+  background-color: #e63900;
+  color: white;
+  scale: 1.1;
+
+}
+
+/*--------------------------------------------------------------
+  #End Cabecera de titulos 
+--------------------------------------------------------------*/
