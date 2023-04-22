@@ -8,14 +8,17 @@ function PqrsCards({ data }) {
       {data.map(({ name, id }) => (
         <tr key={id}>
           <td className="text-center pt-3 ">{name}</td>
-          <td className=" d-flex justify-content-center pt-3">
+          <td className=" pt-3">
+            <div className="d-flex justify-content-center">
             <ReactStarts edit={false} value={id} size={28} />
+            </div>
+          
           </td>
 
           <td className="p-3 ">
             <button
               href=""
-              className="m-0 p-1 text-white btn  bg-primary w-50"
+              className="btn bg-blue px-4"
               data-bs-toggle="modal"
               data-bs-target="#peticion"
             >

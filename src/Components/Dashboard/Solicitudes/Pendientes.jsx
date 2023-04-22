@@ -25,7 +25,7 @@ function Pendientes() {
           <div className="card my-4">
             <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div className="bg-blue-head head-title shadow-primary border-radius-lg">
-                <h4 className="text-light d-flex align-items-center"><img className='imagen-titulo' src={img_pen} alt="" /> Solicitudes Pendientes</h4>
+                <h4 className="text-light d-flex align-items-center"><img className='imagen-titulo' src={img_pen} alt="" style={{width:"32px", opacity:"90%"}} /> Solicitudes Pendientes</h4>
               </div>
             </div>
             <div className="card-body px-0 pb-2">

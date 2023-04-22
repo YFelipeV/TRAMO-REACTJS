@@ -1,5 +1,4 @@
 import React from 'react'
-import moduleName from '../../../../css/styleAdmin.css';
 import { updateSolicitudesPendientes } from '../../../../Data/Solicitudes';
 import Swal from "sweetalert2";
 

@@ -460,6 +460,49 @@ ul {
   background-color: #161627;
 }
 
+/* Solucion para que las imagenes no se sobrepongan en el about*/
+
+@media (max-width:575px){
+    
+  .container1 div{
+      flex-direction: column-reverse;
+      margin-top: -10px;
+      width: 370px;
+      
+    
+      
+      
+  }
+
+
+
+}
+
+@media (max-width:575px) {
+  .container1{
+    text-align: center;
+
+  }
+}
+
+@media (max-width:575px){
+  .Dimensiones .container{
+    width: 370px;
+    
+  }
+}
+
+@media (max-width:575px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+
 /*Animaciones */
 
 .playstore .appstore .wuawei .efecto1 .efecto2 .efecto3 .efecto4 .efecto5 {
@@ -798,5 +841,95 @@ ul {
   }
   100% {
     transform: scale(1.2);
+  }
+}
+
+
+/*Olas reemplazo  Footer*/
+
+ .olas {
+    height: 250px;
+    overflow: hidden;
+   
+  }
+  
+  .olas-reemplazo {
+    display: none;
+    height: 250px;
+    width: 90%;
+    position: relative;
+    top: 19%;
+    z-index: -1;
+  }
+
+  @media (max-width: 767px) {
+   
+
+    .containerc1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .olas {
+      height: 0;
+    }
+  
+    .olas-reemplazo {
+      display: block;
+    }
+
+}
+
+/* Colores Contactanos */
+
+.colorprimario{
+  background-color: #2b616d ;
+}
+
+.colorsecundario{
+  color:#ffffff ;
+}
+
+.ultimocolor{
+  background-color: #002c54;
+  color:#F5F5DC;
+}
+
+.colortxt{
+  color:  #F5F5DC;
+}
+
+.btnhover:hover{
+  background-color: #002c54;
+  color:#F5F5DC ;
+}
+
+.divicons{
+  background-color: #002c54;
+  border-radius: 10px;
+  
+}
+
+.direcciones{
+
+    display: block; /* Asegura que el botón ocupe todo el ancho del contenedor */
+    margin: auto; /* Centra el botón horizontalmente */
+    text-align: center; /* Centra el contenido del botón */
+    margin-top: 20px;
+   
+
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .touch1 {
+    touch-action: manipulation;
+    zoom: 1;
   }
 }

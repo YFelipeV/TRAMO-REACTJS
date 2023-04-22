@@ -10,7 +10,7 @@ function Items({ data }) {
             <div className="d-flex justify-content-center">
               <LazyLoadImage
                 src={conductor.perfil.fotoperfilCON}
-                className="circle-img"
+                className="circle-img-conductores"
                 effect="blur"
               ></LazyLoadImage>
             </div>
@@ -39,8 +39,8 @@ function Items({ data }) {
             <span
               className={
                 conductor.estadoCON.disponibilidadCON == 1
-                  ? "badge badge-sm bg-success"
-                  : "badge badge-sm bg-primary"
+                  ? "estado badge badge-sm bg-success"
+                  : "estado badge badge-sm bg-primary"
               }
             >
               {conductor.estadoCON.disponibilidadCON == 1

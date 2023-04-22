@@ -653,9 +653,7 @@ h6 {
   .sidebar {
     left: -300px;
   }
-  .contan1{
-    display: none;
-  }
+ 
   .logo-empresa{
     margin-top: 50px;
   }
@@ -663,7 +661,13 @@ h6 {
    padding: 15px;
   }
   .fondo{
-    height: auto 400px;
+   
+  }
+}
+
+@media (max-width: 992px) {
+  .contan1{
+    display: none;
   }
 }
 
@@ -1489,10 +1493,9 @@ td {
 
 .fondo{
   width: 100%;
-  height:  700px;
+ 
   background-position: center;
-  background-size: cover;
-  position: absolute;
+  
   
   background-color: #012970;
 }
@@ -1500,17 +1503,19 @@ td {
 
 .contan1{
   background-color: #4154f1;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 @media only screen and (max-width : 900px) {
   .fondo{
-    height: auto;
+    
   }
   }
 
   .circle-img {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -1721,6 +1726,7 @@ td {
   font-weight: bold;
   padding-left: 5px;
   opacity: 70%;
+  padding: 2px 0px;
 }
 
 .Modal-mas-datos table td{
@@ -1753,7 +1759,7 @@ td {
 --------------------------------------------------------------*/
 .bg-blue-head{
   background-color: #0051ff;
-  opacity: 90%;
+  opacity: 100%;
 }
 
 .bg-orange{
@@ -1764,7 +1770,7 @@ td {
 
 .bg-green{
   background-color: #00b33c;
-  opacity: 100%;
+  opacity: 90%;
 
 }
 .head-title{
@@ -1786,22 +1792,105 @@ td {
 .bg-red{
   background-color: #e63900;
   color: white;
-  opacity: 100%;
+}
+
+.bg-orange-btn{
+  background-color: #fa9e2d;
+  color: white;
+}
+
+.bg-green-btn{
+  background-color: #00b33c;
+  color: white;
 }
 
 .bg-blue:hover{
-  background-color: #0055ff;
+  background-color: #004adf;
   color: white;
   scale: 1.1;
+  transition: all 150ms;
 }
 
 .bg-red:hover{
-  background-color: #e63900;
+  background-color: #c73200;
   color: white;
   scale: 1.1;
-
+  transition: all 150ms;
+}
+.bg-orange-btn:hover{
+  background-color: #e89735;
+  color: white;
+  scale: 1.1;
+  transition: all 150ms;
 }
 
+.bg-green-btn:hover{
+  background-color: #00b33c;
+  color: white;
+  scale: 1.1;
+  transition: all 150ms;
+}
 /*--------------------------------------------------------------
   #End Cabecera de titulos 
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+  #Conductores disponibles
+--------------------------------------------------------------*/
+
+.circle-img-conductores {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.estado{
+  font-size: 15px;
+  padding: 6px 12px;
+}
+
+.mostrar-mas-datos{
+  background-color: #0051ff;
+  margin: 0;
+  padding: 0;
+  border-radius: 20px;
+}
+
+/* Calificacion */
+.cal-star{
+  height: 28px;
+}
+
+.btn-mas-datos{
+  font-size: 15px;
+}
+/*--------------------------------------------------------------
+  #Medidas de las tablas
+--------------------------------------------------------------*/
+
+
+
+
+  /* Modificacion Hernan */
+
+  .container{
+   justify-content: center;
+  
+  }
+
+  .container{
+    margin-top: 35px;
+    height: 100%;
+  }
+
+  
+
+  
+
+
+
+  
+
+ 
+  

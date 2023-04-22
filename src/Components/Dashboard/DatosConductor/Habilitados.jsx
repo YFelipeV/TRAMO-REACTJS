@@ -13,7 +13,7 @@ function Habilitados() {
           </div>
           <div className="card-body px-0 pb-2">
             <div className="table-responsive p-0">
-              <table className="table align-items-center mb-2">
+              <table className="table align-items-center mb-2 bottom-table">
                 <tbody>
                   <ItemsHabilitados  />
                 </tbody>

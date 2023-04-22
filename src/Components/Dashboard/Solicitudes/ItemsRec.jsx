@@ -28,7 +28,7 @@ function ItemsRec({ SolicitudesRechazadas }) {
               />
             </span>
           </td>
-          <td className="text-center align-middle text-sm">
+          <td className="text-center align-middle text-sm w-25">
             <p className="font-weight-bold text-xs font-weight-bold m-0">
               <b>Nombre</b>
             </p>
@@ -67,18 +67,19 @@ function ItemsRec({ SolicitudesRechazadas }) {
 
           <td>
             <div className="d-flex flex-md-column align-items-center" style={{ marginTop: "10%" }}>
-              <div
+              <button
                 href=""
-                className="m-0 p-0 text-primary"
+                className="btn bg-blue btn-mas-datos"
                 data-bs-toggle="modal"
                 data-bs-target="#mas-datos-rechazados"
                 onClick={() => handleOnsumbit(conductor._id)}
               >
-                Mostrar mas datos
-              </div>
+                Mostrar Más Datos
+              </button>
               <div className="mt-2">
-                <div
-                  className=" px-3 text-danger d-flex"
+                <button
+                  className="btn bg-red btn-mas-datos"
+                  style={{opacity:"90%"}}
                   data-bs-toggle="modal"
                   data-bs-target="#motivo-rechazo"
                   onClick={() => {
@@ -87,8 +88,8 @@ function ItemsRec({ SolicitudesRechazadas }) {
                     setapellidoCON(conductor.apellidoCON);
                   }}
                 >
-                  Motivo de rechazo
-                </div>
+                  Motivo De Rechazo
+                </button>
               </div>
             </div>
           </td>

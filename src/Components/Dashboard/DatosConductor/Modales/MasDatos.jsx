@@ -3,7 +3,7 @@ import Minhabilitar from "./Minhabilitar";
 
 function MasDatos({ data }) {
   return (
-    <tr>
+    <tr style={{borderColor:"white"}}>
       <td>
         <div
           className="modal fade"
