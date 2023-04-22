@@ -25,12 +25,11 @@ function Login() {
 
   return (
     <>
-      <div className="fondo" style={{ minHeight: "100vh" }}>
-        <div className="container py-5 h-100 justify-content-center d-flex container-login ">
-          <div className="row d-flex justify-content-center align-items-center h-100">
-            <div className="col-xl-10">
+      <div className="fondo p-1 " style={{ minHeight: "100vh" }}>
+        <div className="container h-100 justify-content-center d-flex container-login col-xl-10 align-items-center d-flex p-5">
+         
               <div className="card rounded-3 text-black">
-                <div className="row g-1">
+                <div className="row  ">
                   <div className="col-lg-6">
                     <div className="card-body p-md-5 mx-md-4">
                       <div className="text-center">
@@ -92,8 +91,7 @@ function Login() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+       
     </>
   );
 }
