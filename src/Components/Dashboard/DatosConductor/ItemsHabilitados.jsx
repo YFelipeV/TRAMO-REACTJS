@@ -27,12 +27,12 @@ function ItemsHabilitados() {
           <tr key={conductor._id}>
             <td>
               <img
+                className="circle-img ms-5"
                 src={
                   conductor.perfil.fotoperfilCON
                     ? conductor.perfil.fotoperfilCON
                     : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
                 }
-                className="circle-img m-2 "
                 alt=""
               />
             </td>
@@ -74,25 +74,17 @@ function ItemsHabilitados() {
               </p>
             </td>
             <td className="align-middle">
-              <div className="text-center " style={{ marginTop: "10%" }}>
+              <div className="text-center">
                 <button
-                  className="m-0 p-0 text-primary bg-white border-0 mr-2  "
+                  className="btn bg-blue "
                   data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"
                   onClick={() => handleOnsumbit(conductor._id)}
                 >
-                  Mostrar mas datos
+                  Mostrar Más datos
                 </button>
               </div>
-              {/* <div className="mt-2 border-0 bg-white ">
-                  <button
-                    className="btn btn-danger mb-2 px-3  "
-                    data-bs-toggle="modal"
-                    data-bs-target="#escribir-motivo-inhabilitacion"
-                  >
-                    Inhabilitar
-                  </button>
-                </div> */}
+             
             </td>
           </tr>
         ))

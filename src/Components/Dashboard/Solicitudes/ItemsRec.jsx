@@ -25,11 +25,10 @@ function ItemsRec({ SolicitudesRechazadas }) {
                 src={conductor.perfil.fotoperfilCON}
                 alt=""
                 className="circle-img"
-                style={{ maxWidth: "90px" }}
               />
             </span>
           </td>
-          <td className="text-center align-middle text-sm">
+          <td className="text-center align-middle text-sm w-25">
             <p className="font-weight-bold text-xs font-weight-bold m-0">
               <b>Nombre</b>
             </p>
@@ -67,19 +66,20 @@ function ItemsRec({ SolicitudesRechazadas }) {
           </td>
 
           <td>
-            <div className="text-center" style={{ marginTop: "10%" }}>
-              <a
+            <div className="d-flex flex-md-column align-items-center" style={{ marginTop: "10%" }}>
+              <button
                 href=""
-                className="m-0 p-0 text-primary"
+                className="btn bg-blue btn-mas-datos"
                 data-bs-toggle="modal"
                 data-bs-target="#mas-datos-rechazados"
                 onClick={() => handleOnsumbit(conductor._id)}
               >
-                Mostrar mas datos
-              </a>
+                Mostrar Más Datos
+              </button>
               <div className="mt-2">
-                <a
-                  className=" px-3 text-danger d-flex"
+                <button
+                  className="btn bg-red btn-mas-datos"
+                  style={{opacity:"90%"}}
                   data-bs-toggle="modal"
                   data-bs-target="#motivo-rechazo"
                   onClick={() => {
@@ -88,8 +88,8 @@ function ItemsRec({ SolicitudesRechazadas }) {
                     setapellidoCON(conductor.apellidoCON);
                   }}
                 >
-                  Motivo de rechazo
-                </a>
+                  Motivo De Rechazo
+                </button>
               </div>
             </div>
           </td>

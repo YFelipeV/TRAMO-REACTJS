@@ -23,7 +23,7 @@ function EmpresaInhabilitadosItems({ inhabilitados }) {
           _id,
         }) => (
           <tr key={_id}>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm w-25">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Nombre Empresa</b>
               </p>
@@ -36,6 +36,16 @@ function EmpresaInhabilitadosItems({ inhabilitados }) {
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 {nroTelefonoPJU}
               </p>
+            </td>
+            <td className="text-center align-middle text-sm w-25">
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                <b>Razon Social </b>
+              </p>
+              <p style={{fontSize:"14px"}}>{razonSocialEmpresa}</p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                <b>Representante Legal </b>
+              </p>
+              <p>{nomRepresentanteLegal}</p>
             </td>
             <td className="text-center align-middle text-sm">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
@@ -55,7 +65,7 @@ function EmpresaInhabilitadosItems({ inhabilitados }) {
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Calificacion {calificacionPJU}</b>
               </p>
-              <div className="d-flex justify-content-center">
+              <div className="d-flex justify-content-center cal-star">
               <ReactStarts  edit={false}  value={calificacionPJU}  size={28} /> 
               </div>
               <p className="font-weight-bold text-xs font-weight-bold m-0">
@@ -63,31 +73,24 @@ function EmpresaInhabilitadosItems({ inhabilitados }) {
               </p>
               <p className="">{NITempresa}</p>
             </td>
-            <td className="align-middle">
-              <p className="font-weight-bold text-xs font-weight-bold m-0">
-                <b>Razon Social </b>
-              </p>
-              <p>{razonSocialEmpresa}</p>
-              <p className="font-weight-bold text-xs font-weight-bold m-0">
-                <b>Representante Legal </b>
-              </p>
-              <p>{nomRepresentanteLegal}</p>
-            </td>
+            
             <td>
               <div className="text-center mt-4">
                 <div className="border-0 bg-white">
                   <button
-                    className="m-0 p-0 text-danger bg-white border-0"
+                    className="btn bg-red"
+                    style={{fontSize:"14px"}}
                     data-bs-toggle="modal"
                     data-bs-target="#motivo-inhabilitacion-empresa"
                     onClick={() => {setmotivo(estadoPJU.motivoInhabilitadoPJU), setnombre(nombreEmpresa)}}
                   >
-                    Ver motivo inhabilitacion
+                    Motivo Inhabilitacion
                   </button>
                 </div>
                 <div className="mt-2">
                   <button
-                    className="btn btn-primary mb-2"
+                    className="btn bg-blue mb-2"
+                    style={{fontSize:"15px", padding:"4px 45px"}}
                     onClick={() => {
                       Swal.fire({
                         title: `¿Está seguro de habilitar el cliente ${nombreEmpresa} ? `,

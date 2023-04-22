@@ -1,9 +1,11 @@
 import React from 'react'
+import { updateSolicitudesPendientes } from '../../../../Data/Solicitudes';
+import Swal from "sweetalert2";
 
 function MasDatos({data}) {
   return (
     <div
-      class="modal fade"
+      className="modal fade"
       id="mas-datos"
       data-bs-backdrop="static"
       data-bs-keyboard="false"
@@ -11,40 +13,40 @@ function MasDatos({data}) {
       aria-labelledby="staticBackdropLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-dialog-scrollable modal-xl" id="modal">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+      <div className="modal-dialog modal-dialog-scrollable modal-xl" id="modal">
+        <div className="modal-content Modal-mas-datos">
+          <div className="modal-header">
+            <h1 className="modal-title fs-5 fw-bold ps-2 opacity-75" id="staticBackdropLabel">
               Mas datos conductor
             </h1>
             <button
               type="button"
-              class="btn-close"
+              className="btn-close"
               data-bs-dismiss="modal"
               aria-label="Close"
               id="btn-close"
             ></button>
           </div>
-          <div class="modal-body text-dark">
-            <div class="container-fluid">
+          <div className="modal-body text-dark">
+            <div className="container-fluid">
               {data.map((conductor) => (
                 <>
-                  <div class="row">
-                    <div class="col-12 bg-primary text-white text-center mb-1">
+                  <div className="row">
+                    <div className="col-12 head-title text-white mb-1">
                       DATOS CONDUCTOR
                     </div>
-                    <div class="col-12 col-xl-6">
+                    <div className="col-12 col-xl-6 ps-4 pt-2">
                       <div
                         id="carouselExampleDark"
-                        class="carousel carousel-dark slide"
+                        className="carousel carousel-dark slide"
                         data-bs-ride="carousel"
                       >
-                        <div class="carousel-indicators">
+                        <div className="carousel-indicators">
                           <button
                             type="button"
                             data-bs-target="#carouselExampleDark"
                             data-bs-slide-to="0"
-                            class="active"
+                            className="active"
                             aria-current="true"
                             aria-label="Slide 1"
                           ></button>
@@ -61,327 +63,344 @@ function MasDatos({data}) {
                             aria-label="Slide 3"
                           ></button>
                         </div>
-                        <div class="carousel-inner">
+                        <div className="carousel-inner">
                           <div
-                            class="carousel-item active"
+                            className="carousel-item active"
                             data-bs-interval="10000"
                           >
                             <img
                               src={conductor.imagenesSolicitud.FotoFrontal}
-                              class="d-block w-100"
+                              className="d-block w-100"
                               alt=""
                             />
                           </div>
-                          <div class="carousel-item" data-bs-interval="2000">
+                          <div className="carousel-item" data-bs-interval="2000">
                             <img
                               src={conductor.imagenesSolicitud.FotoVolco}
-                              class="d-block w-50"
+                              className="d-block w-100"
                               alt="..."
                             />
                           </div>
-                          <div class="carousel-item">
+                          <div className="carousel-item">
                             <img
                               src={conductor.imagenesSolicitud.Fotolateral_Der}
-                              class="d-block w-100"
+                              className="d-block w-100"
                               alt="..."
                             />
                           </div>
                         </div>
                         <button
-                          class="carousel-control-prev"
+                          className="carousel-control-prev"
                           type="button"
                           data-bs-target="#carouselExampleDark"
                           data-bs-slide="prev"
                         >
                           <span
-                            class="carousel-control-prev-icon"
+                            className="carousel-control-prev-icon"
                             aria-hidden="true"
                           ></span>
-                          <span class="visually-hidden">Previous</span>
+                          <span className="visually-hidden">Previous</span>
                         </button>
                         <button
-                          class="carousel-control-next"
+                          className="carousel-control-next"
                           type="button"
                           data-bs-target="#carouselExampleDark"
                           data-bs-slide="next"
                         >
                           <span
-                            class="carousel-control-next-icon"
+                            className="carousel-control-next-icon"
                             aria-hidden="true"
                           ></span>
-                          <span class="visually-hidden">Next</span>
+                          <span className="visually-hidden">Next</span>
                         </button>
                       </div>
                     </div>
-                    <div class="col-12 col-xl-6">
-                      <table class="w-100 text-center">
+                    <div className="col-12 col-xl-6">
+                      <table className="w-100 text-center">
                         <tr>
-                          <th colspan="2" class="bg-primary text-white">
+                          <th colspan="2" className="head-subtitle text-white">
                             Datos Tenedor
                           </th>
                         </tr>
                         <tr>
-                          <td>Nombre:</td>
+                          <td className='subtitulo'>Nombre:</td>
                           <td>{conductor.tenedorSolicitud.nombreTE}</td>
                         </tr>
                         <tr>
-                          <td>Apellido:</td>
+                          <td className='subtitulo'>Apellido:</td>
                           <td>{conductor.tenedorSolicitud.apellidoTE}</td>
                         </tr>
                         <tr>
-                          <td>Numero Documento:</td>
+                          <td className='subtitulo'>Numero Documento:</td>
                           <td>{conductor.tenedorSolicitud.apellidoTE}</td>
                         </tr>
                         <tr>
-                          <td>Direccion residencia:</td>
+                          <td className='subtitulo'>Direccion residencia:</td>
                           <td>{conductor.tenedorSolicitud.DireccionResidenciaTE}</td>
                         </tr>
                         <tr>
-                          <td>Ciudad:</td>
+                          <td className='subtitulo'>Ciudad:</td>
                           <td>{conductor.tenedorSolicitud.ciudadTE}</td>
                         </tr>
                         <tr>
-                          <td>Telefono:</td>
+                          <td className='subtitulo'>Telefono:</td>
                           <td>{conductor.tenedorSolicitud.NroTelefonoTE}</td>
                         </tr>
                       </table>
-                      <table class="w-100 text-center">
+                      <table className="w-100 text-center">
                         <tr>
-                          <th colspan="2" class="bg-primary text-white">
-                            Contaco Emergencia
+                          <th colspan="2" className="head-subtitle text-white">
+                            Contacto Emergencia
                           </th>
                         </tr>
                         <tr>
-                          <td>Nombre:</td>
+                          <td className='subtitulo'>Nombre:</td>
                           <td>{conductor.contactoEmergenciaSolicitud.nombreCEM}</td>
                         </tr>
                         <tr>
-                          <td>Apellido:</td>
+                          <td className='subtitulo'>Apellido:</td>
                           <td>{conductor.contactoEmergenciaSolicitud.apellidoCEM}</td>
                         </tr>
                         <tr>
-                          <td>Numero Documento:</td>
+                          <td className='subtitulo'>Numero Documento:</td>
                           <td>{conductor.contactoEmergenciaSolicitud.NroDocumentoCEM}</td>
                         </tr>
                         <tr>
-                          <td>Correo Electronico:</td>
+                          <td className='subtitulo'>Correo Electronico:</td>
                           <td>{conductor.contactoEmergenciaSolicitud.CorreoElectricoCEM}</td>
                         </tr>
                       </table>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-12 col-xl-6">
-                      <table class="w-100 text-center">
+                  <div className="row">
+                    <div className="col-12 col-xl-6">
+                      <table className="w-100 text-center">
                         <tr>
-                          <th colspan="2" class="bg-primary text-white">
-                            Vehiculo
+                          <th colspan="2" className="head-subtitle text-white">
+                            Vehículo
                           </th>
                         </tr>
 
                         <tr>
-                          <td>Placa Vehiculo</td>
+                          <td className='subtitulo'>Placa Vehiculo:</td>
                           <td>{conductor.vehiculoSolicitud.placaVehiculo}</td>
                         </tr>
 
                         <tr>
-                          <td>Marca</td>
+                          <td className='subtitulo'>Marca:</td>
                           <td>{conductor.vehiculoSolicitud.marca}</td>
                         </tr>
 
                         <tr>
-                          <td>modelo</td>
+                          <td className='subtitulo'>modelo:</td>
                           <td>{conductor.vehiculoSolicitud.modelo}</td>
                         </tr>
 
                         <tr>
-                          <td>Numero Ejes</td>
+                          <td className='subtitulo'>Numero Ejes:</td>
                           <td>{conductor.vehiculoSolicitud.numeroEjes}</td>
                         </tr>
 
                         <tr>
-                          <td>Tipo Vehiculo</td>
+                          <td className='subtitulo'>Tipo Vehiculo:</td>
                           <td>{conductor.vehiculoSolicitud.tipoVehiculo}</td>
                         </tr>
 
                         <tr>
-                          <td>Fecha Vencimiento</td>
+                          <td className='subtitulo'>Fecha Vencimiento:</td>
                           <td>{conductor.vehiculoSolicitud.fechavencSOAT}</td>
                         </tr>
 
                         <tr>
-                          <td>Traccion Vehiculo</td>
+                          <td className='subtitulo'>Traccion Vehiculo:</td>
                           <td> {conductor.vehiculoSolicitud.traccionVeh}</td>
                         </tr>
 
                         <tr>
-                          <td>Placas Trailer</td>
+                          <td className='subtitulo'>Placas Trailer:</td>
                           <td> {conductor.vehiculoSolicitud.placasTrailer} </td>
                         </tr>
 
                         <tr>
-                          <td>Peso Vacio</td>
+                          <td className='subtitulo'>Peso Vacio:</td>
                           <td>{conductor.vehiculoSolicitud.pesoVacio}</td>
                         </tr>
 
                         <tr>
-                          <td>Tipo Combustible</td>
+                          <td className='subtitulo'>Tipo Combustible:</td>
                           <td>{conductor.vehiculoSolicitud.CombustibleVeh}</td>
                         </tr>
 
                         <tr>
-                          <td>Numero Licencia</td>
+                          <td className='subtitulo'>Numero Licencia:</td>
                           <td>{conductor.vehiculoSolicitud.numeroLicenciaVeh}</td>
                         </tr>
 
                         <tr>
-                          <td>Numero Soat</td>
+                          <td className='subtitulo'>Numero Soat:</td>
                           <td>{conductor.vehiculoSolicitud.numeroSOAT}</td>
                         </tr>
 
                         <tr>
-                          <td>Fecha Venimiento Soat</td>
+                          <td className='subtitulo'>Fecha Venimiento Soat:</td>
                           <td> {conductor.vehiculoSolicitud.fechavencSOAT}</td>
                         </tr>
 
                         <tr>
-                          <td>Numero Poliza Responsable</td>
+                          <td className='subtitulo'>Numero Poliza Responsable:</td>
                           <td>{conductor.vehiculoSolicitud.nroPoliza_ResponCivil}</td>
                         </tr>
 
                         <tr>
-                          <td>Numero Revision Tecnomecanica</td>
+                          <td className='subtitulo'>Numero Revision Tecnomecanica:</td>
                           <td>{conductor.vehiculoSolicitud.nroRev_TecMecanica}</td>
                         </tr>
 
                         <tr>
-                          <td>Fecha vencimiento Tecnomecanica</td>
+                          <td className='subtitulo'>Fecha vencimiento Tecnomecanica:</td>
                           <td>{conductor.vehiculoSolicitud.fechaVenc_Tecno}</td>
                         </tr>
                       </table>
                     </div>
-                    <div class="col-12 col-xl-6">
-                      <table class="w-100 text-center">
+                    <div className="col-12 col-xl-6">
+                      <table className="w-100 text-center">
                         <tr>
-                          <th colspan="2" class="bg-primary text-white">
+                          <th colspan="2" className="head-subtitle text-white">
                             Conductores
                           </th>
                         </tr>
 
                         <tr>
-                          <td>Nombre</td>
+                          <td className='subtitulo'>Nombre:</td>
                           <td>{conductor.conductorSolicitud.nombreCON}</td>
                         </tr>
 
                         <tr>
-                          <td>Apellido</td>
+                          <td className='subtitulo'>Apellido:</td>
                           <td>{conductor.conductorSolicitud.apellidoCON}</td>
                         </tr>
 
                         <tr>
-                          <td>Tipo Documento</td>
+                          <td className='subtitulo'>Tipo Documento:</td>
                           <td>{conductor.conductorSolicitud.tipo_DocumentoCON}</td>
                         </tr>
 
                         <tr>
-                          <td>Numero Documento</td>
+                          <td className='subtitulo'>Numero Documento:</td>
                           <td>{conductor.conductorSolicitud.nroDocumentoCON}</td>
                         </tr>
 
                         <tr>
-                          <td>Nacionalidad</td>
+                          <td className='subtitulo'>Nacionalidad:</td>
                           <td>{conductor.conductorSolicitud.nacionalidadCON}</td>
                         </tr>
 
                         <tr>
-                          <td>Fecha Nacimiento</td>
+                          <td className='subtitulo'>Fecha Nacimiento:</td>
                           <td>{conductor.conductorSolicitud.fechaNacimientoCON}</td>
                         </tr>
 
                         <tr>
-                          <td>Correo Electronico</td>
+                          <td className='subtitulo'>Correo Electronico:</td>
                           <td>{conductor.conductorSolicitud.correoElectronicoCON}</td>
                         </tr>
 
                         <tr>
-                          <td>Correo Electronico Recuperacion</td>
+                          <td className='subtitulo'>Correo Electronico Recuperacion:</td>
                           <td>{conductor.conductorSolicitud.correoRecuperacionCON}</td>
                         </tr>
 
                         <tr>
-                          <td>Usuario</td>
+                          <td className='subtitulo'>Usuario:</td>
                           <td>{conductor.conductorSolicitud.usuarioCON}</td>
                         </tr>
 
                         <tr>
-                          <td>Numero Telefono</td>
+                          <td className='subtitulo'>Numero Telefono:</td>
                           <td>{conductor.conductorSolicitud.nroTelefonoCON}</td>
                         </tr>
 
                         <tr>
-                          <td>Numero Licencia</td>
+                          <td className='subtitulo'>Numero Licencia:</td>
                           <td>{conductor.conductorSolicitud.nroLicenciaCON}</td>
                         </tr>
                         
                         <tr>
-                          <td>Pregunta Seguridad</td>
+                          <td className='subtitulo'>Pregunta Seguridad:</td>
                           <td>{conductor.conductorSolicitud.preguntaSeguridadCON}</td>
                         </tr>
 
                         <tr>
-                          <td>Respuesta Seguridad</td>
+                          <td className='subtitulo'>Respuesta Seguridad:</td>
                           <td>{conductor.conductorSolicitud.respuestaSeguridadCON}</td>
                         </tr>
                       </table>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col-12">
-                      <table class="w-100 text-center">
+                  <div className="row propietario">
+                    <div className="col-12 col-md-7">
+                      <table className="w-100 text-center mb-3">
                         <tr>
-                          <th colspan="2" class="bg-primary text-white">
+                          <th colspan="2" className="head-subtitle text-white">
                             Datos Propietario
                           </th>
                         </tr>
                         <tr>
-                          <td>Nombre:</td>
+                          <td className='subtitulo'>Nombre:</td>
                           <td>{conductor.propietarioSolicitud.nombrePRO}</td>
                         </tr>
                         <tr>
-                          <td>Apellido:</td>
+                          <td className='subtitulo'>Apellido:</td>
                           <td>{conductor.propietarioSolicitud.apellidoPRO}</td>
                         </tr>
                         <tr>
-                          <td>Numero Documento:</td>
+                          <td className='subtitulo'>Numero Documento:</td>
                           <td>{conductor.propietarioSolicitud.NroDocumentoPRO}</td>
                         </tr>
-                        <h1>sdas</h1>
                         <tr>
-                          <td>Direcion residencia:</td>
+                          <td className='subtitulo'>Direcion residencia:</td>
                           <td> {conductor.propietarioSolicitud.DireccionResidenciaPRO}</td>
                         </tr>
                         <tr>
-                          <td>Ciudad:</td>
+                          <td className='subtitulo'>Ciudad:</td>
                           <td>{conductor.propietarioSolicitud.ciudadPRO}</td>
                         </tr>
                         <tr>
-                          <td>Numero Telefono:</td>
+                          <td className='subtitulo'>Numero Telefono:</td>
                           <td>{conductor.propietarioSolicitud.NroTelefonoPRO}</td>
                         </tr>
                       </table>
                     </div>
                     <hr />
-                    <div class="col-12 text-center">
-                      <button type="button" class="btn btn-primary btn-sm">
-                        Habilitar
+                    <div className="col-12 text-center">
+                      <button type="button" className="btn bg-blue modal-botones me-2 btn-sm"
+                      onClick={() => {
+                        Swal.fire({
+                          title: "¿Seguro que desea Aceptar la solicitud?",
+                          icon: "question",
+                          html: `<p>${conductor.conductorSolicitud.nombreCON} ${conductor.conductorSolicitud.apellidoCON}</p>`,
+                          showDenyButton: true,
+                          denyButtonText: "No",
+                          confirmButtonText: "Si",
+                        }).then((response) => {
+                          if (response.isConfirmed) {
+                            Swal.fire({
+                              icon: "success",
+                              title: "Habilitado Correctamente",
+                            });
+                            button: updateSolicitudesPendientes(conductor.conductorSolicitud._id);
+                          }
+                        });
+                      }}>
+                        Aceptar
                       </button>
                       <button
                         type="button"
-                        class="btn btn-secondary btn-sm"
+                        className="btn bg-red modal-botones  btn-sm"
                         data-bs-toggle="modal"
-                        data-bs-target="#escribir-motivo-inhabilitacion"
+                        data-bs-target="#escribir-motivo-rechazo"
                       >
-                        Inhabilitar
+                        Rechazar
                       </button>
                     </div>
                   </div>

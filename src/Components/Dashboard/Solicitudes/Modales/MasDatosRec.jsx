@@ -12,9 +12,9 @@ function MasDatosRec({ data }) {
       aria-hidden="true"
     >
       <div className="modal-dialog modal-dialog-scrollable modal-xl" id="modal">
-        <div className="modal-content">
+        <div className="modal-content Modal-mas-datos">
           <div className="modal-header">
-            <h1 className="modal-title fs-5" id="staticBackdropLabel">
+            <h1 className="modal-title fs-5 fw-bold ps-2 opacity-75" id="staticBackdropLabel">
               Mas datos conductor
             </h1>
             <button
@@ -30,13 +30,13 @@ function MasDatosRec({ data }) {
               {data.map((conductor) => (
                 <>
                   <div className="row" key={conductor._id}>
-                    <div className="col-12 bg-primary text-white text-center mb-1">
+                    <div className="col-12 head-title text-white text-center mb-1">
                       DATOS CONDUCTOR
                     </div>
                     <div className="col-12 col-xl-6">
                       <div
                         id="carouselExampleDark"
-                        className="carousel carousel-dark slide"
+                        className="carousel carousel-dark slide ms-2 mt-2"
                         data-bs-ride="carousel"
                       >
                         <div className="carousel-indicators">
@@ -82,7 +82,7 @@ function MasDatosRec({ data }) {
                               src={
                                 conductor.imagenesSolicitudRechazada.FotoVolco
                               }
-                              className="d-block w-50"
+                              className="d-block w-100"
                               alt="..."
                             />
                           </div>
@@ -126,30 +126,30 @@ function MasDatosRec({ data }) {
                     <div className="col-12 col-xl-6">
                       <table className="w-100 text-center">
                         <tr>
-                          <th colspan="2" className="bg-primary text-white">
+                          <th colspan="2" className="head-subtitle text-white">
                             Datos Tenedor
                           </th>
                         </tr>
                         <tr>
-                          <td>Nombre:</td>
+                          <td className='subtitulo'>Nombre:</td>
                           <td>
                             {conductor.tenedorSolicitudRechazada.nombreTE}
                           </td>
                         </tr>
                         <tr>
-                          <td>Apellido:</td>
+                          <td className='subtitulo'>Apellido:</td>
                           <td>
                             {conductor.tenedorSolicitudRechazada.apellidoTE}
                           </td>
                         </tr>
                         <tr>
-                          <td>Numero Documento:</td>
+                          <td className='subtitulo'>Numero Documento:</td>
                           <td>
                             {conductor.tenedorSolicitudRechazada.apellidoTE}
                           </td>
                         </tr>
                         <tr>
-                          <td>Direccion residencia:</td>
+                          <td className='subtitulo'>Direccion residencia:</td>
                           <td>
                             {
                               conductor.tenedorSolicitudRechazada
@@ -158,13 +158,13 @@ function MasDatosRec({ data }) {
                           </td>
                         </tr>
                         <tr>
-                          <td>Ciudad:</td>
+                          <td className='subtitulo'>Ciudad:</td>
                           <td>
                             {conductor.tenedorSolicitudRechazada.ciudadTE}
                           </td>
                         </tr>
                         <tr>
-                          <td>Telefono:</td>
+                          <td className='subtitulo'>Telefono:</td>
                           <td>
                             {conductor.tenedorSolicitudRechazada.NroTelefonoTE}
                           </td>
@@ -172,12 +172,12 @@ function MasDatosRec({ data }) {
                       </table>
                       <table className="w-100 text-center">
                         <tr>
-                          <th colspan="2" className="bg-primary text-white">
-                            Contaco Emergencia
+                          <th colspan="2" className="head-subtitle text-white">
+                            Contacto Emergencia
                           </th>
                         </tr>
                         <tr>
-                          <td>Nombre:</td>
+                          <td className='subtitulo'>Nombre:</td>
                           <td>
                             {
                               conductor.contactoEmergenciaSolicitudRechazada
@@ -186,7 +186,7 @@ function MasDatosRec({ data }) {
                           </td>
                         </tr>
                         <tr>
-                          <td>Apellido:</td>
+                          <td className='subtitulo'>Apellido:</td>
                           <td>
                             {
                               conductor.contactoEmergenciaSolicitudRechazada
@@ -195,7 +195,7 @@ function MasDatosRec({ data }) {
                           </td>
                         </tr>
                         <tr>
-                          <td>Numero Documento:</td>
+                          <td className='subtitulo'>Numero Documento:</td>
                           <td>
                             {
                               conductor.contactoEmergenciaSolicitudRechazada
@@ -204,7 +204,7 @@ function MasDatosRec({ data }) {
                           </td>
                         </tr>
                         <tr>
-                          <td>Correo Electronico:</td>
+                          <td className='subtitulo'>Correo Electronico:</td>
                           <td>
                             {
                               conductor.contactoEmergenciaSolicitudRechazada
@@ -219,51 +219,51 @@ function MasDatosRec({ data }) {
                     <div className="col-12 col-xl-6">
                       <table className="w-100 text-center">
                         <tr>
-                          <th colspan="2" className="bg-primary text-white">
-                            Vehiculo
+                          <th colspan="2" className="head-subtitle className='subtitulo' text-white">
+                            Vehículo
                           </th>
                         </tr>
 
                         <tr>
-                          <td>Placa Vehiculo</td>
+                          <td className='subtitulo'>Placa Vehículo</td>
                           <td>
                             {conductor.vehiculoSolicitudRechazada.placaVehiculo}
                           </td>
                         </tr>
 
                         <tr>
-                          <td>Marca</td>
+                          <td className='subtitulo'>Marca</td>
                           <td>{conductor.vehiculoSolicitudRechazada.marca}</td>
                         </tr>
 
                         <tr>
-                          <td>modelo</td>
+                          <td className='subtitulo'>Modelo</td>
                           <td>{conductor.vehiculoSolicitudRechazada.modelo}</td>
                         </tr>
 
                         <tr>
-                          <td>Numero Ejes</td>
+                          <td className='subtitulo'>Numero Ejes</td>
                           <td>
                             {conductor.vehiculoSolicitudRechazada.numeroEjes}
                           </td>
                         </tr>
 
                         <tr>
-                          <td>Tipo Vehiculo</td>
+                          <td className='subtitulo'>Tipo Vehículo</td>
                           <td>
                             {conductor.vehiculoSolicitudRechazada.tipoVehiculo}
                           </td>
                         </tr>
 
                         <tr>
-                          <td>Fecha Vencimiento</td>
+                          <td className='subtitulo'>Fecha Vencimiento</td>
                           <td>
                             {conductor.vehiculoSolicitudRechazada.fechavencSOAT}
                           </td>
                         </tr>
 
                         <tr>
-                          <td>Traccion Vehiculo</td>
+                          <td className='subtitulo'>Traccion Vehiculo</td>
                           <td>
                             {" "}
                             {conductor.vehiculoSolicitudRechazada.traccionVeh}
@@ -271,7 +271,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Placas Trailer</td>
+                          <td className='subtitulo'>Placas Trailer</td>
                           <td>
                             {" "}
                             {
@@ -281,14 +281,14 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Peso Vacio</td>
+                          <td className='subtitulo'>Peso Vacio</td>
                           <td>
                             {conductor.vehiculoSolicitudRechazada.pesoVacio}
                           </td>
                         </tr>
 
                         <tr>
-                          <td>Tipo Combustible</td>
+                          <td className='subtitulo'>Tipo Combustible</td>
                           <td>
                             {
                               conductor.vehiculoSolicitudRechazada
@@ -298,7 +298,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Numero Licencia</td>
+                          <td className='subtitulo'>Numero Licencia</td>
                           <td>
                             {
                               conductor.vehiculoSolicitudRechazada
@@ -308,14 +308,14 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Numero Soat</td>
+                          <td className='subtitulo'>Numero Soat</td>
                           <td>
                             {conductor.vehiculoSolicitudRechazada.numeroSOAT}
                           </td>
                         </tr>
 
                         <tr>
-                          <td>Fecha Venimiento Soat</td>
+                          <td className='subtitulo'>Fecha Venimiento Soat</td>
                           <td>
                             {" "}
                             {conductor.vehiculoSolicitudRechazada.fechavencSOAT}
@@ -323,7 +323,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Numero Poliza Responsable</td>
+                          <td className='subtitulo'>Numero Poliza Responsable</td>
                           <td>
                             {
                               conductor.vehiculoSolicitudRechazada
@@ -333,7 +333,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Numero Revision Tecnomecanica</td>
+                          <td className='subtitulo'>Numero Revision Tecnomecanica</td>
                           <td>
                             {
                               conductor.vehiculoSolicitudRechazada
@@ -343,7 +343,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Fecha vencimiento Tecnomecanica</td>
+                          <td className='subtitulo'>Fecha vencimiento Tecnomecanica</td>
                           <td>
                             {
                               conductor.vehiculoSolicitudRechazada
@@ -356,27 +356,27 @@ function MasDatosRec({ data }) {
                     <div className="col-12 col-xl-6">
                       <table className="w-100 text-center">
                         <tr>
-                          <th colspan="2" className="bg-primary text-white">
+                          <th colspan="2" className="head-subtitle className='subtitulo' text-white">
                             Conductores
                           </th>
                         </tr>
 
                         <tr>
-                          <td>Nombre</td>
+                          <td className='subtitulo'>Nombre</td>
                           <td>
                             {conductor.conductorSolicitudRechazada.nombreCON}
                           </td>
                         </tr>
 
                         <tr>
-                          <td>Apellido</td>
+                          <td className='subtitulo'>Apellido</td>
                           <td>
                             {conductor.conductorSolicitudRechazada.apellidoCON}
                           </td>
                         </tr>
 
                         <tr>
-                          <td>Tipo Documento</td>
+                          <td className='subtitulo'>Tipo Documento</td>
                           <td>
                             {
                               conductor.conductorSolicitudRechazada
@@ -386,7 +386,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Numero Documento</td>
+                          <td className='subtitulo'>Numero Documento</td>
                           <td>
                             {
                               conductor.conductorSolicitudRechazada
@@ -396,7 +396,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Nacionalidad</td>
+                          <td className='subtitulo'>Nacionalidad</td>
                           <td>
                             {
                               conductor.conductorSolicitudRechazada
@@ -406,7 +406,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Fecha Nacimiento</td>
+                          <td className='subtitulo'>Fecha Nacimiento</td>
                           <td>
                             {
                               conductor.conductorSolicitudRechazada
@@ -416,7 +416,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Correo Electronico</td>
+                          <td className='subtitulo'>Correo Electronico</td>
                           <td>
                             {
                               conductor.conductorSolicitudRechazada
@@ -426,7 +426,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Correo Electronico Recuperacion</td>
+                          <td className='subtitulo'>Correo Electronico Recuperacion</td>
                           <td>
                             {
                               conductor.conductorSolicitudRechazada
@@ -436,14 +436,14 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Usuario</td>
+                          <td className='subtitulo'>Usuario</td>
                           <td>
                             {conductor.conductorSolicitudRechazada.usuarioCON}
                           </td>
                         </tr>
 
                         <tr>
-                          <td>Numero Telefono</td>
+                          <td className='subtitulo'>Numero Telefono</td>
                           <td>
                             {
                               conductor.conductorSolicitudRechazada
@@ -453,7 +453,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Numero Licencia</td>
+                          <td className='subtitulo'>Numero Licencia</td>
                           <td>
                             {
                               conductor.conductorSolicitudRechazada
@@ -463,7 +463,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Pregunta Seguridad</td>
+                          <td className='subtitulo'>Pregunta Seguridad</td>
                           <td>
                             {
                               conductor.conductorSolicitudRechazada
@@ -473,7 +473,7 @@ function MasDatosRec({ data }) {
                         </tr>
 
                         <tr>
-                          <td>Respuesta Seguridad</td>
+                          <td className='subtitulo'>Respuesta Seguridad</td>
                           <td>
                             {
                               conductor.conductorSolicitudRechazada
@@ -484,22 +484,22 @@ function MasDatosRec({ data }) {
                       </table>
                     </div>
                   </div>
-                  <div className="row">
-                    <div className="col-12">
+                  <div className="row propietario">
+                    <div className="col-12 col-md-7">
                       <table className="w-100 text-center">
                         <tr>
-                          <th colspan="2" className="bg-primary text-white">
+                          <th colspan="2" className="head-subtitle text-white">
                             Datos Propietario
                           </th>
                         </tr>
                         <tr>
-                          <td>Nombre:</td>
+                          <td className='subtitulo'>Nombre:</td>
                           <td>
                             {conductor.propietarioSolicitudRechazada.nombrePRO}
                           </td>
                         </tr>
                         <tr>
-                          <td>Apellido:</td>
+                          <td className='subtitulo'>Apellido:</td>
                           <td>
                             {
                               conductor.propietarioSolicitudRechazada
@@ -508,7 +508,7 @@ function MasDatosRec({ data }) {
                           </td>
                         </tr>
                         <tr>
-                          <td>Numero Documento:</td>
+                          <td className='subtitulo'>Numero Documento:</td>
                           <td>
                             {
                               conductor.propietarioSolicitudRechazada
@@ -516,9 +516,8 @@ function MasDatosRec({ data }) {
                             }
                           </td>
                         </tr>
-                        <h1>sdas</h1>
                         <tr>
-                          <td>Direcion residencia:</td>
+                          <td className='subtitulo'>Direcion residencia:</td>
                           <td>
                             {" "}
                             {
@@ -528,13 +527,13 @@ function MasDatosRec({ data }) {
                           </td>
                         </tr>
                         <tr>
-                          <td>Ciudad:</td>
+                          <td className='subtitulo'>Ciudad:</td>
                           <td>
                             {conductor.propietarioSolicitudRechazada.ciudadPRO}
                           </td>
                         </tr>
                         <tr>
-                          <td>Numero Telefono:</td>
+                          <td className='subtitulo'>Numero Telefono:</td>
                           <td>
                             {
                               conductor.propietarioSolicitudRechazada
@@ -545,19 +544,6 @@ function MasDatosRec({ data }) {
                       </table>
                     </div>
                     <hr />
-                    <div className="col-12 text-center">
-                      <button type="button" className="btn btn-primary btn-sm">
-                        Habilitar
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-secondary btn-sm"
-                        data-bs-toggle="modal"
-                        data-bs-target="#escribir-motivo-inhabilitacion"
-                      >
-                        Inhabilitar
-                      </button>
-                    </div>
                   </div>
                 </>
               ))}

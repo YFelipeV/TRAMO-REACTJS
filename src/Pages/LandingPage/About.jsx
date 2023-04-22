@@ -1,5 +1,5 @@
 
-import fondo from "../../assets/ilustraciones/fondo.jpg";
+
 import ilu1 from "../../assets/ilustraciones/ilustracionabout1.svg";
 import ilu2 from "../../assets/ilustraciones/ilustracion2.svg";
 import ilu3 from "../../assets/ilustraciones/ilustracion3.svg";
@@ -9,23 +9,27 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
 import SliderAbout from "./SliderAbout";
+/* Impor Restaurar <Pagina></Pagina */
+import restaurar from "./VolverPosition.js";
 
 function About() {
-  useEffect(()=>{
-    AOS.init({duration:2000})
-  },[])
+  useEffect(() => {
+    AOS.init({ duration: 2000 })
+  }, [])
+
+  restaurar()
 
 
-  
+
   return (
     <>
-    
-  
-      
+
+
+
       <section id="container" className="font">
         <div className="mt-6">
           <SliderAbout></SliderAbout>
-          
+
           <div className="mt-3 d-flex justify-content-center flex-column container w-md-75">
             <h6 className="text-center fs-2 mt-5 dark fw-bold">Acerca de Nosotros</h6>
             <div className="w-100 d-flex justify-content-center">
@@ -45,11 +49,11 @@ function About() {
 
       {/* mision */}
       <section className="py-3 font">
-        <div className="container mt-5">
+        <div className="container mt-5 Dimensiones" >
           <div className="row align-items-center">
-            <div  id="myDiv" className= "col-md-5 text-center text-md-start order-1 " data-aos="fade-right" >
+            <div id="myDiv" className="col-md-5 text-center text-md-start order-1 " data-aos="fade-up" >
               <img
-                className="img-fluid mb-4" 
+                className="img-fluid mb-4"
                 src={ilu1}
                 width="650"
                 alt=""
@@ -73,21 +77,20 @@ function About() {
       {/* fin section */}
 
       {/* vision */}
-      <section className="py-6 font my-5">
-        <div className="container1">
-          <div className="row  text-md-start offset-md-1">
-            <div className="col-sm-12 col-md-6 order-sm-3 order-md-1 text-center text-md-start">
-              <h6 className="fw-bold fs-2  X f lh-sm mt-5  text-sm-center text-md-start dark">
+      <section className="py-5 font my-5 text-center">
+        <div className="container1 mt-5 m-3">
+          <div className="row justify-content-center align-items-center">
+            <div className="col-sm-12 col-md-6 order-sm-3 order-md-1">
+              <h6 className="fw-bold fs-2  X f lh-sm mt-5  text-sm-center  dark">
                 Vision
               </h6>
-
               <p className="my-5 pe-xl-4  text-justify fs-5 text-secondary">
                 En cinco años queremos visualizarnos como una de los mejores
                 aplicativos a nivel nacional y también como una de las mejores
                 empresas emprendedoras del país.
               </p>
             </div>
-            <div className="col-sm-12 col-md-6 order-md-2  text-center" data-aos="fade-left" >
+            <div className="col-sm-12 col-md-6 order-md-2" data-aos="fade-up" >
               <img
                 className=" img-fluid w-lg-75"
                 src={ilu2}
@@ -104,13 +107,15 @@ function About() {
       <section className="font mt-5 py-5 ">
         <div className="container">
           <div className="row text-md-start offset-md-1">
-            <div className="col-sm-12 col-md-6  order-md-1 d-flex justify-content-center align-items-start justify-content-md-start " data-aos="fade-right" >
+            <div className="col-sm-12 col-md-6  order-md-1 d-flex justify-content-center align-items-start justify-content-md-start " data-aos="fade-up" >
               <img
-                className="img-fluid mt-3 m-md-0 w-sm-100 w-md-75  " 
+                className="img-fluid  m-md-0 w-sm-100 w-md-75  "
                 src={ilu3}
                 alt=""
-                style={{ maxWidth: "340px",
-                maxHeight:"540px"}}
+                style={{
+                  maxWidth: "340px",
+                  maxHeight: "540px", marginTop: "-50px"
+                }}
               ></img>
             </div>
 
@@ -129,15 +134,15 @@ function About() {
             </div>
           </div>
         </div>
-       
+
       </section>
-      <IntegrantesSliderGrande/>
+      <IntegrantesSliderGrande />
       <IntegrantesSlider />
 
-      
-      
+
+
     </>
-    
+
   );
 }
 

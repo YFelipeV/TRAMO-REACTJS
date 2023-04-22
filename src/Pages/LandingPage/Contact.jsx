@@ -7,8 +7,15 @@ import telefono from "../../assets/icons/telephone.svg";
 import email from "../../assets/icons/email.svg";
 import celular from "../../assets/icons/telefono-inteligente.gif";
 import Preguntas from "./Preguntas";
+import { Link } from "react-router-dom";
+/* Impor Restaurar <Pagina></Pagina */
+import restaurar from "./VolverPosition.js";
 
 function Contact() {
+
+  restaurar()
+
+  
   return (
     <>
       <section id="faq pb-sm-5 container my-5 mt-5">
@@ -38,7 +45,7 @@ function Contact() {
       </div>
 
       <section className="contact-area font">
-        <div className="container-form-contacto bg-secondary   p-5">
+        <div className="container-form-contacto colorprimario  p-5">
           <div className="row">
             <div className="col-12">
               <div className="contact-content">
@@ -49,10 +56,10 @@ function Contact() {
                       data-wow-delay="400ms"
                     >
                       <div>
-                        <p className="font dark fs-2 fw-bold">
+                        <p className="font colorsecundario fs-2 fw-bold">
                           Dejanos un mensaje
                         </p>
-                        <p className="mt-30 font">
+                        <p className="mt-30 font colortxt">
                           {" "}
                           Dejanos saber tus dudas, o inconvenientes que hayas
                           tenido durante el uso de nuestra aplicacion.
@@ -60,68 +67,77 @@ function Contact() {
                       </div>
 
                       <div>
-                        <ul className="iconos-form">
+                        <ul className="iconos-form divicons">
                           <li className="form__list-item ">
-                            <a href="#" className="form__list-link">
-                              <img
+
+                            <Link  href="#" className="form__list-link">
+                            <img
                                 src={facebook}
                                 width="24px"
                                 className="mx-2"
                                 alt=""
                               ></img>
-                            </a>
+                            </Link>
+                            
                           </li>
                           <li className="form__list-item me-2">
-                            <a href="#" className="form__list-link">
-                              <img
+                            <Link  href="#" className="form__list-link">
+                            <img
                                 src={ins}
                                 width="24px"
                                 className="ms-2"
                                 alt=""
                               ></img>
-                            </a>
+                            </Link>
+                            
                           </li>
                           <li className="form__list-item me-2">
-                            <a href="#" className="form__list-link">
-                              <img
+                            <Link  href="#" className="form__list-link">
+                            <img
                                 src={twitter}
                                 width="24px"
                                 className="ms-2"
                                 alt=""
                               ></img>
-                            </a>
+                            </Link>
+                           
                           </li>
                           <li className="form__list-item me-2">
-                            <a href="#" className="form__list-link">
-                              <img
+
+                            <Link href="#" className="form__list-link">
+                            <img
                                 src={wasap}
                                 width="24px"
                                 className="ms-2"
                                 alt=""
                               ></img>
-                            </a>
+                            </Link>
+                           
                           </li>
                           <li className="form__list-item me-2">
-                            <a href="#" className="form__list-link">
-                              <img
+
+                            <Link  href="#" className="form__list-link">
+                            <img
                                 src={youtube}
                                 width="24px"
                                 className="ms-2"
                                 alt=""
                               ></img>
-                            </a>
+                            </Link>
+                           
                           </li>
                         </ul>
                       </div>
 
-                      <h4 className="dark fw-bold">Contactanos</h4>
+                      <h4 className="colorsecundario fw-bold">Contactanos</h4>
                       <div className="single-contact-info d-flex">
                         <ul className="footer__list">
                           <li className="footer__list-item">
                             <img src={email} alt=""></img>
-                            <a href="" className="footer__list-link ms-1">
-                              TramoAdmin@gmail.com
-                            </a>
+                            <Link  href="" className="colortxt footer__list-link ms-1">
+                            TramoAdmin@gmail.com
+                            </Link>
+                           
                           </li>
                           <li className="footer__list-item">
                             <img
@@ -129,27 +145,30 @@ function Contact() {
                               src={telefono}
                               alt=""
                             ></img>
-                            <a href="" className="footer__list-link ms-1">
-                              +57 3235234567
-                            </a>
+                            <Link href="" className=" colortxt footer__list-link ms-1">
+                            +57 3235234567
+                            </Link>
+                            
                           </li>
                           <li className="footer__list-item">
                             <img src={telefono} alt=""></img>
-                            <a href="" className="footer__list-link ms-1">
-                              +57 3235234567
-                            </a>
+
+                            <Link  href="" className="colortxt footer__list-link ms-1">
+                            +57 3235234567
+                            </Link>
+                            
                           </li>
                         </ul>
                       </div>
                     </div>
                   </div>
 
-                  <div className="col-12 col-lg-7">
+                  <div className="col-12 col-lg-7 ">
                     <div
                       className="contact-form-area wow fadeInUp mt-3 mt-lg-0"
                       data-wow-delay="500ms"
                     >
-                      <form action="#" method="post">
+                      <form  action="#" method="post">
                         <input
                           type="text"
                           className="form-control"
@@ -162,6 +181,12 @@ function Contact() {
                           id="email"
                           placeholder="E-mail"
                         ></input>
+                        <input
+                          type="tel"
+                          className="form-control mt-2"
+                          id="number"
+                          placeholder="Numero de telefono"
+                        ></input>
                         <textarea
                           name="message"
                           className="form-control descripcion-pregunta my-2"
@@ -171,7 +196,7 @@ function Contact() {
                           placeholder="Message"
                         ></textarea>
                         <button
-                          className="btn btn-primary w-100 mt-30 p-2"
+                          className="btn btnhover direcciones  ultimocolor w-70  mt-30 p-2"
                           type="submit"
                         >
                           Contactanos

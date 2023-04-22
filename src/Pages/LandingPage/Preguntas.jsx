@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Preguntas() {
   return (
@@ -13,7 +14,10 @@ function Preguntas() {
                 En este apartado podras encontrar todas las preguntas frecuentes
                 que nuestros usuarios han echo con anterioridad. En caso de que
                 no encuentres lo que buscas, contactactanos pulsando{" "}
-                <a href="./contactos.html">aqui</a>
+                <Link href="./contactos.html">
+                aqui
+                </Link>
+                
               </p>
             </div>
           </div>

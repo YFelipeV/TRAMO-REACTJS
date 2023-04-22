@@ -27,12 +27,14 @@ function HistorialCards() {
           <td className="text-center pt-4">{address.street}</td>
           <td className="text-center pt-4">${address.geo.lat}</td>
           <td className="text-center pt-4">
-            <div className="manifiesto ">
-              <Link to={`/manifiesto/${id}`} target="blank" className="text-danger"
+            
+              <Link to={`/manifiesto/${id}`} target="blank"
               >
-                Ver manifiesto
+                <button className="btn bg-orange-btn px-4" style={{fontSize:"14px"}}>
+                  Ver manifiesto
+                </button>
               </Link>
-            </div>
+            
           </td>
         </tr>
       ))}
