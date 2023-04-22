@@ -1,25 +1,50 @@
-import { Outlet } from "react-router-dom";
-import SidebarLinks from "./SidebarLinks";
+import { Link, Outlet } from "react-router-dom";
 import "../../../css/styleAdmin.css";
 
 function Sidebar() {
   return (
     <>
-    <Outlet />
+      <Outlet />
       <aside id="sidebar" className="sidebar">
         <ul className="sidebar-nav" id="sidebar-nav">
-          <SidebarLinks goingTo={"/dashboard"} children={"conductores"} />
-          <SidebarLinks goingTo={"solicitudes"} children={"Solicitudes"} />
-          <SidebarLinks
-            goingTo={"datosconductores"}
-            children={"Datos Conductores"}
-          />
-          <SidebarLinks goingTo={"datoscliente"} children={"Datos cliente"} />
-          <SidebarLinks goingTo={"historial"} children={"Historial"} />
-          <SidebarLinks goingTo={"pqrs"} children={"P.Q.R.S"} />
-        </ul>
+          <li className="nav-item">
+            <Link className="nav-link collapsed" to={"/dashboard"}>
+              <i className="bx bi-card-heading"></i>
+              <span className="m-2">conductores</span>
+            </Link>
+          </li>
 
-        <span></span>
+          <li className="nav-item">
+            <Link className="nav-link collapsed" to={"solicitudes"}>
+              <i className="bx bi-card-heading"></i>
+              <span className="m-2">Solicitudes</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link collapsed" to={"datosconductores"}>
+              <i className="bx bi-card-heading"></i>
+              <span className="m-2">Datos Conductores</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link collapsed" to={"datoscliente"}>
+              <i className="bx bi-card-heading"></i>
+              <span className="m-2">Datos cliente</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link collapsed" to={"historial"}>
+              <i className="bx bi-card-heading"></i>
+              <span className="m-2">Historial</span>
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link collapsed" to={"pqrs"}>
+              <i className="bx bi-card-heading"></i>
+              <span className="m-2">P.Q.R.S</span>
+            </Link>
+          </li>
+        </ul>
       </aside>
     </>
   );
