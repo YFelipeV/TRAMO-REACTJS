@@ -23,18 +23,37 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 //  import hero from ' ../../assets/ilustraciones/hero-bg.png'
 import { lazy, useEffect } from "react";
+
+
+/* Impor Restaurar <Pagina></Pagina */
+import restaurar from "./VolverPosition";
+import { Helmet } from "react-helmet";
+
+
 function Home() {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
 
+  restaurar()
+
+
+ 
+
   return (
     <>
-      <section className="index_inicio fond   " id="home ">
+
+      <Helmet>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+      </Helmet>
+      <section className="index_inicio fond touch1  " id="home ">
         <div className="w-100 px-5 hello container mt-5">
           <div
             className="row align-items-center    w-100  "
-            data-aos="fade-right"
+            data-aos="fade-up"
           >
             <div className="col-md-3 arreglar3   mt-5 col-lg-6 order-md-1 text-center ">
               <img
@@ -46,7 +65,7 @@ function Home() {
             </div>
             <div
               className="col-md-9 arreglar2  col-lg-6 text-center text-md-start "
-              data-aos="fade-right"
+              data-aos="fade-up"
             >
               <span className=" badge bg_gray rounded-pill text-dark align-items-center d-flex flex-row-reverse justify-content-end mx-auto mx-md-0 ps-0 w-100 w-sm-50 w-md-75 w-xl-0 my-3 ">
                 APP #1 Transporte De Carga 2023
@@ -68,12 +87,11 @@ function Home() {
                 Descargando nuestra aplicación, disponible para Android y IOS
               </p>
               <div className="text-center text-md-start">
-                <a
-                  className="btn btn-lg btn-success rounded-pill hover-top bg_green mt-3"
-                  href="#descarga-con"
-                >
-                  Descarga Gratis
-                </a>
+                <Link  className="btn btn-lg btn-success rounded-pill hover-top bg_green mt-3"
+                  href="#descarga-con">
+                      Descarga Gratis
+                </Link>
+               
               </div>
             </div>
           </div>
@@ -85,7 +103,7 @@ function Home() {
       {/* fin section */}
 
       {/* sponsor */}
-      <section className="py-5  ">
+      <section className="py-5 touch1  ">
         <div className="container">
           <div className="row">
             <div className="col-12 mx-auto align-items-center text-center">
@@ -97,28 +115,28 @@ function Home() {
           <div className="row align-items-center justify-content-center justify-content-lg-around efectos">
             <div
               className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center efecto1"
-              data-aos="fade-rigth"
+              data-aos="fade-up"
             >
               <img src={company_1}  alt=""></img>
             </div>
             <div
               className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center efecto2"
-              data-aos="fade-right"
+              data-aos="fade-up"
             >
               <img src={company_2}  alt=""></img>
             </div>
-            <div className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center efecto3">
+            <div className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center efecto3" data-aos="fade-up">
               <img src={company_3}  alt=""></img>
             </div>
             <div
               className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center efecto4"
-              data-aos="fade-left"
+              data-aos="fade-up"
             >
               <img src={company_4}  alt=""></img>
             </div>
             <div
               className="col-6 col-sm-4 col-md-4 col-lg-2 px-md-0 mb-5 mb-lg-0 text-center efecto5"
-              data-aos="fade-left"
+              data-aos="fade-up"
             >
               <img src={company_1}  alt=""></img>
             </div>
@@ -128,17 +146,17 @@ function Home() {
       {/* fin section */}
 
       {/* Caracteristicas de la APP */}
-      <section className="py-1" id="features">
+      <section className="py-1 touch1" id="features">
         <div className="container-lg pt-2 mt-2">
           <div className="row align-items-center">
             <div
               className="col-md-4 col-lg-5 order-md-0  text-start mb-5 mb-md-0 conEmpresa"
-              data-aos="fade-right"
+              data-aos="fade-up"
             >
               <img
                 className="img-fluid ilustracionEmpresa flotante"
                 src={imagen2me}
-                style={{ maxWidth: "290px" }}
+                style={{ maxWidth: "280px" }}
                 alt=""
               ></img>
             </div>
@@ -217,7 +235,7 @@ function Home() {
       {/* fin section */}
 
       {/* Acerca de nosotros */}
-      <section className="py-sm-4 fond  my-sm-2 py-md-4 my-md-5">
+      <section className="py-sm-4 fond  my-sm-2 py-md-4 my-md-5 touch1">
         <div className="container pt-md-5">
           <div className="row align-items-center">
             <div className="col-md-6 text-center text-md-start offset-md-1 mb-sm-5">
@@ -243,12 +261,12 @@ function Home() {
             </div>
             <div
               className="col-md-5 order-md-0 text-center text-md-start pt-sm-5"
-              data-aos="fade-left"
+              data-aos="fade-up"
             >
               <img
                 className="img-fluid acercaImg my-md-5  flotante"
                 src={acerca}
-                width="300"
+                style={{maxWidth:"280px"}}
                 alt=""
               ></img>
             </div>
@@ -262,7 +280,7 @@ function Home() {
       {/* fin section */}
 
       {/* Preguntas frecuentes */}
-      <section id="faq pb-sm-5">
+      <section id="faq pb-sm-5 touch1">
         <div className="container py-sm-2 pt-md-5">
           <div className="row justify-content-center">
             <div className="col-md-8 col-lg-6 text-center mb-3">
@@ -447,13 +465,14 @@ function Home() {
       {/* fin section */}
 
       {/* section descarga */}
-      <section className="pt-sm-3 mt-md-5 pt-sm-2 pt-md-5  fond" id="descarga-con">
+      <section className="pt-sm-3 mt-md-5 pt-sm-2 pt-md-5  fond touch1" id="descarga-con">
         <div className="container mt-sm-3 mt-md-5 ">
           <div className="row align-items-center ">
-            <div className="col-md-5 col-lg-5  order-md-1 text-center z-index-2 cta-image ">
+            <div className="col-md-5 col-lg-5  order-md-1 text-center z-index-2 cta-image " data-aos="fade-up" >
               <img
                 className="img-fluid mb-4 mb-md-0  ilustracion  flotante"
                 src={imagen3me}
+                style={{ maxWidth: "270px" }}
                 alt=""
               ></img>
             </div>
@@ -468,29 +487,28 @@ function Home() {
                 mundo, como facebook.
               </p>
               <div className=" justify-content-center d-md-inline-block columna centrar">
-                <a className="pe-2 pe-sm-3 pe-md-4" href="!#">
-                  <img
+                <Link  className="pe-2 pe-sm-3 pe-md-4" href="!#">
+                <img
                     className="w-sm-50 w-md-50 playstore"
                     src={playstore}
                     alt=""
                   ></img>
-                </a>
-                <a href="!#"></a>
-
-                <a className="pe-2 pe-sm-3 pe-md-4" href="!#">
-                  <img
+                </Link>
+                <Link  className="pe-2 pe-sm-3 pe-md-4" href="!#">
+                <img
                     className="w-sm-50 w-md-50 appstore"
                     src={appstore}
                     alt=""
                   ></img>
-                </a>
-                <a className="pe-2 pe-sm-3 pe-md-4" href="!#">
-                  <img
+                </Link>
+                <Link className="pe-2 pe-sm-3 pe-md-4" href="!#">
+                <img
                     className="w-sm-50 w-md-50 wuawei"
                     src={wuawei}
                     alt=""
                   ></img>
-                </a>
+                </Link>
+               
               </div>
             </div>
           </div>

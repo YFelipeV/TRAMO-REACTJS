@@ -3,8 +3,19 @@ import Footer from "./Footer";
 import "../../css/style.css";
 import { Link, Outlet } from "react-router-dom";
 import { Suspense } from "react";
+import { useState } from "react";
 
 function Header() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
   return (
     <>
       <header>
@@ -24,6 +35,7 @@ function Header() {
               ></img>
             </Link>
             <button
+             
               className="navbar-toggler collapsed"
               type="button"
               data-bs-toggle="collapse"
@@ -31,27 +43,32 @@ function Header() {
               aria-controls="navbarSupportedContent"
               aria-expanded="false"
               aria-label="Toggle navigation"
+              onClick={handleMenuClick}
             >
               <span className="navbar-toggler-icon"></span>
             </button>
             <div
-              className="collapse navbar-collapse mt-4 mt-lg-0"
+              className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav ms-auto pt-2 pt-lg-0">
                 <li className="nav-item">
                   <Link
+                   
                     className="nav-link mx-2 fw-medium active fs-5 text-primary"
                     aria-current="page"
                     to="/"
+                    onClick={handleLinkClick}
                   >
                     Inicio
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
+                    
                     className="nav-link mx-2 fw-medium fs-5 text-primary"
                     to="about"
+                    onClick={handleLinkClick}
                   >
                     Acerca de Nosotros
                   </Link>
@@ -59,8 +76,10 @@ function Header() {
 
                 <li className="nav-item">
                   <Link
-                    className="nav-link fw-medium fs-5 text-primary"
+                    
+                    className="nav-link fw-medium fs-5 mx-2 text-primary"
                     to="contactos"
+                    onClick={handleLinkClick}
                   >
                     Contactos
                   </Link>
@@ -69,7 +88,7 @@ function Header() {
               <div className="ps-lg-5">
                 <Link
                   to={"/login"}
-                  className="btn btn-lg btn-primary rounded-pill order-0 fs-5 me-5"
+                  className="btn btn-lg btn-primary rounded-pill mx-1 order-0 fs-5 me-5"
                 >
                   Inicio Sesion
                 </Link>

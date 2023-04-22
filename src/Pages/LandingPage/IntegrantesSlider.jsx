@@ -8,6 +8,7 @@ import hernan from "../../assets/Integrantes/HernanSF2.png";
 import facebook from "../../assets/icons/facebook.svg";
 import ins from "../../assets/icons/instagram.svg";
 import wasap from "../../assets/icons/whatsapp.svg";
+import { Link } from "react-router-dom";
 
 function IntegrantesSlider() {
   return (
@@ -34,23 +35,26 @@ function IntegrantesSlider() {
                   <h6 className="font" >Scrum Master</h6>
                   <ul className="d-flex redes-integrantes justify-content-center">
                     <li>
-                      <a className=" bg-yellow wasap" target={"_blank"} href="">
-                        <img src={wasap} className=" p-2 rounded mb-2" alt="" />
-                      </a>
+                     <Link className=" bg-yellow wasap" target={"_blank"} href="">
+                     <img src={wasap} className=" p-2 rounded mb-2" alt="" />
+                     </Link>
+                     
                     </li>
                     <li>
-                      <a className=" bg-yellow  instagram" target={"_blank"} href="">
-                        <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                      </a>
+                      <Link className=" bg-yellow  instagram" target={"_blank"} href="">
+                      <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                      </Link>
+                      
                     </li>
                     <li>
-                      <a className=" bg-yellow facebook" target={"_blank"} href="">
-                        <img
+                      <Link  className=" bg-yellow facebook" target={"_blank"} href="">
+                      <img
                           src={facebook}
                           className=" p-2 rounded mb-2"
                           alt=""
                         />
-                      </a>
+                      </Link>
+                     
                     </li>
                   </ul>
                 </div>
@@ -71,23 +75,26 @@ function IntegrantesSlider() {
                   <h6 className="font" >Product Owner</h6>
                   <ul className="d-flex redes-integrantes justify-content-center">
                     <li>
-                      <a className=" bg-yellow wasap" target={"_blank"} href="">
-                        <img src={wasap} className=" p-2 rounded mb-2" alt="" />
-                      </a>
+                      <Link className=" bg-yellow wasap" target={"_blank"} href="">
+                      <img src={wasap} className=" p-2 rounded mb-2" alt="" />
+                      </Link>
+                     
                     </li>
                     <li>
-                      <a className=" bg-yellow instagram" target={"_blank"} href="">
-                        <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                      </a>
+                      <Link className=" bg-yellow instagram" target={"_blank"} href="">
+                      <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                      </Link>
+                      
                     </li>
                     <li>
-                      <a className=" bg-yellow facebook" target={"_blank"} href="">
-                        <img
+                      <Link className=" bg-yellow facebook" target={"_blank"} href="">
+                      <img
                           src={facebook}
                           className=" p-2 rounded mb-2"
                           alt=""
                         />
-                      </a>
+                      </Link>
+                     
                     </li>
                   </ul>
                 </div>
@@ -109,23 +116,26 @@ function IntegrantesSlider() {
                   <h6 className="font" >Full Stack Developer</h6>
                   <ul className="d-flex redes-integrantes justify-content-center">
                     <li>
-                      <a className=" bg-yellow wasap" target={"_blank"} href="">
-                        <img src={wasap} className=" p-2 rounded mb-2" alt="" />
-                      </a>
+                      <Link className=" bg-yellow wasap" target={"_blank"} href="">
+                      <img src={wasap} className=" p-2 rounded mb-2" alt="" />
+                      </Link>
+                      
                     </li>
                     <li>
-                      <a className=" bg-yellow instagram" target={"_blank"} href="">
-                        <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                      </a>
+                      <Link className=" bg-yellow instagram" target={"_blank"} href="">
+                      <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                      </Link>
+                     
                     </li>
                     <li>
-                      <a className=" bg-yellow facebook" target={"_blank"} href="">
-                        <img
+                      <Link className=" bg-yellow facebook" target={"_blank"} href="">
+                      <img
                           src={facebook}
                           className=" p-2 rounded mb-2"
                           alt=""
                         />
-                      </a>
+                      </Link>
+                     
                     </li>
                   </ul>
                 </div>
@@ -145,24 +155,27 @@ function IntegrantesSlider() {
                   <h5 className="card-title">Jhon Sebastian Hurtado</h5>
                   <h6 className="font" >Full Stack Developer</h6>
                   <ul className="d-flex redes-integrantes justify-content-center">
-                    <li>
-                      <a className=" bg-yellow wasap" target={"_blank"} href="">
-                        <img src={wasap} className=" p-2 rounded mb-2" alt="" />
-                      </a>
+                  <li>
+                      <Link className=" bg-yellow wasap" target={"_blank"} href="">
+                      <img src={wasap} className=" p-2 rounded mb-2" alt="" />
+                      </Link>
+                      
                     </li>
                     <li>
-                      <a className=" bg-yellow instagram" target={"_blank"} href="">
-                        <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                      </a>
+                      <Link className=" bg-yellow instagram" target={"_blank"} href="">
+                      <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                      </Link>
+                     
                     </li>
                     <li>
-                      <a className=" bg-yellow facebook" target={"_blank"} href="">
-                        <img
+                      <Link className=" bg-yellow facebook" target={"_blank"} href="">
+                      <img
                           src={facebook}
                           className=" p-2 rounded mb-2"
                           alt=""
                         />
-                      </a>
+                      </Link>
+                     
                     </li>
                   </ul>
                 </div>
@@ -183,24 +196,27 @@ function IntegrantesSlider() {
                   <h5 className="card-title">Yonatan David Pechene</h5>
                   <h6 className="font" >Full Stack Developer</h6>
                   <ul className="d-flex redes-integrantes justify-content-center">
-                    <li>
-                      <a className=" bg-yellow wasap" target={"_blank"} href="">
-                        <img src={wasap} className=" p-2 rounded mb-2" alt="" />
-                      </a>
+                  <li>
+                      <Link className=" bg-yellow wasap" target={"_blank"} href="">
+                      <img src={wasap} className=" p-2 rounded mb-2" alt="" />
+                      </Link>
+                      
                     </li>
                     <li>
-                      <a className=" bg-yellow instagram" target={"_blank"} href="">
-                        <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                      </a>
+                      <Link className=" bg-yellow instagram" target={"_blank"} href="">
+                      <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                      </Link>
+                     
                     </li>
                     <li>
-                      <a className=" bg-yellow facebook" target={"_blank"} href="">
-                        <img
+                      <Link className=" bg-yellow facebook" target={"_blank"} href="">
+                      <img
                           src={facebook}
                           className=" p-2 rounded mb-2"
                           alt=""
                         />
-                      </a>
+                      </Link>
+                     
                     </li>
                   </ul>
                 </div>
@@ -220,24 +236,27 @@ function IntegrantesSlider() {
                   <h5 className="card-title">Hernan Dario Zuñiga</h5>
                   <h6  className="font">Full Stack Developer</h6>
                   <ul className="d-flex redes-integrantes justify-content-center">
-                    <li>
-                      <a className=" bg-yellow wasap" target={"_blank"} href="">
-                        <img src={wasap} className=" p-2 rounded mb-2" alt="" />
-                      </a>
+                  <li>
+                      <Link className=" bg-yellow wasap" target={"_blank"} href="">
+                      <img src={wasap} className=" p-2 rounded mb-2" alt="" />
+                      </Link>
+                      
                     </li>
                     <li>
-                      <a className=" bg-yellow instagram" target={"_blank"} href="">
-                        <img src={ins} className=" p-2 rounded mb-2" alt="" />
-                      </a>
+                      <Link className=" bg-yellow instagram" target={"_blank"} href="">
+                      <img src={ins} className=" p-2 rounded mb-2" alt="" />
+                      </Link>
+                     
                     </li>
                     <li>
-                      <a className=" bg-yellow facebook" target={"_blank"} href="">
-                        <img
+                      <Link className=" bg-yellow facebook" target={"_blank"} href="">
+                      <img
                           src={facebook}
                           className=" p-2 rounded mb-2"
                           alt=""
                         />
-                      </a>
+                      </Link>
+                     
                     </li>
                   </ul>
                 </div>
