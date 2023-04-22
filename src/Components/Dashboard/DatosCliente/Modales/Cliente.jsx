@@ -36,7 +36,8 @@ function Cliente({ getid }) {
             <div className="modal-body">
               <form>
                 <textarea
-                  className="w-100"
+                  className="w-100 p-3"
+                  placeholder="Motivo Inhabilitación..."
                   name="motivoInhabilitadoPNA"
                   id="respuesta-pqrs"
                   rows="10"

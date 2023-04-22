@@ -72,19 +72,20 @@ function ItemsInhabilitados() {
               </p>
             </td>
             <td className="align-middle ">
-              <div className="text-center" style={{ marginTop: "10%" }}>
+              <div className="text-center">
                 <a
                   href=""
-                  className="m-0 p-0 text-primary"
+                  className="btn bg-blue mb-2 btn-mas-datos"
                   data-bs-toggle="modal"
                   data-bs-target="#inhabilitado"
                   onClick={() => handleOnsumbit(conductor._id)}
                 >
-                  Mostrar mas datos
+                  Mostrar Más datos
                 </a>
                 <br />
                 <button
-                  className="m-0 p-0 text-danger bg-white border-0 mr-2  "
+                  className="btn bg-red btn-mas-datos"
+                  style={{opacity:"90%", fontSize:"14px"}}
                   data-bs-toggle="modal"
                   data-bs-target="#motivo-rechazo"
                   onClick={() => {
@@ -95,7 +96,7 @@ function ItemsInhabilitados() {
                     );
                   }}
                 >
-                  Ver motivo inhabilitacion
+                  Motivo Inhabilitación
                 </button>
               </div>
             </td>

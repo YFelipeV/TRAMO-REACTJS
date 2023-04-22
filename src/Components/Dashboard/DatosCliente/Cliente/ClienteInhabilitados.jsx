@@ -1,4 +1,5 @@
 import ClienteInhabilitadosItems from "./ClienteInhabilitadosItems";
+import img_pen from '../../../../assets/icons/inhabilitado.png';
 
 function ClienteInhabilitados({ClienteInhabilitado}) {
   return (
@@ -7,8 +8,8 @@ function ClienteInhabilitados({ClienteInhabilitado}) {
         <div className="col-12">
           <div className="card my-4">
             <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-              <div className="bg-danger shadow-primary border-radius-lg pt-4 pb-3">
-                <h4 className="text-light ps-3">Clientes Inhabilitados</h4>
+              <div className="bg-orange head-title border-radius-lg">
+                <h4 className="text-light d-flex align-items-center"> <img className='imagen-titulo rounded-circle' src={img_pen} alt=""/> Clientes Inhabilitados</h4>
               </div>
             </div>
             <div className="card-body px-0 pb-2">

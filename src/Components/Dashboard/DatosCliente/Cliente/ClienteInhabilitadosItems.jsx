@@ -16,6 +16,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
           nombrePNA,
           apellidoPNA,
           nroTelefonoPNA,
+          nroDocumentoPNA,
           correoElectronicoPNA,
           DireccionPNA,
           calificacionPNA,
@@ -23,7 +24,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
         }) => (
           <tr key={_id}>
             <td>
-              <div>
+              <div className="d-flex justify-content-center">
                 <img
                   src={
                     perfil
@@ -35,7 +36,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                 />
               </div>
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm w-25">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Nombre </b>
               </p>
@@ -49,7 +50,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                 {nroTelefonoPNA}
               </p>
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm w-25">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Correo</b>
               </p>
@@ -67,18 +68,23 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Calificacion {calificacionPNA}</b>
               </p>
-              <div className="d-flex justify-content-center">
+              <div className="d-flex justify-content-center align-items-center cal-star">
                 <ReactStarts edit={false} value={calificacionPNA} size={28} />
               </div>
-
-              <p className="font-weight-bold text-xs font-weight-bold m-0"></p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                <b>Documento</b>
+              </p>
+              <p className="font-weight-bold text-xs font-weight-bold m-0">
+                {nroDocumentoPNA}
+              </p>
             </td>
             <td>
               <div className="text-center mt-4">
                 <div className="border-0  bg-white">
                   <button
                     href=""
-                    className="m-0 p-0 text-danger bg-white border-0"
+                    className="btn bg-red"
+                    style={{fontSize:"15px"}}
                     data-bs-toggle="modal"
                     data-bs-target="#motivo-inhabilitacion"
                     onClick={() => {
@@ -86,7 +92,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                         setnombre(nombrePNA , apellidoPNA);
                     }}
                   >
-                    Ver motivo inhabilitacion
+                    Motivo Inhabilitacion
                   </button>
                 </div>
                 <div className="mt-2">
@@ -109,7 +115,8 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                         }
                       })
                     }
-                    className="btn btn-primary mb-2"
+                    className="btn bg-blue mb-2"
+                    style={{fontSize:"15px", padding:"5px 50px"}}
                   >
                     Habilitar
                   </button>

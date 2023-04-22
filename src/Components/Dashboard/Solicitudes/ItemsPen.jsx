@@ -29,7 +29,7 @@ function ItemsPen({ SolicitudesPendientes }) {
                 />
               </div>
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm w-25">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Nombre</b>
               </p>
@@ -57,7 +57,7 @@ function ItemsPen({ SolicitudesPendientes }) {
                 {conductor.correoElectronicoCON}
               </p>
             </td>
-            <td className="text-center align-middle">
+            <td className="text-center align-middle w-25">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Direccion de residencia</b>
               </p>
@@ -65,16 +65,15 @@ function ItemsPen({ SolicitudesPendientes }) {
                 {conductor.DireccionResidenciaCON}
               </p>
             </td>
-            <td>
-              <div className="text-center d-flex align-items-center justify-content-center" style={{ marginTop: "10%" }}>
-                <div
-                  className="m-0 p-0 text-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#mas-datos"
-                  onClick={() => handleOnsumbit(conductor._id)}
-                >
-                  <p className="scale">Mostrar mas datos</p>
-                </div>
+            <td >
+              <div
+                className=""
+                style={{marginTop:"35px"}}
+                data-bs-toggle="modal"
+                data-bs-target="#mas-datos"
+                onClick={() => handleOnsumbit(conductor._id)}
+              >
+                <button className="btn bg-blue btn-mas-datos">Mostrar Más Datos</button>
               </div>
             </td>
           </tr>

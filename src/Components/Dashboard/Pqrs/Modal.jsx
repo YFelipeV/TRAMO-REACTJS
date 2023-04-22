@@ -34,11 +34,7 @@ function Modal() {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Cupiditate laborum, ab odit maiores quidem numquam facere non
                   autem, omnis eligendi quo reiciendis suscipit nulla officiis
-                  accusantium? Officiis voluptas culpa tempore.lorem Lorem,
-                  ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-                  esse necessitatibus earum quam, est omnis error, cumque,
-                  incidunt nesciunt tempora doloribus? Perspiciatis perferendis
-                  facilis quis, voluptatem consequatur sequi soluta modi.
+                  accusantium? Officiis voluptas culpa tempore.lorem Lorem
                 </p>
 
                 <textarea
@@ -46,6 +42,8 @@ function Modal() {
                   id=""
                   cols="55"
                   rows="10"
+                  className="p-2"
+                  placeholder="Escribe La Respuesta..."
                   onChange={(e) => setdata(e.target.value)}
                 ></textarea>
                 <button className="btn btn-primary w-100 my-1">Enviar</button>
