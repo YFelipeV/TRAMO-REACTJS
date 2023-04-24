@@ -24,10 +24,10 @@ function ItemsHabilitados() {
     <>
       {loadingconductor ? (
         datosConductor.map(({ conductor }) => (
-          <tr key={conductor._id}>
-            <td>
+          <tr key={conductor._id} className="filas_info">
+            <td className="">
               <img
-                className="circle-img ms-5"
+                className="circle-img"
                 src={
                   conductor.perfil.fotoperfilCON
                     ? conductor.perfil.fotoperfilCON
@@ -36,7 +36,7 @@ function ItemsHabilitados() {
                 alt=""
               />
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Nombre</b>
               </p>
@@ -51,7 +51,7 @@ function ItemsHabilitados() {
                 {conductor.nroTelefonoCON}
               </p>
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm filas_info_corta">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Cedula</b>
               </p>
@@ -65,7 +65,7 @@ function ItemsHabilitados() {
                 {conductor.correoElectronicoCON}
               </p>
             </td>
-            <td className="text-center align-middle">
+            <td className="text-center align-middle filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Direccion de residencia</b>
               </p>
@@ -73,7 +73,7 @@ function ItemsHabilitados() {
                 {conductor.DireccionResidenciaCON}
               </p>
             </td>
-            <td className="align-middle">
+            <td className="align-middle filas_info_corta">
               <div className="text-center">
                 <button
                   className="btn bg-blue "

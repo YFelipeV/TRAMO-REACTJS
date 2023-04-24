@@ -18,7 +18,7 @@ function ItemsRec({ SolicitudesRechazadas }) {
   return (
     <>
       {SolicitudesRechazadas.map(({conductor}) => (
-        <tr key={conductor._id}>
+        <tr key={conductor._id} className="filas_info">
           <td>
             <span className="d-flex justify-content-center">
               <img
@@ -28,7 +28,7 @@ function ItemsRec({ SolicitudesRechazadas }) {
               />
             </span>
           </td>
-          <td className="text-center align-middle text-sm w-25">
+          <td className="text-center align-middle text-sm w-25 filas_info_larga">
             <p className="font-weight-bold text-xs font-weight-bold m-0">
               <b>Nombre</b>
             </p>
@@ -42,7 +42,7 @@ function ItemsRec({ SolicitudesRechazadas }) {
               {conductor.nroTelefonoCON}
             </p>
           </td>
-          <td className="text-center align-middle text-sm">
+          <td className="text-center align-middle text-sm filas_info_corta">
             <p className="font-weight-bold text-xs font-weight-bold m-0">
               <b>Cedula</b>
             </p>
@@ -56,7 +56,7 @@ function ItemsRec({ SolicitudesRechazadas }) {
               {conductor.correoElectronicoCON}
             </p>
           </td>
-          <td className="text-center align-middle">
+          <td className="text-center align-middle filas_info_larga">
             <p className="font-weight-bold text-xs font-weight-bold m-0">
               <b>Direccion de residencia</b>
             </p>
@@ -65,11 +65,11 @@ function ItemsRec({ SolicitudesRechazadas }) {
             </p>
           </td>
 
-          <td>
-            <div className="d-flex flex-md-column align-items-center" style={{ marginTop: "10%" }}>
+          <td className="">
+            <div className="d-flex flex-column align-items-center filas_info_corta" style={{ marginTop: "10%" }}>
               <button
                 href=""
-                className="btn bg-blue btn-mas-datos"
+                className="btn bg-blue btn-mas-datos botones"
                 data-bs-toggle="modal"
                 data-bs-target="#mas-datos-rechazados"
                 onClick={() => handleOnsumbit(conductor._id)}
@@ -78,7 +78,7 @@ function ItemsRec({ SolicitudesRechazadas }) {
               </button>
               <div className="mt-2">
                 <button
-                  className="btn bg-red btn-mas-datos"
+                  className="btn bg-red btn-mas-datos botones"
                   style={{opacity:"90%"}}
                   data-bs-toggle="modal"
                   data-bs-target="#motivo-rechazo"

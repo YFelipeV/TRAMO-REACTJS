@@ -22,7 +22,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
           calificacionPNA,
           estadoCLN,
         }) => (
-          <tr key={_id}>
+          <tr key={_id} className="filas_info">
             <td>
               <div className="d-flex justify-content-center">
                 <img
@@ -36,7 +36,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                 />
               </div>
             </td>
-            <td className="text-center align-middle text-sm w-25">
+            <td className="text-center align-middle text-sm w-25 filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Nombre </b>
               </p>
@@ -50,7 +50,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                 {nroTelefonoPNA}
               </p>
             </td>
-            <td className="text-center align-middle text-sm w-25">
+            <td className="text-center align-middle text-sm w-25 filas_info_corta">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Correo</b>
               </p>
@@ -64,7 +64,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                 {DireccionPNA}
               </p>
             </td>
-            <td className="text-center align-middle">
+            <td className="text-center align-middle filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Calificacion {calificacionPNA}</b>
               </p>
@@ -78,12 +78,12 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                 {nroDocumentoPNA}
               </p>
             </td>
-            <td>
+            <td className="filas_info_corta">
               <div className="text-center mt-4">
                 <div className="border-0  bg-white">
                   <button
                     href=""
-                    className="btn bg-red"
+                    className="btn bg-red botones"
                     style={{fontSize:"15px"}}
                     data-bs-toggle="modal"
                     data-bs-target="#motivo-inhabilitacion"
@@ -115,7 +115,7 @@ function ClienteInhabilitadosItems({ ClienteInhabilitado }) {
                         }
                       })
                     }
-                    className="btn bg-blue mb-2"
+                    className="btn bg-blue mb-2 botones"
                     style={{fontSize:"15px", padding:"5px 50px"}}
                   >
                     Habilitar

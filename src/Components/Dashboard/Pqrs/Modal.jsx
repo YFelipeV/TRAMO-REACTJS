@@ -42,7 +42,7 @@ function Modal() {
                   id=""
                   cols="55"
                   rows="10"
-                  className="p-2"
+                  className="p-2 w-100"
                   placeholder="Escribe La Respuesta..."
                   onChange={(e) => setdata(e.target.value)}
                 ></textarea>

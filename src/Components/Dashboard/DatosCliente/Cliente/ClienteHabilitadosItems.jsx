@@ -11,7 +11,7 @@ function ClienteHabilitadosItems({ data }) {
   return (
     <>
       {data.map((cliente) => (
-        <tr key={cliente._id}>
+        <tr key={cliente._id} className="filas_info">
           <td className="w-one">
             <div className="d-flex justify-content-center">
               <img
@@ -26,7 +26,7 @@ function ClienteHabilitadosItems({ data }) {
             </div>
           </td>
 
-          <td className="text-center align-middle text-sm w-25">
+          <td className="text-center align-middle text-sm w-25 filas_info_larga">
             <p className="font-weight-bold text-xs font-weight-bold m-0">
               <b>Nombre</b>
             </p>
@@ -40,7 +40,7 @@ function ClienteHabilitadosItems({ data }) {
               {cliente.nroTelefonoPNA}
             </p>
           </td>
-          <td className="text-center align-middle text-sm w-25">
+          <td className="text-center align-middle text-sm w-25 filas_info_corta">
             <p className="font-weight-bold text-xs font-weight-bold m-0">
               <b>Correo</b>
             </p>
@@ -54,7 +54,7 @@ function ClienteHabilitadosItems({ data }) {
               {cliente.DireccionPNA}
             </p>
           </td>
-          <td className="text-center align-middle">
+          <td className="text-center align-middle filas_info_larga">
             <p className="font-weight-bold text-xs font-weight-bold m-0">
               <b>Calificacion {cliente.calificacionPNA}</b>
             </p>
@@ -77,7 +77,7 @@ function ClienteHabilitadosItems({ data }) {
             <div className="text-center">
               <div className="mt-5">
                 <button
-                  className="btn bg-red"
+                  className="btn bg-red botones"
                   style={{padding:"4px 20px"}}
                   data-bs-toggle="modal"
                   data-bs-target="#escribir-motivo-inhabilitacion"
