@@ -1,5 +1,11 @@
 import { Link, Outlet } from "react-router-dom";
 import "../../../css/styleAdmin.css";
+import volante from '../../../assets/icons/volante.png';
+import campana from '../../../assets/icons/campana.png';
+import ruta from '../../../assets/icons/camion.png';
+import cliente from '../../../assets/icons/cliente.png';
+import historial from '../../../assets/icons/historialNar.png';
+import buzon from '../../../assets/icons/buzon.png';
 
 function Sidebar() {
   return (
@@ -9,38 +15,38 @@ function Sidebar() {
         <ul className="sidebar-nav" id="sidebar-nav">
           <li className="nav-item">
             <Link className="nav-link collapsed" to={"/dashboard"}>
-              <i className="bx bi-card-heading"></i>
-              <span className="m-2">conductores</span>
+              <img src={ruta} className="img-sidebar" alt="" />
+              <span className="m-2">Conductores</span>
             </Link>
           </li>
 
           <li className="nav-item">
             <Link className="nav-link collapsed" to={"solicitudes"}>
-              <i className="bx bi-card-heading"></i>
+              <img src={campana} className="img-sidebar" alt="" />
               <span className="m-2">Solicitudes</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link collapsed" to={"datosconductores"}>
-              <i className="bx bi-card-heading"></i>
+             <img src={volante} className="img-sidebar" alt="" />
               <span className="m-2">Datos Conductores</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link collapsed" to={"datoscliente"}>
-              <i className="bx bi-card-heading"></i>
+             <img src={cliente} className="img-sidebar" alt="" />
               <span className="m-2">Datos cliente</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link collapsed" to={"historial"}>
-              <i className="bx bi-card-heading"></i>
+              <img src={historial} className="img-sidebar" alt="" />
               <span className="m-2">Historial</span>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link collapsed" to={"pqrs"}>
-              <i className="bx bi-card-heading"></i>
+              <img src={buzon} className="img-sidebar" alt="" />
               <span className="m-2">P.Q.R.S</span>
             </Link>
           </li>
