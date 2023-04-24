@@ -5,7 +5,7 @@ function Items({ data }) {
   return (
     <>
       {data.map(({ conductor }) => (
-        <tr key={conductor._id}>
+        <tr key={conductor._id} className="filas_info">
           <td>
             <div className="d-flex justify-content-center">
               <LazyLoadImage
@@ -15,7 +15,7 @@ function Items({ data }) {
               ></LazyLoadImage>
             </div>
           </td>
-          <td className="text-center align-middle text-sm">
+          <td className="text-center align-middle text-sm filas_info_corta">
             <p className="font-weight-bold text-xs font-weight-bold m-0">
               {conductor.nombreCON} {conductor.apellidoCON}
             </p>
@@ -25,7 +25,7 @@ function Items({ data }) {
               {conductor.nroTelefonoCON}
             </span>
           </td>
-          <td className="text-center align-middle text-sm">
+          <td className="text-center align-middle text-sm filas_info_larga">
             <div className="d-flex justify-content-center">
               <ReactStarts
                 edit={false}

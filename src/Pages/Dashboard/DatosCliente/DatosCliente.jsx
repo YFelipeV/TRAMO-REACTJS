@@ -38,7 +38,7 @@ function DatosCliente() {
       <main className="main" id="main">
         <div className="d-flex justify-content-center">
           <button
-            className="btn bg-green-btn mx-2 d-flex justify-content-center align-items-center"
+            className="btn bg-green-btn mx-2 d-flex justify-content-center align-items-center botones_cliente"
             type="submit"
             onClick={() => {
               navigate("/dashboard/datoscliente");
@@ -48,7 +48,7 @@ function DatosCliente() {
             Ver Cliente Natural
           </button>
           <button
-            className="btn bg-blue mx-2 d-flex justify-content-center align-items-center"
+            className="btn bg-blue mx-2 d-flex justify-content-center align-items-center botones_cliente"
             type="submit"
             onClick={() => {
               navigate("/dashboard/datosclienteEmpresa");

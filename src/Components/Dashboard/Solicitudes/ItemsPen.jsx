@@ -19,7 +19,7 @@ function ItemsPen({ SolicitudesPendientes }) {
     <>
       {SolicitudesPendientes.map(({ conductor }) => (
         <>
-          <tr key={conductor._id}>
+          <tr key={conductor._id} className="filas_info">
             <td>
               <div className="d-flex justify-content-center aling-items-center ">
                 <img
@@ -29,7 +29,7 @@ function ItemsPen({ SolicitudesPendientes }) {
                 />
               </div>
             </td>
-            <td className="text-center align-middle text-sm w-25">
+            <td className="text-center align-middle text-sm w-25 filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Nombre</b>
               </p>
@@ -43,7 +43,7 @@ function ItemsPen({ SolicitudesPendientes }) {
                 {conductor.nroTelefonoCON}
               </p>
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm filas_info_corta">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Cedula</b>
               </p>
@@ -57,7 +57,7 @@ function ItemsPen({ SolicitudesPendientes }) {
                 {conductor.correoElectronicoCON}
               </p>
             </td>
-            <td className="text-center align-middle w-25">
+            <td className="text-center align-middle w-25 filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Direccion de residencia</b>
               </p>
@@ -65,7 +65,7 @@ function ItemsPen({ SolicitudesPendientes }) {
                 {conductor.DireccionResidenciaCON}
               </p>
             </td>
-            <td >
+            <td className="filas_info_corta">
               <div
                 className=""
                 style={{marginTop:"35px"}}
@@ -73,7 +73,7 @@ function ItemsPen({ SolicitudesPendientes }) {
                 data-bs-target="#mas-datos"
                 onClick={() => handleOnsumbit(conductor._id)}
               >
-                <button className="btn bg-blue btn-mas-datos">Mostrar Más Datos</button>
+                <button className="btn bg-blue btn-mas-datos botones">Mostrar Más Datos</button>
               </div>
             </td>
           </tr>

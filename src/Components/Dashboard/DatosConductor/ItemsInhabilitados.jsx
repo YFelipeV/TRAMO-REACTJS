@@ -25,17 +25,17 @@ function ItemsInhabilitados() {
     <>
       {loading ? (
         datosConductorInhabilitado.map(({ conductor }) => (
-          <tr key={conductor._id}>
+          <tr key={conductor._id} className="filas_info">
             <td>
               <div>
                 <img
                   src={conductor.perfil.fotoperfilCON}
-                  className="circle-img  ms-5"
+                  className="circle-img"
                   alt=""
                 />
               </div>
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Nombre</b>
               </p>
@@ -49,7 +49,7 @@ function ItemsInhabilitados() {
                 {conductor.nroTelefonoCON}
               </p>
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm filas_info_corta">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Cedula</b>
               </p>
@@ -63,7 +63,7 @@ function ItemsInhabilitados() {
                 {conductor.correoElectronicoCON}
               </p>
             </td>
-            <td className="text-center align-middle">
+            <td className="text-center align-middle filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Direccion de residencia</b>
               </p>
@@ -71,7 +71,7 @@ function ItemsInhabilitados() {
                 {conductor.DireccionResidenciaCON} 78N - Popayan Cauca
               </p>
             </td>
-            <td className="align-middle ">
+            <td className="align-middle filas_info_corta">
               <div className="text-center">
                 <a
                   href=""
