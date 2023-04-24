@@ -17,7 +17,8 @@ import acerca from "../../assets/ilustraciones/acerca_nosotros_ilus.svg";
 import appstore from "../../assets/icons/app-store.png";
 import playstore from "../../assets/icons/google-play.png";
 
-import { Link } from "react-router-dom";
+
+import { BrowserRouter as Router,  Link } from 'react-router-dom';
 import Testimonios from "./Testimonios";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -41,7 +42,9 @@ function Home() {
  
 
   return (
+    
     <>
+   
 
       <Helmet>
         <meta
@@ -88,7 +91,7 @@ function Home() {
               </p>
               <div className="text-center text-md-start">
                 <Link  className="btn btn-lg btn-success rounded-pill hover-top bg_green mt-3"
-                  href="#descarga-con">
+                  onClick={() => document.getElementById('descarga-con').scrollIntoView({ behavior: "smooth" })}>
                       Descarga Gratis
                 </Link>
                
@@ -284,7 +287,7 @@ function Home() {
         <div className="container py-sm-2 pt-md-5">
           <div className="row justify-content-center">
             <div className="col-md-8 col-lg-6 text-center mb-3">
-              <h6 className="  fw-bold lh-sm mb-3 display-6 dark dark py-2">
+              <h6 className=" fs-3 fw-bold lh-sm mb-3 display-6 dark dark py-2">
                 Preguntas Frecuentes
               </h6>
               <p className="pb-3 fs-6 font text-secondary ">
@@ -309,7 +312,7 @@ function Home() {
                       aria-expanded="true"
                       aria-controls="collapse1"
                     >
-                      <span className=" fs-5   mb-0 fw-bold text-start  dark">
+                      <span className="fs-6   mb-0 fw-bold text-start  dark">
                         Es posible negociar el precio del flete directamente con
                         el conductor encargado del servicio ?
                       </span>
@@ -340,7 +343,7 @@ function Home() {
                       aria-expanded="true"
                       aria-controls="collapse2"
                     >
-                      <span className="mb-0 fs-5  fw-bold text-start bg_azul  dark">
+                      <span className="mb-0 fs-6  fw-bold text-start bg_azul  dark">
                         Que pasa si hay un retraso en la llegada del vehiculo
                         encargado de prestar el servicio?
                       </span>
@@ -371,7 +374,7 @@ function Home() {
                       aria-expanded="true"
                       aria-controls="collapse3"
                     >
-                      <span className="mb-0 fs-5 fw-bold text-start dark ">
+                      <span className="mb-0 fs-6 fw-bold text-start dark ">
                         Que sucederia si el vehiculo en el cual transportaba los
                         alimentos nunca llego al lugar de destino.
                       </span>
@@ -406,7 +409,7 @@ function Home() {
                       aria-expanded="true"
                       aria-controls="collapse4"
                     >
-                      <span className="mb-0 fs-5 fw-bold text-start  dark ">
+                      <span className="mb-0 fs-6 fw-bold text-start  dark ">
                         Como hago para tener la seguridad de que los vehiculos y
                         conductores que estan regristrados a la app cumplen con
                         toda la normativa?
@@ -439,7 +442,7 @@ function Home() {
                       aria-expanded="true"
                       aria-controls="collapse5"
                     >
-                      <span className="mb-0 fs-5 text-start fw-bold  dark">
+                      <span className="mb-0 fs-6 text-start fw-bold  dark">
                         Tengo la posibilidad de escoger el vehiculo de acuerdo a
                         mis nesecidades?
                       </span>
@@ -465,7 +468,9 @@ function Home() {
       {/* fin section */}
 
       {/* section descarga */}
+     
       <section className="pt-sm-3 mt-md-5 pt-sm-2 pt-md-5  fond touch1" id="descarga-con">
+      
         <div className="container mt-sm-3 mt-md-5 ">
           <div className="row align-items-center ">
             <div className="col-md-5 col-lg-5  order-md-1 text-center z-index-2 cta-image " data-aos="fade-up" >
@@ -486,6 +491,7 @@ function Home() {
                 consumimos informacion por completo y los mas importante del
                 mundo, como facebook.
               </p>
+              
               <div className=" justify-content-center d-md-inline-block columna centrar">
                 <Link  className="pe-2 pe-sm-3 pe-md-4" href="!#">
                 <img
@@ -510,10 +516,14 @@ function Home() {
                 </Link>
                
               </div>
+             
             </div>
           </div>
         </div>
+       
       </section>
+     
+   
     </>
   );
 }

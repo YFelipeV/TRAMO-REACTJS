@@ -7,7 +7,7 @@ function Preguntas() {
     <div className="container py-sm-2 pt-md-5">
           <div className="row justify-content-center mt-5">
             <div className="col-md-8 col-lg-6 text-center mb-3">
-              <h6 className="  fw-bold lh-sm mb-3 display-6 dark dark py-2">
+              <h6 className=" fs-3 fw-bold lh-sm mb-3 display-6 dark dark py-2">
                 Preguntas Frecuentes
               </h6>
               <p className="pb-3 fs-6 font text-secondary ">
@@ -35,7 +35,7 @@ function Preguntas() {
                       aria-expanded="true"
                       aria-controls="collapse1"
                     >
-                      <span className=" fs-5   mb-0 fw-bold text-start  dark">
+                      <span className=" fs-6   mb-0 fw-bold text-start  dark">
                         Es posible negociar el precio del flete directamente con el conductor encargado del servicio ?
                       </span>
                     </button>
@@ -61,7 +61,7 @@ function Preguntas() {
                       aria-expanded="true"
                       aria-controls="collapse2"
                     >
-                      <span className="mb-0 fs-5  fw-bold text-start bg_azul  dark">
+                      <span className="mb-0 fs-6  fw-bold text-start bg_azul  dark">
                        Que pasa si hay un retraso en la llegada del vehiculo encargado de prestar el servicio?
                       </span>
                     </button>
@@ -87,7 +87,7 @@ function Preguntas() {
                       aria-expanded="true"
                       aria-controls="collapse3"
                     >
-                      <span className="mb-0 fs-5 fw-bold text-start dark ">
+                      <span className="mb-0 fs-6 fw-bold text-start dark ">
                        Que sucederia si el vehiculo en el cual transportaba los alimentos nunca llego al lugar de destino.
                       </span>
                     </button>
@@ -113,7 +113,7 @@ function Preguntas() {
                       aria-expanded="true"
                       aria-controls="collapse4"
                     >
-                      <span className="mb-0 fs-5 fw-bold text-start  dark ">
+                      <span className="mb-0 fs-6 fw-bold text-start  dark ">
                        Como hago para tener la seguridad de que los vehiculos y conductores que estan regristrados a la app cumplen con toda la normativa?
                       </span>
                     </button>
@@ -139,7 +139,7 @@ function Preguntas() {
                       aria-expanded="true"
                       aria-controls="collapse5"
                     >
-                      <span className="mb-0 fs-5 text-start fw-bold  dark">
+                      <span className="mb-0 fs-6 text-start fw-bold  dark">
                         Tengo la posibilidad de escoger el vehiculo de acuerdo a mis nesecidades?
                 
                       </span>

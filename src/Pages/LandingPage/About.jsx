@@ -5,6 +5,7 @@ import ilu2 from "../../assets/ilustraciones/ilustracion2.svg";
 import ilu3 from "../../assets/ilustraciones/ilustracion3.svg";
 import IntegrantesSlider from "./IntegrantesSlider";
 import IntegrantesSliderGrande from "./IntegrantesSliderGrande";
+import mision1 from "../../assets/ilustraciones/MISIONM.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import { useEffect } from "react";
@@ -54,8 +55,8 @@ function About() {
             <div id="myDiv" className="col-md-5 text-center text-md-start order-1 " data-aos="fade-up" >
               <img
                 className="img-fluid mb-4"
-                src={ilu1}
-                width="650"
+                src={mision1}
+                width="350"
                 alt=""
               ></img>
             </div>

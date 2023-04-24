@@ -25,12 +25,15 @@ function Login() {
 
   return (
     <>
-      <div className="fondo p-1 " style={{ minHeight: "100vh" }}>
-        <div className="container h-100 justify-content-center d-flex container-login col-xl-10 align-items-center d-flex p-5">
+     
+
+      
+      <div className="centrar" >
+        <div className="containerp p-5 " style={{minHeight:"100vh"}} >
          
-              <div className="card rounded-3 text-black">
-                <div className="row  ">
-                  <div className="col-lg-6">
+              <div className="container">
+                <div className="row movil ">
+                  <div className="col-lg-6  colorlogin p-3">
                     <div className="card-body p-md-5 mx-md-4">
                       <div className="text-center">
                         <a href="/">
@@ -82,7 +85,7 @@ function Login() {
                       </form>
                     </div>
                   </div>
-                  <div className="col-lg-6   contan1">
+                  <div className="col-lg-6  p-3 contan1">
                     <picture className="d-flex align-items-end justify-content-end mt-4">
                       <img src={login} width={"95%"} alt="" />
                     </picture>
