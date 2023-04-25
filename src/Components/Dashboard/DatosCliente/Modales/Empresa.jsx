@@ -41,7 +41,8 @@ function Empresa({ _id }) {
             <div className="modal-body">
               <form>
                 <textarea
-                  className="w-100"
+                  className="w-100 p-3"
+                  placeholder="Motivo Inhabilitación..."
                   name="motivoInhabilitadoPJU"
                   rows="10"
                   onChange={handleChange}

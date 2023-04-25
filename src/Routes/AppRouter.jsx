@@ -97,8 +97,8 @@ export const AppRouter = () => {
             {/* felipe segura */}
             <Route path="pqrs" element={<Pqrs />} />
           </Route>
-          <Route path="/manifiesto/:id" element={<Manifiesto/>}></Route>
         </Route>
+        <Route path="/manifiesto/:id" element={<Manifiesto />}></Route>
       </Routes>
     </>
   );

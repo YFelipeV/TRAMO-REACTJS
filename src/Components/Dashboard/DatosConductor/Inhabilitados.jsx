@@ -1,4 +1,5 @@
 import ItemsInhabilitados from "./ItemsInhabilitados";
+import img_inhab from '../../../assets/icons/inhabilitado.png';
 
 function Inhabilitados() {
   return (
@@ -6,8 +7,9 @@ function Inhabilitados() {
       <div className="col-12">
         <div className="card my-4">
           <div className="card-header p-0 position-relative pb-3 mt-n4 mx-3 z-index-2">
-            <div className="bg-danger shadow-primary border-radius-lg pt-4 pb-3">
-              <h4 className="text-light ps-3 mb-2">
+            <div className="bg-orange head-title shadow-primary border-radius-lg">
+              <h4 className="text-light d-flex align-items-center">
+              <img className='imagen-titulo me-3 rounded-circle' src={img_inhab} alt=""/>
                 Conductores Inhabilitados
               </h4>
             </div>

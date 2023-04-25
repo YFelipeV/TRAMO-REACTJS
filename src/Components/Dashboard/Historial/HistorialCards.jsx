@@ -21,18 +21,20 @@ function HistorialCards() {
     <>
       {Historial.map(({ name, id, username, address }) => (
         <tr key={id}>
-          <td className="text-center p-4">{name}</td>
-          <td className="text-center pt-4 ">{username}</td>
-          <td className="text-center pt-4">{id} toneladas</td>
-          <td className="text-center pt-4">{address.street}</td>
-          <td className="text-center pt-4">${address.geo.lat}</td>
-          <td className="text-center pt-4">
-            <div className="manifiesto ">
-              <Link to={`/manifiesto/${id}`} target="blank" className="text-danger"
+          <td className="text_movil filas_info_corta text-center p-4">{name}</td>
+          <td className="text_movil filas_info_corta text-center pt-4 ">{username}</td>
+          <td className="text_movil text-center pt-4">{id} toneladas</td>
+          <td className="text_movil filas_info_larga text-center pt-4">{address.street}</td>
+          <td className="text_movil  text-center pt-4">${address.geo.lat}</td>
+          <td className="text_movil filas_info_corta text-center pt-4">
+            
+              <Link to={`/manifiesto/${id}`} target="blank"
               >
-                Ver manifiesto
+                <button className="btn bg-orange-btn px-4" style={{fontSize:"14px"}}>
+                  Ver manifiesto
+                </button>
               </Link>
-            </div>
+            
           </td>
         </tr>
       ))}

@@ -19,8 +19,8 @@ function EmpresaHabilitadosItems({ data }) {
           _id,
         }) => (
           <>
-            <tr key={_id}>
-              <td className="text-center align-middle text-sm">
+            <tr key={_id} className="filas_info">
+              <td className="text-center align-middle text-sm w-25 filas_info_larga">
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
                   <b>Nombre Empresa</b>
                 </p>
@@ -34,7 +34,17 @@ function EmpresaHabilitadosItems({ data }) {
                   {nroTelefonoPJU}
                 </p>
               </td>
-              <td className="text-center align-middle text-sm">
+              <td className="text-center align-middle text-sm w-25 filas_info_larga">
+                <p className="font-weight-bold text-xs font-weight-bold m-0">
+                  <b>Razon Social </b>
+                </p>
+                <p className="mb-0" style={{fontSize:"14px"}}>{razonSocialEmpresa}</p>
+                <p className="font-weight-bold text-xs font-weight-bold m-0">
+                  <b>Representante Legal </b>
+                </p>
+                <p>{nomRepresentanteLegal}</p>
+              </td>
+              <td className="text-center align-middle text-sm filas_info_corta">
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
                   <b>Correo</b>
                 </p>
@@ -48,35 +58,24 @@ function EmpresaHabilitadosItems({ data }) {
                   {DireccionEmpresa}
                 </p>
               </td>
-              <td className="text-center align-middle">
+              <td className="text-center align-middle filas_info_corta">
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
                   <b>Calificacion {calificacionPJU}</b>
                 </p>
-                <div className="d-flex justify-content-center">
+                <div className="d-flex justify-content-center align-items-center cal-star">
                   <ReactStarts edit={false} value={calificacionPJU} size={28} />
                 </div>
 
                 <p className="font-weight-bold text-xs font-weight-bold m-0">
                   <b>Nit </b>
                 </p>
-                <p className="">{NITempresa}</p>
+                <p className="mb-0">{NITempresa}</p>
               </td>
-              <td className="align-middle">
-                <p className="font-weight-bold text-xs font-weight-bold m-0">
-                  <b>Razon Social </b>
-                </p>
-                <p>{razonSocialEmpresa}</p>
-                <p className="font-weight-bold text-xs font-weight-bold m-0">
-                  <b>Representante Legal </b>
-                </p>
-                <p>{nomRepresentanteLegal}</p>
-              </td>
-
               <td className="align-middle">
                 <div className="text-center">
                   <div className="mt-4">
                     <button
-                      className="btn btn-danger mb-2  "
+                      className="btn bg-red botones"
                       data-bs-toggle="modal"
                       data-bs-target="#motivo-inhabilitacion-o"
                     >

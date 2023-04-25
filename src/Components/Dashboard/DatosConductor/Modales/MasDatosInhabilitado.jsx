@@ -18,9 +18,9 @@ function MasDatosInhabilitado({ data }) {
             className="modal-dialog modal-dialog-scrollable modal-xl"
             id="modal"
           >
-            <div className="modal-content">
+            <div className="modal-content Modal-mas-datos">
               <div className="modal-header">
-                <h1 className="modal-title fs-5" id="staticBackdropLabel">
+                <h1 className="modal-title fs-5 fw-bold ps-2 opacity-75" id="staticBackdropLabel">
                   Mas datos conductor
                 </h1>
                 <button
@@ -36,7 +36,7 @@ function MasDatosInhabilitado({ data }) {
                   {data.map((conductor) => (
                     <>
                       <div className="row">
-                        <div className="col-12 bg-primary text-white text-center mb-1">
+                        <div className="col-12 head-title text-white text-center mb-1">
                           DATOS CONDUCTOR
                         </div>
                         <div className="col-12 col-xl-6">
@@ -72,13 +72,13 @@ function MasDatosInhabilitado({ data }) {
                                 className="carousel-item active"
                                 data-bs-interval="10000"
                               >
-                                <div class="cuadrado">
+                                <div>
                                 <img
                                   src={
                                     conductor.imagenesInhabilitado.FotoFrontal
                                   }
-                                  className=" "
-                                  alt=""
+                                  className=" w-100"
+                                  alt="..."
                                 />
                                 </div>
                               </div>
@@ -88,7 +88,7 @@ function MasDatosInhabilitado({ data }) {
                               >
                                 <img
                                   src={conductor.imagenesInhabilitado.FotoVolco}
-                                  className=" w-50"
+                                  className=" w-100"
                                   alt="..."
                                 />
                               </div>
@@ -98,7 +98,7 @@ function MasDatosInhabilitado({ data }) {
                                     conductor.imagenesInhabilitado
                                       .Fotolateral_Der
                                   }
-                                  className=" w-50"
+                                  className=" w-100"
                                   alt="..."
                                 />
                               </div>
@@ -132,28 +132,28 @@ function MasDatosInhabilitado({ data }) {
                         <div className="col-12 col-xl-6">
                           <table className="w-100 text-center">
                             <tr>
-                              <th colSpan="2" className="bg-primary text-white">
+                              <th colSpan="2" className="head-subtitle text-white">
                                 Datos tenedor
                               </th>
                             </tr>
                             <tr>
-                              <td>Nombre:</td>
+                              <td className='subtitulo'>Nombre:</td>
                               <td>{conductor.tenedorInhabilitado.nombreTE}</td>
                             </tr>
                             <tr>
-                              <td>Apellido:</td>
+                              <td className='subtitulo'>Apellido:</td>
                               <td>
                                 {conductor.tenedorInhabilitado.apellidoTE}
                               </td>
                             </tr>
                             <tr>
-                              <td>Numero Documento:</td>
+                              <td className='subtitulo'>Numero Documento:</td>
                               <td>
                                 {conductor.tenedorInhabilitado.apellidoTE}
                               </td>
                             </tr>
                             <tr>
-                              <td>Direccion residencia:</td>
+                              <td className='subtitulo'>Direccion residencia:</td>
                               <td>
                                 {
                                   conductor.tenedorInhabilitado
@@ -162,11 +162,11 @@ function MasDatosInhabilitado({ data }) {
                               </td>
                             </tr>
                             <tr>
-                              <td>Ciudad:</td>
+                              <td className='subtitulo'>Ciudad:</td>
                               <td>{conductor.tenedorInhabilitado.ciudadTE}</td>
                             </tr>
                             <tr>
-                              <td>Telefono:</td>
+                              <td className='subtitulo'>Telefono:</td>
                               <td>
                                 {conductor.tenedorInhabilitado.NroTelefonoTE}
                               </td>
@@ -174,12 +174,12 @@ function MasDatosInhabilitado({ data }) {
                           </table>
                           <table className="w-100 text-center">
                             <tr>
-                              <th colSpan="2" className="bg-primary text-white">
-                                Contaco Emergencia
+                              <th colSpan="2" className="head-subtitle text-white">
+                                Contacto Emergencia
                               </th>
                             </tr>
                             <tr>
-                              <td>Nombre:</td>
+                              <td className='subtitulo'>Nombre:</td>
                               <td>
                                 {
                                   conductor.contactoEmergenciaInhabilitado
@@ -188,7 +188,7 @@ function MasDatosInhabilitado({ data }) {
                               </td>
                             </tr>
                             <tr>
-                              <td>Apellido:</td>
+                              <td className='subtitulo'>Apellido:</td>
                               <td>
                                 {
                                   conductor.contactoEmergenciaInhabilitado
@@ -197,7 +197,7 @@ function MasDatosInhabilitado({ data }) {
                               </td>
                             </tr>
                             <tr>
-                              <td>Numero Documento:</td>
+                              <td className='subtitulo'>Numero Documento:</td>
                               <td>
                                 {
                                   conductor.contactoEmergenciaInhabilitado
@@ -206,7 +206,7 @@ function MasDatosInhabilitado({ data }) {
                               </td>
                             </tr>
                             <tr>
-                              <td>Correo Electronico:</td>
+                              <td className='subtitulo'>Correo Electronico:</td>
                               <td>
                                 {
                                   conductor.contactoEmergenciaInhabilitado
@@ -221,13 +221,13 @@ function MasDatosInhabilitado({ data }) {
                         <div className="col-12 col-xl-6">
                           <table className="w-100 text-center">
                             <tr>
-                              <th colSpan="2" className="bg-primary text-white">
-                                vehiculoInhabilitado
+                              <th colSpan="2" className="head-subtitle text-white">
+                                vehiculo Inhabilitado
                               </th>
                             </tr>
 
                             <tr>
-                              <td>Placa Vehiculo</td>
+                              <td className='subtitulo'>Placa Vehiculo:</td>
                               <td>
                                 {
                                   conductor.vehiculoInhabilitado
@@ -237,41 +237,40 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Marca</td>
+                              <td className='subtitulo'>Marca:</td>
                               <td>{conductor.vehiculoInhabilitado.marca}</td>
                             </tr>
 
                             <tr>
-                              <td>modelo</td>
+                              <td className='subtitulo'>modelo:</td>
                               <td>{conductor.vehiculoInhabilitado.modelo}</td>
                             </tr>
 
                             <tr>
-                              <td>Numero Ejes</td>
+                              <td className='subtitulo'>Numero Ejes:</td>
                               <td>
                                 {conductor.vehiculoInhabilitado.numeroEjes}
                               </td>
                             </tr>
 
                             <tr>
-                              <td>Tipo vehiculoInhabilitado</td>
+                              <td className='subtitulo'>Tipo vehiculoInhabilitado:</td>
                               <td>
                                 {
-                                  conductor.vehiculoInhabilitado
-                                    .tipovehiculoInhabilitado
+                                  conductor.vehiculoInhabilitado.tipovehiculoInhabilitado
                                 }
                               </td>
                             </tr>
 
                             <tr>
-                              <td>Fecha Vencimiento</td>
+                              <td className='subtitulo'>Fecha Vencimiento:</td>
                               <td>
                                 {conductor.vehiculoInhabilitado.fechavencSOAT}
                               </td>
                             </tr>
 
                             <tr>
-                              <td>Traccion vehiculoInhabilitado</td>
+                              <td className='subtitulo'>Traccion vehiculoInhabilitado:</td>
                               <td>
                                 {" "}
                                 {conductor.vehiculoInhabilitado.traccionVeh}
@@ -279,7 +278,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Placas Trailer</td>
+                              <td className='subtitulo'>Placas Trailer:</td>
                               <td>
                                 {" "}
                                 {
@@ -289,21 +288,21 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Peso Vacio</td>
+                              <td className='subtitulo'>Peso Vacio:</td>
                               <td>
                                 {conductor.vehiculoInhabilitado.pesoVacio}
                               </td>
                             </tr>
 
                             <tr>
-                              <td>Tipo Combustible</td>
+                              <td className='subtitulo'>Tipo Combustible:</td>
                               <td>
                                 {conductor.vehiculoInhabilitado.CombustibleVeh}
                               </td>
                             </tr>
 
                             <tr>
-                              <td>Numero Licencia</td>
+                              <td className='subtitulo'>Numero Licencia:</td>
                               <td>
                                 {
                                   conductor.vehiculoInhabilitado
@@ -313,14 +312,14 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Numero Soat</td>
+                              <td className='subtitulo'>Numero Soat:</td>
                               <td>
                                 {conductor.vehiculoInhabilitado.numeroSOAT}
                               </td>
                             </tr>
 
                             <tr>
-                              <td>Fecha Venimiento Soat</td>
+                              <td className='subtitulo'>Fecha Venimiento Soat:</td>
                               <td>
                                 {" "}
                                 {conductor.vehiculoInhabilitado.fechavencSOAT}
@@ -328,7 +327,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Numero Poliza Responsable</td>
+                              <td className='subtitulo'>Numero Poliza Responsable:</td>
                               <td>
                                 {
                                   conductor.vehiculoInhabilitado
@@ -338,7 +337,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Numero Revision Tecnomecanica</td>
+                              <td className='subtitulo'>Numero Revision Tecnomecanica:</td>
                               <td>
                                 {
                                   conductor.vehiculoInhabilitado
@@ -348,7 +347,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Fecha vencimiento Tecnomecanica</td>
+                              <td className='subtitulo'>Fecha vencimiento Tecnomecanica:</td>
                               <td>
                                 {conductor.vehiculoInhabilitado.fechaVenc_Tecno}
                               </td>
@@ -358,20 +357,20 @@ function MasDatosInhabilitado({ data }) {
                         <div className="col-12 col-xl-6">
                           <table className="w-100 text-center">
                             <tr>
-                              <th colSpan="2" className="bg-primary text-white">
+                              <th colSpan="2" className="head-subtitle className='subtitulo' text-white">
                                 Conductores
                               </th>
                             </tr>
 
                             <tr>
-                              <td>Nombre</td>
+                              <td className='subtitulo'>Nombre:</td>
                               <td>
                                 {conductor.unicoConductorInhabilitado.nombreCON}
                               </td>
                             </tr>
 
                             <tr>
-                              <td>Apellido</td>
+                              <td className='subtitulo'>Apellido:</td>
                               <td>
                                 {
                                   conductor.unicoConductorInhabilitado
@@ -381,7 +380,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Tipo Documento</td>
+                              <td className='subtitulo'>Tipo Documento:</td>
                               <td>
                                 {
                                   conductor.unicoConductorInhabilitado
@@ -391,7 +390,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Numero Documento</td>
+                              <td className='subtitulo'>Numero Documento:</td>
                               <td>
                                 {
                                   conductor.unicoConductorInhabilitado
@@ -401,7 +400,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Nacionalidad</td>
+                              <td className='subtitulo'>Nacionalidad:</td>
                               <td>
                                 {
                                   conductor.unicoConductorInhabilitado
@@ -411,7 +410,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Fecha Nacimiento</td>
+                              <td className='subtitulo'>Fecha Nacimiento:</td>
                               <td>
                                 {
                                   conductor.unicoConductorInhabilitado
@@ -421,7 +420,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Correo Electronico</td>
+                              <td className='subtitulo'>Correo Electronico:</td>
                               <td>
                                 {
                                   conductor.unicoConductorInhabilitado
@@ -431,7 +430,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Correo Electronico Recuperacion</td>
+                              <td className='subtitulo'>Correo Electronico Recuperacion:</td>
                               <td>
                                 {
                                   conductor.unicoConductorInhabilitado
@@ -441,7 +440,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Usuario</td>
+                              <td className='subtitulo'>Usuario:</td>
                               <td>
                                 {
                                   conductor.unicoConductorInhabilitado
@@ -451,7 +450,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Numero Telefono</td>
+                              <td className='subtitulo'>Numero Telefono:</td>
                               <td>
                                 {
                                   conductor.unicoConductorInhabilitado
@@ -461,7 +460,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Numero Licencia</td>
+                              <td className='subtitulo'>Numero Licencia:</td>
                               <td>
                                 {
                                   conductor.unicoConductorInhabilitado
@@ -471,12 +470,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Contraseña</td>
-                              <td>*****************</td>
-                            </tr>
-
-                            <tr>
-                              <td>Pregunta Seguridad</td>
+                              <td className='subtitulo'>Pregunta Seguridad:</td>
                               <td>
                                 {
                                   conductor.unicoConductorInhabilitado
@@ -486,7 +480,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Respuesta Seguridad</td>
+                              <td className='subtitulo'>Respuesta Seguridad:</td>
                               <td>
                                 {
                                   conductor.unicoConductorInhabilitado
@@ -497,28 +491,28 @@ function MasDatosInhabilitado({ data }) {
                           </table>
                         </div>
                       </div>
-                      <div className="row">
-                        <div className="col-12">
+                      <div className="row propietario className='subtitulo'">
+                        <div className="col-12 col-md-7">
                           <table className="w-100 text-center">
                             <tr>
-                              <th colSpan="2" className="bg-primary text-white">
+                              <th colSpan="2" className="head-subtitle text-white">
                                 Datos propietario
                               </th>
                             </tr>
                             <tr>
-                              <td>Nombre:</td>
+                              <td className='subtitulo'>Nombre:</td>
                               <td>
                                 {conductor.propietarioInhabilitado.nombrePRO}
                               </td>
                             </tr>
                             <tr>
-                              <td>Apellido:</td>
+                              <td className='subtitulo'>Apellido:</td>
                               <td>
                                 {conductor.propietarioInhabilitado.apellidoPRO}
                               </td>
                             </tr>
                             <tr>
-                              <td>Numero Documento:</td>
+                              <td className='subtitulo'>Numero Documento:</td>
                               <td>
                                 {
                                   conductor.propietarioInhabilitado
@@ -528,7 +522,7 @@ function MasDatosInhabilitado({ data }) {
                             </tr>
 
                             <tr>
-                              <td>Direcion residencia:</td>
+                              <td className='subtitulo'>Direcion residencia:</td>
                               <td>
                                 {" "}
                                 {
@@ -538,13 +532,13 @@ function MasDatosInhabilitado({ data }) {
                               </td>
                             </tr>
                             <tr>
-                              <td>Ciudad:</td>
+                              <td className='subtitulo'>Ciudad:</td>
                               <td>
                                 {conductor.propietarioInhabilitado.ciudadPRO}
                               </td>
                             </tr>
                             <tr>
-                              <td>Numero Telefono:</td>
+                              <td className='subtitulo'>Numero Telefono:</td>
                               <td>
                                 {
                                   conductor.propietarioInhabilitado
@@ -558,7 +552,7 @@ function MasDatosInhabilitado({ data }) {
                         <div className="col-12 text-center">
                           <div className="mt-2">
                             <button
-                              className="btn btn-primary mb-2"
+                              className="btn bg-blue modal-botones mb-2"
                               onClick={() => {
                                 Swal.fire({
                                   title:

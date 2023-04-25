@@ -24,19 +24,19 @@ function ItemsHabilitados() {
     <>
       {loadingconductor ? (
         datosConductor.map(({ conductor }) => (
-          <tr key={conductor._id}>
-            <td>
+          <tr key={conductor._id} className="filas_info">
+            <td className="">
               <img
+                className="circle-img"
                 src={
                   conductor.perfil.fotoperfilCON
                     ? conductor.perfil.fotoperfilCON
                     : "https://profileme.app/wp-content/uploads/2021/01/cropped-ProfileMe-06.jpg"
                 }
-                className="circle-img m-2 "
                 alt=""
               />
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Nombre</b>
               </p>
@@ -51,7 +51,7 @@ function ItemsHabilitados() {
                 {conductor.nroTelefonoCON}
               </p>
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm filas_info_corta">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Cedula</b>
               </p>
@@ -65,7 +65,7 @@ function ItemsHabilitados() {
                 {conductor.correoElectronicoCON}
               </p>
             </td>
-            <td className="text-center align-middle">
+            <td className="text-center align-middle filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Direccion de residencia</b>
               </p>
@@ -73,26 +73,18 @@ function ItemsHabilitados() {
                 {conductor.DireccionResidenciaCON}
               </p>
             </td>
-            <td className="align-middle">
-              <div className="text-center " style={{ marginTop: "10%" }}>
+            <td className="align-middle filas_info_corta">
+              <div className="text-center">
                 <button
-                  className="m-0 p-0 text-primary bg-white border-0 mr-2  "
+                  className="btn bg-blue "
                   data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"
                   onClick={() => handleOnsumbit(conductor._id)}
                 >
-                  Mostrar mas datos
+                  Mostrar Más datos
                 </button>
               </div>
-              {/* <div className="mt-2 border-0 bg-white ">
-                  <button
-                    className="btn btn-danger mb-2 px-3  "
-                    data-bs-toggle="modal"
-                    data-bs-target="#escribir-motivo-inhabilitacion"
-                  >
-                    Inhabilitar
-                  </button>
-                </div> */}
+             
             </td>
           </tr>
         ))

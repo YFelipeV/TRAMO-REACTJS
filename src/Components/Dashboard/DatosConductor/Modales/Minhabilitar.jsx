@@ -8,7 +8,7 @@ function Minhabilitar({ getid }) {
 
   
   return (
-    <tr>
+    <tr style={{borderColor:"white"}}>
       <td>
       <div
         className="modal fade"
@@ -23,7 +23,7 @@ function Minhabilitar({ getid }) {
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="staticBackdropLabel">
-                Escriba el motivo de la Inhabilitacion
+                Escriba el motivo de Inhabilitacion
               </h1>
               <button
                 className="btn-close"
@@ -34,12 +34,12 @@ function Minhabilitar({ getid }) {
             <div className="modal-body">
               <form>
                 <textarea
-                  className="w-100 p-2"
+                  className="w-100 p-3"
                   required
                   name="motivoInhabilitadoCON"
                   rows="10"
                   onChange={(e)=>setmotivoInhabilitadoCON(e.target.value)}
-                  placeholder="Ingrese motivio inhabilitacion...."
+                  placeholder="Motivo De Inhabilitación...."
                 ></textarea>
               </form>
             </div>

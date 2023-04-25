@@ -19,18 +19,15 @@ function ItemsPen({ SolicitudesPendientes }) {
     <>
       {SolicitudesPendientes.map(({ conductor }) => (
         <>
-          <tr key={conductor._id}>
+          <tr key={conductor._id} className="filas_info">
             <td>
-              <div className="d-flex justify-content-center aling-items-center ">
                 <img
                   src={conductor.perfil.fotoperfilCON}
-                  style={{ maxWidth: "90px" }}
-                  className="circle-img fotoperfil  "
+                  className="circle-img"
                   alt=""
                 />
-              </div>
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm w-25 filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Nombre</b>
               </p>
@@ -44,7 +41,7 @@ function ItemsPen({ SolicitudesPendientes }) {
                 {conductor.nroTelefonoCON}
               </p>
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm filas_info_corta">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Cedula</b>
               </p>
@@ -58,7 +55,7 @@ function ItemsPen({ SolicitudesPendientes }) {
                 {conductor.correoElectronicoCON}
               </p>
             </td>
-            <td className="text-center align-middle">
+            <td className="text-center align-middle w-25 filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Direccion de residencia</b>
               </p>
@@ -66,51 +63,17 @@ function ItemsPen({ SolicitudesPendientes }) {
                 {conductor.DireccionResidenciaCON}
               </p>
             </td>
-            <td>
-              <div className="text-center" style={{ marginTop: "10%" }}>
-                <a
-                  href=""
-                  className="m-0 p-0 text-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#mas-datos"
-                  onClick={() => handleOnsumbit(conductor._id)}
-                >
-                  Mostrar mas datos
-                </a>
-                <div className="mt-2 ">
-                  <button
-                    className="btn btn-primary mb-2 px-4 border-0 mx-2"
-                    onClick={() => {
-                      Swal.fire({
-                        title: "¿Seguro que desea Aceptar la solicitud?",
-                        icon: "question",
-                        html: `<p>${conductor.nombreCON} ${conductor.apellidoCON}</p>`,
-                        showDenyButton: true,
-                        denyButtonText: "No",
-                        confirmButtonText: "Si",
-                      }).then((response) => {
-                        if (response.isConfirmed) {
-                          Swal.fire({
-                            icon: "success",
-                            title: "Habilitado Correctamente",
-                          });
-                          button: updateSolicitudesPendientes(conductor._id);
-                        }
-                      });
-                    }}
-                  >
-                    Aceptar
-                  </button>
-                  <button className="border-0  ">
-                    <a
-                      className="btn btn-danger  px-3  "
-                      data-bs-toggle="modal"
-                      data-bs-target="#escribir-motivo-rechazo"
-                    >
-                      Rechazar
-                    </a>
-                  </button>
-                </div>
+            <td className="filas_info_corta">
+              <div
+                className=""
+                style={{marginTop:"32px"}}
+                data-bs-toggle="modal"
+                data-bs-target="#mas-datos"
+                onClick={() => handleOnsumbit(conductor._id)}
+              >
+                <button className="btn bg-blue btn-mas-datos botones"
+                style={{fontSize:"14px"}}
+                >Mostrar Más Datos</button>
               </div>
             </td>
           </tr>

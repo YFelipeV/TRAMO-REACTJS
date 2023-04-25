@@ -18,18 +18,18 @@ function ClienteMotivo(data) {
           <div className="modal-content">
             <div className="modal-header">
               <h1 className="modal-title fs-5" id="mas-datosLabel">
-                Motivo de Inhabilitacion{" "}
+                Motivo de Inhabilitacion
               </h1>
               <button
                 type="button"
-                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                className="btn-close"
               ></button>
             </div>
             <div className="modal-body">
             <h6 className='mb-3 fw-bold'>{nombre}</h6>
-              {motivo}
+              Motivo: {motivo}
               </div>
           </div>
         </div>

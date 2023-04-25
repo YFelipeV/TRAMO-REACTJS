@@ -22,6 +22,7 @@
     "react-lazy-load-image-component": "^1.5.6",
     "react-loading-skeleton": "^3.2.1",
     "react-pdf": "^6.2.2",
+    "react-qr-code": "^2.0.11",
     "react-router-dom": "6.9.0",
     "react-stars": "^2.2.5",
     "sweetalert2": "^11.7.1"

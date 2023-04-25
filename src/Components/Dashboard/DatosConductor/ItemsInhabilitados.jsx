@@ -25,17 +25,17 @@ function ItemsInhabilitados() {
     <>
       {loading ? (
         datosConductorInhabilitado.map(({ conductor }) => (
-          <tr key={conductor._id}>
+          <tr key={conductor._id} className="filas_info">
             <td>
               <div>
                 <img
                   src={conductor.perfil.fotoperfilCON}
-                  className="circle-img  m-2 "
+                  className="circle-img"
                   alt=""
                 />
               </div>
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Nombre</b>
               </p>
@@ -49,7 +49,7 @@ function ItemsInhabilitados() {
                 {conductor.nroTelefonoCON}
               </p>
             </td>
-            <td className="text-center align-middle text-sm">
+            <td className="text-center align-middle text-sm filas_info_corta">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Cedula</b>
               </p>
@@ -63,7 +63,7 @@ function ItemsInhabilitados() {
                 {conductor.correoElectronicoCON}
               </p>
             </td>
-            <td className="text-center align-middle">
+            <td className="text-center align-middle filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
                 <b>Direccion de residencia</b>
               </p>
@@ -71,20 +71,21 @@ function ItemsInhabilitados() {
                 {conductor.DireccionResidenciaCON} 78N - Popayan Cauca
               </p>
             </td>
-            <td className="align-middle ">
-              <div className="text-center" style={{ marginTop: "10%" }}>
+            <td className="align-middle filas_info_corta">
+              <div className="text-center">
                 <a
                   href=""
-                  className="m-0 p-0 text-primary"
+                  className="btn bg-blue mb-2 btn-mas-datos"
                   data-bs-toggle="modal"
                   data-bs-target="#inhabilitado"
                   onClick={() => handleOnsumbit(conductor._id)}
                 >
-                  Mostrar mas datos
+                  Mostrar Más datos
                 </a>
                 <br />
                 <button
-                  className="m-0 p-0 text-danger bg-white border-0 mr-2  "
+                  className="btn bg-red btn-mas-datos"
+                  style={{opacity:"90%", fontSize:"14px"}}
                   data-bs-toggle="modal"
                   data-bs-target="#motivo-rechazo"
                   onClick={() => {
@@ -95,7 +96,7 @@ function ItemsInhabilitados() {
                     );
                   }}
                 >
-                  Ver motivo inhabilitacion
+                  Motivo Inhabilitación
                 </button>
               </div>
             </td>
