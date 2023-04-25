@@ -412,12 +412,6 @@ h6 {
   /* Search Bar */
 }
 
-.header .toggle-sidebar-btn {
-  font-size: 32px;
-  padding-left: 10px;
-  cursor: pointer;
-  color: #012970;
-}
 
 .header .search-bar {
   min-width: 360px;
@@ -1988,6 +1982,135 @@ td {
 /*--------------------------------------------------------------
   #END Modificacion Para Admin MOVIL
 --------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+  #START Sidebar
+--------------------------------------------------------------*/
+
+#active_dashboard{
+  color: #f58b09;
+  background: #eff1f594;
+  scale: 1.1;
+  font-size: 120%;
+  padding-left: 30px;
+}
+
+#inactive_dashboard{
+  color: #004adf;
+}
+
+
+/*--------------------------------------------------------------
+  #Menu Hamburguesa
+--------------------------------------------------------------*/
+
+.main-container{
+  width: 100px;
+  margin: 0px auto;
+}
+#hamburguer button{
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+#hamburguer button span{
+  border-radius: 5px;
+  background: rgb(0, 0, 0);
+  display: block;
+  width: 25px;
+  margin: 5px auto;
+  height: 3px;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+#hamburguer button .top-line{
+  animation-name: top-line-animation;
+}
+
+#hamburguer button .middle-line{
+  animation-name: middle-line-animation;
+}
+
+#hamburguer button .bottom-line{
+  animation-name: bottom-line-animation;
+}
+
+#hamburguer button.open .top-line{
+  animation-name: top-line-animation-close;
+}
+
+#hamburguer button.open .middle-line{
+  animation-name: middle-line-animation-close;
+}
+
+#hamburguer button.open .bottom-line{
+  animation-name: bottom-line-animation-close;
+}
+
+@keyframes top-line-animation{
+    50%, 100%{
+      margin: 0 auto;
+      transform: translateY(2px) rotate(-45deg);
+    }
+}
+
+@keyframes bottom-line-animation{
+  50%, 100%{
+    margin: 0 auto;
+    transform: translateY(-2px) rotate(45deg);
+  }
+}
+
+@keyframes middle-line-animation{
+  20%, 100%{
+    margin: 0 auto;
+    width: 0;
+    opacity: 0;
+  }
+}
+
+
+@keyframes top-line-animation-close{
+  0%{
+    margin: 0 auto;
+    transform: translateY(2px) rotate(-45deg);
+  }
+  50%, 100%{
+    margin: 5px auto;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes middle-line-animation-close{
+  0%{
+    margin: 0 auto;
+    width: 0;
+    opacity: 0;
+  }
+  20%, 100%{
+    margin: 0 auto;
+    width: 60%;
+    opacity: 1;
+  }
+}
+
+@keyframes bottom-line-animation-close{
+  0%{
+    margin: 0 auto;
+    transform: translateY(-2px) rotate(45deg);
+  }
+  50%, 100%{
+    margin: 5px auto;
+    transform: translateY(0px) rotate(0deg);
+  }
+}
 
 /*--------------------------------------------------------------
   #Modificacion Hernan

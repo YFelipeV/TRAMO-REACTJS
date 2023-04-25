@@ -21,13 +21,11 @@ function ItemsPen({ SolicitudesPendientes }) {
         <>
           <tr key={conductor._id} className="filas_info">
             <td>
-              <div className="d-flex justify-content-center aling-items-center ">
                 <img
                   src={conductor.perfil.fotoperfilCON}
                   className="circle-img"
                   alt=""
                 />
-              </div>
             </td>
             <td className="text-center align-middle text-sm w-25 filas_info_larga">
               <p className="font-weight-bold text-xs font-weight-bold m-0">
@@ -68,12 +66,14 @@ function ItemsPen({ SolicitudesPendientes }) {
             <td className="filas_info_corta">
               <div
                 className=""
-                style={{marginTop:"35px"}}
+                style={{marginTop:"32px"}}
                 data-bs-toggle="modal"
                 data-bs-target="#mas-datos"
                 onClick={() => handleOnsumbit(conductor._id)}
               >
-                <button className="btn bg-blue btn-mas-datos botones">Mostrar Más Datos</button>
+                <button className="btn bg-blue btn-mas-datos botones"
+                style={{fontSize:"14px"}}
+                >Mostrar Más Datos</button>
               </div>
             </td>
           </tr>

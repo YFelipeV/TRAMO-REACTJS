@@ -14,6 +14,7 @@ function Navbar() {
     setOpenSidebar(true);
     if (openMenu == true) {
       document.querySelector("body").classList.toggle("toggle-sidebar");
+      document.querySelector("#hamburguer button").classList.toggle("open");
     }
   }
   return (
@@ -27,9 +28,15 @@ function Navbar() {
             <div className="logo_tramo"></div>
           </Link>
 
-          <button className="border-0 bg-white" onClick={() => openSidebar()}>
-            <i className="i bi-list toggle-sidebar-btn"></i>
-          </button>
+          <div className="main-container">
+            <div id="hamburguer" >
+              <button className="border-0 bg-white " onClick={() => openSidebar()}>
+                <span className="top-line"></span>
+                <span className="middle-line"></span>
+                <span className="bottom-line"></span>
+              </button>
+            </div>
+          </div>
         </div>
 
         <nav className="header-nav ms-auto">
