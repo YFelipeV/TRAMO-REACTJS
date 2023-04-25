@@ -29,12 +29,12 @@ function Login() {
 
       
       <div className="centrar" >
-        <div className="containerp p-5 " style={{minHeight:"100vh"}} >
+        <div className="containerp  "  >
          
               <div className="container">
                 <div className="row movil ">
                   <div className="col-lg-6  colorlogin p-3">
-                    <div className="card-body p-md-5 mx-md-4">
+                    <div className="card-body p-md-2 mx-md-4 ">
                       <div className="text-center">
                         <a href="/">
                           <img
@@ -76,7 +76,7 @@ function Login() {
                         <div className="d-grid gap-2 col-12 mx-auto text-center pt-1 mb-5 pb-1 mt-4">
                           <button
                             type="submit"
-                            className="btn text-white gradient-custom-button  w-100 fs- pb-2"
+                            className="btn text-white gradient-custom-button p-2 w-100 fs- pb-2"
                             onClick={() => authUsuarios(data, navigate)}
                           >
                             Iniciar sesión

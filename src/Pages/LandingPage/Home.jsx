@@ -53,7 +53,7 @@ function Home() {
         />
       </Helmet>
       <section className="index_inicio fond touch1  " id="home ">
-        <div className="w-100 px-5 hello container mt-5">
+        <div className="w-100 px-5 hello container mt-5   ">
           <div
             className="row align-items-center    w-100  "
             data-aos="fade-up"
@@ -70,10 +70,10 @@ function Home() {
               className="col-md-9 arreglar2  col-lg-6 text-center text-md-start "
               data-aos="fade-up"
             >
-              <span className=" badge bg_gray rounded-pill text-dark align-items-center d-flex flex-row-reverse justify-content-end mx-auto mx-md-0 ps-0 w-100 w-sm-50 w-md-75 w-xl-0 my-3 ">
+              <span className=" badge bg_gray rounded-pill text-dark align-items-center d-flex flex-row-reverse justify-content-end mx-auto mx-md-0 ps-0 w-100 w-sm-50 w-md-75 w-xl-0 my-3   ">
                 APP #1 Transporte De Carga 2023
                 <img
-                  className="img-fluid float-start me-4   "
+                  className="img-fluid float-start me-1   "
                   src={imagen2}
                   alt=""
                 ></img>
@@ -90,7 +90,7 @@ function Home() {
                 Descargando nuestra aplicación, disponible para Android y IOS
               </p>
               <div className="text-center text-md-start">
-                <Link  className="btn btn-lg btn-success rounded-pill hover-top bg_green mt-3"
+                <Link  className="btn btn-lg btn-success rounded-pill hover-top bg_green mb-4 movilstore"
                   onClick={() => document.getElementById('descarga-con').scrollIntoView({ behavior: "smooth" })}>
                       Descarga Gratis
                 </Link>
@@ -169,7 +169,7 @@ function Home() {
                 <br />
                 App TRAMO
               </h6>
-              <p className="my-4 text-secondary fs-5">
+              <p className="my-4 text-secondary fs-6">
                 TRAMO conecta el campo y las ciudades en una sola aplicación,
                 <br className="d-none d-xl-block" />
                 siendo la primera empresa con enfoque en el campo.
@@ -177,7 +177,7 @@ function Home() {
               <div className="d-flex align-items-center mb-5">
                 <div>
                   <img
-                    className="img-fluid "
+                    className="img-fluid espaciosicons"
                     src={icon1}
                     width="90"
                     alt=""
@@ -185,7 +185,7 @@ function Home() {
                 </div>
                 <div className="px-4">
                   <h5 className="fw-bold text-danger">Servicios Rapidos</h5>
-                  <p className="text-secondary fs-5">
+                  <p className="my-4 text-secondary fs-6">
                     Encuentra los vehiculos disponibles que esten{" "}
                     <br className="d-none d-xl-block"></br> más cerca de tu
                     ubicación.
@@ -203,7 +203,7 @@ function Home() {
                 </div>
                 <div className="px-4">
                   <h5 className="fw-bold text-primary">Ahorro</h5>
-                  <p className="text-secondary fs-5">
+                  <p className="text-secondary fs-6">
                     Podrás ahorrar en tiempo y precios reduciendo{" "}
                     <br className="d-none d-xl-block"></br>y controlando los
                     sobreprecios en los servicios
@@ -224,7 +224,7 @@ function Home() {
                   <h5 className="fw-bold text-success">
                     Desarrollo Para El Campo
                   </h5>
-                  <p className="text-secondary fs-5">
+                  <p className="text-secondary fs-6">
                     Ofrecemos cobertura en en zonas urbanas y rurales
                     <br className="d-none d-xl-block"></br>para sacarte de
                     apuros en cualquier condición.
@@ -242,7 +242,7 @@ function Home() {
         <div className="container pt-md-5">
           <div className="row align-items-center">
             <div className="col-md-6 text-center text-md-start offset-md-1 mb-sm-5">
-              <h6 className="fw-bold display-6 dark lh-sm">
+              <h6 className="fw-bold display-6 dark lh-sm m-3">
                 Acerca de Nosotros
               </h6>
               <p className="my-4  pe-xl-5 fs-6 font text-secondary ">
@@ -343,7 +343,7 @@ function Home() {
                       aria-expanded="true"
                       aria-controls="collapse2"
                     >
-                      <span className="mb-0 fs-6  fw-bold text-start bg_azul  dark">
+                      <span className="mb-0 fs-6  fw-bold text-start  dark">
                         Que pasa si hay un retraso en la llegada del vehiculo
                         encargado de prestar el servicio?
                       </span>
@@ -507,9 +507,9 @@ function Home() {
                     alt=""
                   ></img>
                 </Link>
-                <Link className="pe-2 pe-sm-3 pe-md-4" href="!#">
+                <Link className="pe-2 pe-sm-3 pe-md-4 " href="!#">
                 <img
-                    className="w-sm-50 w-md-50 wuawei"
+                    className="w-sm-50 w-md-50 wuawei  "
                     src={wuawei}
                     alt=""
                   ></img>

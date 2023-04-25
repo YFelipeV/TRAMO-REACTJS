@@ -1692,6 +1692,7 @@ td {
     background-color: white;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+    
   }
   
   .containerp{
@@ -1700,6 +1701,8 @@ td {
     justify-content: center;
     background-color: #012970;
     width: 100%;
+    padding: 48px;
+    min-height: 100vh;
    
 
 
@@ -1715,6 +1718,30 @@ td {
   @media screen and (max-width:797px) {
 
 
+  }
+
+  @media screen and (max-width:991px) {
+    .containerp{
+      background-color: white;
+      padding: 10px;
+      
+
+      
+    }
+
+    .container{
+      display: block;
+    }
+
+    .card-body{
+      height: 100%;
+
+    }
+
+    
+
+   
+    
   }
     
     

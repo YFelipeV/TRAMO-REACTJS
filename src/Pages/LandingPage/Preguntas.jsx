@@ -61,7 +61,7 @@ function Preguntas() {
                       aria-expanded="true"
                       aria-controls="collapse2"
                     >
-                      <span className="mb-0 fs-6  fw-bold text-start bg_azul  dark">
+                      <span className="mb-0 fs-6  fw-bold text-start   dark">
                        Que pasa si hay un retraso en la llegada del vehiculo encargado de prestar el servicio?
                       </span>
                     </button>

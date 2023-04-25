@@ -55,7 +55,7 @@ function About() {
             <div id="myDiv" className="col-md-5 text-center text-md-start order-1 " data-aos="fade-up" >
               <img
                 className="img-fluid mb-4"
-                src={mision1}
+                src={ilu1}
                 width="350"
                 alt=""
               ></img>
@@ -78,7 +78,7 @@ function About() {
       {/* fin section */}
 
       {/* vision */}
-      <section className="py-5 font my-5 text-center">
+      <section className="py-6 font my-5  text-center">
         <div className="container1 mt-5 m-3">
           <div className="row justify-content-center align-items-center">
             <div className="col-sm-12 col-md-6 order-sm-3 order-md-1">
@@ -102,19 +102,20 @@ function About() {
           </div>
         </div>
       </section>
+      
       {/* fin section */}
 
       {/* Obejtivo principal */}
-      <section className="font mt-5 py-5 ">
+      <section className="font mt-5 py-5  ">
         <div className="container">
           <div className="row text-md-start offset-md-1">
-            <div className="col-sm-12 col-md-6  order-md-1 d-flex justify-content-center align-items-start justify-content-md-start " data-aos="fade-up" >
+            <div className="col-sm-12 col-md-6  order-md-1 d-flex justify-content-center  espacioobjetivo  " data-aos="fade-up" >
               <img
                 className="img-fluid  m-md-0 w-sm-100 w-md-75  "
                 src={ilu3}
                 alt=""
                 style={{
-                  maxWidth: "340px",
+                  maxWidth: "330px",
                   maxHeight: "540px", marginTop: "-50px"
                 }}
               ></img>
