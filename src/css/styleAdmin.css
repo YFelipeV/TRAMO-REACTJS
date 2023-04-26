@@ -2023,7 +2023,7 @@ td {
 
 #hamburguer button span{
   border-radius: 50px;
-  background: rgb(0, 30, 255);
+  background: #001eff;
   display: block;
   width: 60%;
   margin: 5px auto;
@@ -2037,6 +2037,21 @@ td {
   animation-fill-mode: forwards;
 }
 
+@media (max-width: 1199px) {
+  #hamburguer button span{
+    display: none;
+  }
+  #hamburguer button{
+    background-image: url(/src/assets/icons/menu.png);
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    margin-top: 7px;
+    margin-left: 10px;
+  }
+  
+
+}
 
 #hamburguer button .top-line{
   animation-name: top-line-animation;

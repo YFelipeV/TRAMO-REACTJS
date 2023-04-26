@@ -10,7 +10,7 @@ import buzon from '../../../assets/icons/buzon.png';
 function Sidebar() {
 
   const activeLink = "active_dashboard"
-  const inactiveLink = "inactive_dashboard"
+  const inactiveLink = "inactive_dashboard  "
 
   const rouerterlink = useLocation()
   const { pathname } = rouerterlink
