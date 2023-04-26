@@ -14,7 +14,7 @@ function Navbar() {
     setOpenSidebar(true);
     if (openMenu == true) {
       document.querySelector("body").classList.toggle("toggle-sidebar");
-      document.querySelector("#hamburguer button").classList.toggle("open");
+      document.querySelector("#hamburguer button").classList.toggle("open");   
     }
   }
   return (
@@ -30,7 +30,7 @@ function Navbar() {
 
           <div className="main-container">
             <div id="hamburguer" >
-              <button className="border-0 bg-white " onClick={() => openSidebar()}>
+              <button className="" onClick={() => openSidebar()}>
                 <span className="top-line"></span>
                 <span className="middle-line"></span>
                 <span className="bottom-line"></span>
