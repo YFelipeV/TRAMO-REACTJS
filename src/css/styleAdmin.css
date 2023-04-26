@@ -2017,6 +2017,9 @@ td {
   width: 40px;
   height: 40px;
 }
+#hamburguer:hover{
+  scale: 1.1;
+}
 
 #hamburguer button span{
   border-radius: 50px;
@@ -2034,9 +2037,6 @@ td {
   animation-fill-mode: forwards;
 }
 
-#hamburguer:hover{
-  scale: 1.1;
-}
 
 #hamburguer button .top-line{
   animation-name: top-line-animation;
