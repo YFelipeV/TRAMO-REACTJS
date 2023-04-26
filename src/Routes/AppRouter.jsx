@@ -58,18 +58,15 @@ export const AppRouter = () => {
           element={
             <Suspense
               fallback={
-                <section className="mt-5 p-5">
-                  <div className="d-flex justify-content-center mt-5 align-content-center">
-                    <span className="loader"></span>
-                  </div>
-                  <div className="text-center">
-                    <span className="loader1 "></span>
-                  </div>
+                <section>
+                    <div class="container-loaders">
+                      <span class="loader1"></span>
+                      <div class="loader-title">
+                        <span class="loader2">T R A M &nbsp; </span>
+                      </div>
+                      <span class="slogan">Transporte & Movilidad</span>
+                    </div>
                 </section>
-
-               
-
-             
               }
             >
               {" "}
