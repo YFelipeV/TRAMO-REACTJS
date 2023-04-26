@@ -2022,7 +2022,7 @@ td {
   border-radius: 5px;
   background: rgb(0, 0, 0);
   display: block;
-  width: 25px;
+  width: 60%;
   margin: 5px auto;
   height: 3px;
 
@@ -2057,14 +2057,14 @@ td {
 @keyframes top-line-animation{
     50%, 100%{
       margin: 0 auto;
-      transform: translateY(2px) rotate(-45deg);
+      transform: translateY(2px) rotate(-48deg);
     }
 }
 
 @keyframes bottom-line-animation{
   50%, 100%{
     margin: 0 auto;
-    transform: translateY(-2px) rotate(45deg);
+    transform: translateY(-3px) rotate(45deg);
   }
 }
 
@@ -2080,7 +2080,7 @@ td {
 @keyframes top-line-animation-close{
   0%{
     margin: 0 auto;
-    transform: translateY(2px) rotate(-45deg);
+    transform: translateY(3px) rotate(-45deg);
   }
   50%, 100%{
     margin: 5px auto;
@@ -2104,7 +2104,7 @@ td {
 @keyframes bottom-line-animation-close{
   0%{
     margin: 0 auto;
-    transform: translateY(-2px) rotate(45deg);
+    transform: translateY(-3px) rotate(45deg);
   }
   50%, 100%{
     margin: 5px auto;
