@@ -60,7 +60,7 @@ export const AppRouter = () => {
               fallback={
                 <section className="mt-5 p-5">
                   <div className="d-flex justify-content-center mt-5 align-content-center">
-                    <span class="loader"></span>
+                    <span className="loader"></span>
                   </div>
                   <div className="text-center">
                     <span className="loader1 "></span>

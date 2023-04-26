@@ -24,17 +24,16 @@ function Login() {
   }
 
   return (
-    <>
+   
      
 
       
-      <div className="centrar" >
-        <div className="containerp  "  >
+     <div className="containerp  "style={{height:"100vh"}} >
          
-              <div className="container">
+              <div className="container w-75"  >
                 <div className="row movil ">
-                  <div className="col-lg-6  colorlogin p-3">
-                    <div className="card-body p-md-2 mx-md-4 ">
+                  <div className="col-lg-6 colorlogin ">
+                    <div className="card-body p-md-2 mx-md-4 movilP ">
                       <div className="text-center">
                         <a href="/">
                           <img
@@ -93,9 +92,8 @@ function Login() {
                 </div>
               </div>
             </div>
-          </div>
        
-    </>
+   
   );
 }
 

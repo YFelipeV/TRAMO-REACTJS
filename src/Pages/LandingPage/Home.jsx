@@ -53,9 +53,9 @@ function Home() {
         />
       </Helmet>
       <section className="index_inicio fond touch1  " id="home ">
-        <div className="w-100 px-5 hello container mt-5   ">
+        <div className="w-100 px-5 mt-5 container   ">
           <div
-            className="row align-items-center    w-100  "
+            className="row align-items-center mt-5   w-100  "
             data-aos="fade-up"
           >
             <div className="col-md-3 arreglar3   mt-5 col-lg-6 order-md-1 text-center ">
@@ -80,7 +80,7 @@ function Home() {
               </span>
               <h1 className="mb-4 arreglar1 display-5 fw-bold lh-sm dark pt-3">
                 TRAMO <br className="d-block d-lg-none d-xl-block d5 " />
-                <span className="arreglar display-5 fw-bold ">
+                <span className="arreglar display-6 fw-bold ">
                   Transporte y Movilidad
                 </span>
               </h1>
