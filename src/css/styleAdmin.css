@@ -2017,18 +2017,26 @@ td {
   width: 40px;
   height: 40px;
 }
+#hamburguer:hover{
+  scale: 1.1;
+}
 
 #hamburguer button span{
-  border-radius: 5px;
-  background: rgb(0, 0, 0);
+  border-radius: 50px;
+  background: rgb(0, 30, 255);
   display: block;
   width: 60%;
   margin: 5px auto;
-  height: 3px;
+  height: 2px;
+
+  -webkit-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.29);
+  -moz-box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.29);
+  box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.29);
 
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+
 
 #hamburguer button .top-line{
   animation-name: top-line-animation;
@@ -2057,14 +2065,17 @@ td {
 @keyframes top-line-animation{
     50%, 100%{
       margin: 0 auto;
-      transform: translateY(2px) rotate(-48deg);
+      transform: translateY(2px) rotate(-45deg);
+      background: #ff3c00;
     }
 }
 
 @keyframes bottom-line-animation{
   50%, 100%{
     margin: 0 auto;
-    transform: translateY(-3px) rotate(45deg);
+    transform: translateY(-2px) rotate(45deg);
+    background: #ff3c00;
+
   }
 }
 
@@ -2073,6 +2084,7 @@ td {
     margin: 0 auto;
     width: 0;
     opacity: 0;
+
   }
 }
 
@@ -2080,11 +2092,12 @@ td {
 @keyframes top-line-animation-close{
   0%{
     margin: 0 auto;
-    transform: translateY(3px) rotate(-45deg);
+    transform: translateY(2px) rotate(-45deg);
   }
   50%, 100%{
     margin: 5px auto;
     transform: translateY(0px) rotate(0deg);
+    
   }
 }
 
@@ -2104,7 +2117,7 @@ td {
 @keyframes bottom-line-animation-close{
   0%{
     margin: 0 auto;
-    transform: translateY(-3px) rotate(45deg);
+    transform: translateY(-2px) rotate(45deg);
   }
   50%, 100%{
     margin: 5px auto;
