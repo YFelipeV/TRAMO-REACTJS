@@ -72,7 +72,7 @@ function Manifiesto() {
                 }}
               >
                 <QRCode
-                  value={`http://10.185.80.147:5173/manifiesto/${id} `}
+                  value={`https://tramo.vercel.app/manifiesto/${id} `}
                   style={{ maxWidth: "120px" }}
                 />
               </div>
