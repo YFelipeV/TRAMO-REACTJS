@@ -1661,157 +1661,27 @@ td {
 # Star Mas Datos
 --------------------------------------------------------------*/
 
-.Modal-mas-datos .carousel {
-  max-width: 500px;
-  max-height: 300px;
-}
+  /* Modificacion Hernan */
+  
+  .container{
+    width: 90%;
+   
+  }
+  
+  .colorlogin{
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  
+  .containerp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #012970;
+    width: 100%;
 
-.Modal-mas-datos .carousel img {
-  object-fit: cover;
-  max-width: 500px;
-  max-height: 250px;
-}
-
-.Modal-mas-datos .head-title {
-  background-color: #0080ff;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-bottom: 12px;
-}
-.Modal-mas-datos .head-subtitle {
-  background-color: #0080ff;
-  height: 25px;
-  text-align: center;
-}
-
-.Modal-mas-datos table .subtitulo {
-  font-weight: bold;
-  padding-left: 5px;
-  opacity: 70%;
-  padding: 2px 0px;
-}
-
-.Modal-mas-datos table td {
-  text-align: left;
-  font-size: 15px;
-}
-.Modal-mas-datos .modal-botones {
-  text-align: left;
-  font-size: 17px;
-  padding: 4px 25px;
-}
-
-.Modal-mas-datos .propietario {
-  display: flex;
-  justify-content: center;
-  margin-top: 5px;
-}
-
-/*--------------------------------------------------------------
-# End Mas Datos
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-  #Cabecera de titulos 
---------------------------------------------------------------*/
-.bg-blue-head {
-  background-color: #0051ff;
-  opacity: 100%;
-}
-
-.bg-orange {
-  background-color: #f1a546;
-  opacity: 90%;
-}
-
-.bg-green {
-  background-color: #00b33c;
-  opacity: 90%;
-}
-
-.bg-blue {
-  background-color: #0055ff;
-  color: white;
-}
-
-.bg-red {
-  background-color: #e63900;
-  color: white;
-}
-
-.bg-orange-btn {
-  background-color: #fa9e2d;
-  color: white;
-}
-
-.bg-green-btn {
-  background-color: #00b33c;
-  color: white;
-}
-
-.bg-blue:hover {
-  background-color: #004adf;
-  color: white;
-  scale: 1.1;
-  transition: all 150ms;
-}
-
-.bg-red:hover {
-  background-color: #c73200;
-  color: white;
-  scale: 1.1;
-  transition: all 150ms;
-}
-.bg-orange-btn:hover {
-  background-color: #e89735;
-  color: white;
-  scale: 1.1;
-  transition: all 150ms;
-}
-
-.bg-green-btn:hover {
-  background-color: #00b33c;
-  color: white;
-  scale: 1.1;
-  transition: all 150ms;
-}
-
-.head-title {
-  height: 60px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 15px 15px 2px;
-}
-
-.imagen-titulo {
-  width: 40px;
-  margin-right: 10px;
-}
-
-/*--------------------------------------------------------------
-  #End Cabecera de titulos 
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-  #Conductores disponibles
---------------------------------------------------------------*/
-.td_imagen {
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle-img-conductores {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-}
+   
 
 .estado {
   font-size: 15px;
@@ -1864,59 +1734,9 @@ td {
   .filas_info td span {
     font-size: 13px;
   }
-
-  .filas_info_larga {
-    min-width: 250px;
-  }
-  .circle-img {
-    width: 80px;
-    height: 80px;
-    margin-left: 25px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  .circle-img-conductores {
-    width: 60px;
-    height: 60px;
-    margin-left: 15px;
-  }
-  .filas_info_larga {
-    min-width: 250px;
-  }
-
-  .filas_info_corta {
-    min-width: 200px;
-  }
-}
-@media (max-width: 800px) {
-  .logo_tramo {
-    background-image: url("../assets/icons/horizontal_movil.jpg");
-    background-size: cover;
-    background-size: 100% 100%;
-    width: 100px;
-    height: 30px;
-  }
-}
-
-/*---------------- Menos de 600px ----------------------*/
-
-@media (max-width: 600px) {
-  .head-title {
-    padding: 0px;
-    height: 50px;
-  }
-  .logo_tramo {
-    background-image: url("../assets/icons/horizontal_movil.jpg");
-    background-size: cover;
-    background-size: 100% 100%;
-    width: 80px;
-    height: 25px;
-  }
-
-  .head-title h4 {
-    font-size: 18px;
-    margin-bottom: 0px;
-  }
+    
+    
+   
 
   .imagen-titulo {
     width: 30px;
@@ -1936,52 +1756,15 @@ td {
   .filas_info td span {
     font-size: 13px;
   }
+    .card-body{
+      height: 100%;
 
-  .filas_info_larga {
-    min-width: 250px;
-  }
+  
 
-  .filas_info_corta {
-    min-width: 200px;
-  }
-  .circle-img {
-    width: 80px;
-    height: 80px;
-    margin-left: 25px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  .circle-img-conductores {
-    width: 60px;
-    height: 60px;
-    margin-left: 15px;
-  }
-  .botones{
-    font-size: 13px;
-  }
-  .botones_cliente{
-    font-size: 12px;
-  }
-}
+  
 
-/*---------------- Menos de 340px ----------------------*/
+  
 
-@media (max-width: 340px) {
-  .head-title h4 {
-    font-size: 14px;
-    margin-bottom: 0px;
-  }
-
-  .imagen-titulo {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-}
-/*--------------------------------------------------------------
-  #END Modificacion Para Admin MOVIL
---------------------------------------------------------------*/
 
 
 /*--------------------------------------------------------------

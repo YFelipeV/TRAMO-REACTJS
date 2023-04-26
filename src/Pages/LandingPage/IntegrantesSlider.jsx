@@ -62,12 +62,14 @@ function IntegrantesSlider() {
             </div>
             <div className="carousel-item text-center d-flex  justify-content-center  w-100">
               <div
-                className="ms-3 card card-integrantes my-5"
+                className="card card-integrantes my-5"
                 style={{ width: "18rem" }}
               >
                 <img
                   src={carlos}
-                  className="card-img-top m-auto d-block w-100"
+                  className="card-img-top m-auto d-block w-75  "
+                  
+                 
                   alt="..."
                 />
                 <div className="card-body">

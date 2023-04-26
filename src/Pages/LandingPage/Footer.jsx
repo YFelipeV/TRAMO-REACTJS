@@ -30,12 +30,14 @@ function Footer() {
  
   return (
     <>
-      <div className="olas" style={{ height: "250px", overflow: "hidden" }}>
+    
+      <div className="olas " style={{ height: "250px", overflow: "hidden" }}>
       {showSVG ? (
-        <svg className="olas-reemplazo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"  preserveAspectRatio="none"
+        <svg  className="olas-reemplazo fond"  viewBox="0 0 1440 320"  preserveAspectRatio="none"
         style={{ height: "100%", width: "100%" }}><path fill="#161627" fill-opacity="1" d="M0,160L60,154.7C120,149,240,139,360,144C480,149,600,171,720,160C840,149,960,107,1080,101.3C1200,96,1320,128,1380,144L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
       ) : (
         <svg
+        className="fond"
           viewBox="0 0 500 150"
           preserveAspectRatio="none"
           style={{ height: "100%", width: "100%" }}
@@ -48,12 +50,14 @@ function Footer() {
       )}
     </div>
 
+   
+
 
 
       <footer className=" w-100 m-0 p-0">
         <div className="footer__container   ">
           <div className="row d-flex">
-            <div className="col-12 col-md-6 col-xl-4 text-center text-md-start newsletter ">
+            <div className="col-12 col-md-6 col-xl-4 text-center text-md-start newsletter containerc1 ">
              <img src={negativo} style={{width:"50%"}}></img>
               <ul className="footer__list my-4 text-center">
                 <li className="footer__list-item me-2">

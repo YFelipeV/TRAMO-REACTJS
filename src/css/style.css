@@ -482,6 +482,7 @@ ul {
   .container1{
     text-align: center;
 
+
   }
 }
 
@@ -500,6 +501,7 @@ ul {
     justify-content: center;
   }
 }
+
 
 
 
@@ -566,7 +568,15 @@ ul {
 
   background-position: center;
   background-repeat: no-repeat;
+  justify-content: center;
+  
+  
+  
 }
+
+
+
+
 
 /*Footer*/
 
@@ -581,7 +591,7 @@ ul {
     height: 250px;
     width: 100%;
     position: relative;
-    top: 19%;
+    
     z-index: -1;
   }
 
@@ -845,6 +855,9 @@ ul {
 }
 
 
+
+
+
 /*Olas reemplazo  Footer*/
 
  .olas {
@@ -858,7 +871,7 @@ ul {
     height: 250px;
     width: 90%;
     position: relative;
-    top: 19%;
+    
     z-index: -1;
   }
 
@@ -871,6 +884,8 @@ ul {
         justify-content: center;
         flex-direction: column; 
     }
+
+   
   }
 
   @media (max-width: 1000px) {
@@ -928,4 +943,30 @@ ul {
     touch-action: manipulation;
     zoom: 1;
   }
+
+ 
 }
+
+/* Descargas */
+
+@media screen and  (max-width:1199px) {
+   .appstore {
+   margin-bottom: 30px;
+  }
+  .playstore{
+    margin-bottom: 30px;
+  }
+
+  .espaciosicons{
+    width: 68px;
+  }
+  
+}
+
+
+
+
+
+
+
+

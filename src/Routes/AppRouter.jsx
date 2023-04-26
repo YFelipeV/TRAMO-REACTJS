@@ -30,7 +30,19 @@ const Solicitudes = lazy(() =>
   import("../Pages/Dashboard/Solicitudes/Solicitudes")
 );
 
+/* Loader */
+
+
+
+
+
+
+
 export const AppRouter = () => {
+
+ 
+
+ 
   return (
     <>
       {/* LANDING*/}
@@ -54,6 +66,10 @@ export const AppRouter = () => {
                     <span className="loader1 "></span>
                   </div>
                 </section>
+
+               
+
+             
               }
             >
               {" "}
