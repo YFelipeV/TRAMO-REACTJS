@@ -371,6 +371,7 @@ function IntegrantesSliderGrande() {
           </div>
         </div>
       </div>
+      <div className="union-footer"></div>
     </>
   );
 }

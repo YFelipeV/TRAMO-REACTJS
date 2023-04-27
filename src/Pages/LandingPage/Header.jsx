@@ -1,11 +1,19 @@
 import logo from "../../assets/icons/horizontal.jpg";
 import Footer from "./Footer";
 import "../../css/style.css";
-import { Link, Outlet } from "react-router-dom";
+import "../../css/styleAdmin.css";
+import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { Suspense } from "react";
 import { useState } from "react";
 
 function Header() {
+
+  const activeLink = "active_header"
+  const inactiveLink = "inactive_header"
+
+  const rouerterlink = useLocation()
+  const { pathname } = rouerterlink
+  console.log(pathname);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,16 +32,15 @@ function Header() {
           data-navbar-on-scroll="data-navbar-on-scroll"
         >
           <div className="container-fluid">
-            <Link
+            <NavLink
               className=" w-sm-100 w-md-25 logonav position-md-absolute left-md-5"
-              to="/"
             >
               <img
                 src={logo}
                 alt=""
                 className="position-md-relative w-sm-100 w-md-75"
               ></img>
-            </Link>
+            </NavLink>
             <button
              
               className="navbar-toggler collapsed"
@@ -53,44 +60,47 @@ function Header() {
             >
               <ul className="navbar-nav ms-auto pt-2 pt-lg-0">
                 <li className="nav-item">
-                  <Link
+                  <NavLink
                    
-                    className="nav-link mx-2 fw-medium active fs-5 text-primary"
+                    className="nav-link links_headaer"
                     aria-current="page"
+                    id={pathname === "/" ? activeLink : inactiveLink}
                     to="/"
                     onClick={handleLinkClick}
                   >
-                    Inicio
-                  </Link>
+                    <p>Inicio</p>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <Link
+                  <NavLink
                     
-                    className="nav-link mx-2 fw-medium fs-5 text-primary"
-                    to="about"
+                    className="nav-link links_headaer"
+                    id={pathname === "/about" ? activeLink : inactiveLink}
+                    to="/about"
                     onClick={handleLinkClick}
                   >
-                    Acerca de Nosotros
-                  </Link>
+                    <p>Acerca de Nosotros</p>
+                  </NavLink>
                 </li>
 
                 <li className="nav-item">
-                  <Link
+                  <NavLink
                     
-                    className="nav-link fw-medium fs-5 mx-2 text-primary"
-                    to="contactos"
+                    className="nav-link links_headaer"
+                    id={pathname === "/contactos" ? activeLink : inactiveLink}
+                    to="/contactos"
                     onClick={handleLinkClick}
                   >
-                    Contactos
-                  </Link>
+                    <p>Contactos</p>
+                  </NavLink>
                 </li>
               </ul>
-              <div className="ps-lg-5">
+              <div className="ps-lg-2 btn-inicio-sesion">
                 <Link
                   to={"/login"}
-                  className="btn btn-lg btn-primary rounded-pill mx-1 order-0 fs-5 me-5"
+                  className="btn btn-lg btn-primary rounded-pill me-5"
                 >
-                  Inicio Sesion
+                  <p>Inicio Sesion</p>
                 </Link>
               </div>
             </div>
@@ -101,12 +111,12 @@ function Header() {
       <Suspense
         fallback={
           <section>
-            <div class="container-loaders">
-                <span class="loader1"></span>
-                <div class="loader-title">
-                  <span class="loader2">T R A M &nbsp; </span>
+            <div className="container-loaders">
+                <span className="loader1"></span>
+                <div className="loader-title">
+                  <span className="loader2">T R A M &nbsp; </span>
                 </div>
-                <span class="slogan">Transporte & Movilidad</span>
+                <span className="slogan">Transporte & Movilidad</span>
               </div>
           </section>
         }

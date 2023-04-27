@@ -360,7 +360,6 @@ h6 {
 }
 
 .nav-tabs-bordered .nav-link {
-  margin-bottom: -2px;
   border: none;
   color: #2c384e;
 }
@@ -720,7 +719,6 @@ h6 {
   color: #4154f1;
   transition: 0.3;
   background: #f6f9ff;
-  padding: 10px 15px;
   border-radius: 4px;
 }
 
@@ -1675,7 +1673,6 @@ td {
 .logo_tramo {
   background-image: url("../assets/icons/horizontal.jpg");
   background-size: cover;
-  background-size: 100% 100%;
   width: 230px;
 }
 /*--------------------------------------------------------------
@@ -1966,6 +1963,48 @@ td {
     margin: 5px auto;
     transform: translateY(0px) rotate(0deg);
   }
+}
+
+/*--------------------------------------------------------------
+  #Avtive Header Landing
+--------------------------------------------------------------*/
+#active_header{
+  color: #f58b09;
+  margin-bottom: 0px;
+  scale: 1.1;
+}
+#active_header p{
+  font-size: 17px;
+  margin: 0;
+}
+
+#inactive_header {
+  color: #004adf;
+  margin-bottom: -16px;
+}
+#inactive_header p{
+  font-size: 17px;
+  margin: 0;
+  margin-left: 5px;
+}
+.links_headaer{
+  margin-left: 10px;
+}
+.links_headaer p:hover{
+  font-size: 18px;
+}
+
+.union-footer{
+  width: 100%;
+  height: 80px;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 45%, rgba(245,254,255,0.9450630594034489) 80%);  
+}
+
+.btn-inicio-sesion p{
+  font-size: 18px;
+  margin-bottom: 0px;
+  padding: 2px 5px;
 }
 
 /*--------------------------------------------------------------
