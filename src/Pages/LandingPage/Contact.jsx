@@ -210,6 +210,7 @@ function Contact() {
           </div>
         </div>
       </section>
+      <div className="union-footer"></div>
     </>
   );
 }

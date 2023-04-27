@@ -1,5 +1,4 @@
 import Sidebar from "./Sidebar";
-import logo from "../../../assets/icons/horizontal.jpg";
 import "../../../css/styleAdmin.css";
 import profile from "../../../assets/icons/profile.jpg";
 import { Link } from "react-router-dom";
@@ -24,7 +23,8 @@ function Navbar() {
         className="header fixed-top d-flex align-items-center "
       >
         <div className="d-flex align-items-center justify-content-between logo_tramo">
-          <Link to="/dashboard" className="me-3">
+          
+          <Link className="me-3" to={"/dashboard"}>
             <div className="logo_tramo"></div>
           </Link>
 
